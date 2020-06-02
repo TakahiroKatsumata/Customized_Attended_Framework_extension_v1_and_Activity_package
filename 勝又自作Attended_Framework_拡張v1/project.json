@@ -1,0 +1,40 @@
+{
+  "name": "サンプルロボット_勝又自作Attended_Framework_拡張v1",
+  "description": "このRPAロボットプロセスは\"勝又自作Attended_Framework_拡張v1\"を使用して作成されています。\r\n\r\n　※[勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata\r\n　　説明：\r\n　　このコンポーネントはフリーソフトですので自由にご使用ください。\r\n　　著作権は作者が保有しており，作者の個人活動によって作成されたものです。\r\n　　UiPath社公開\"Attended Framework\"をカスタマイズし機能拡張したものです。",
+  "main": "勝又自作Attended_Framework_拡張v1_パーツ\\MainFramework.xaml",
+  "dependencies": {
+    "Microsoft.Activities": "1.0.1",
+    "Microsoft.Activities.Extensions": "2.0.6.9",
+    "UiPath.Credentials.Activities": "1.1.6479.13204",
+    "UiPath.Excel.Activities": "[2.7.2]",
+    "UiPath.Mail.Activities": "1.7.2",
+    "UiPath.System.Activities": "19.10.1",
+    "UiPath.UIAutomation.Activities": "19.11.1",
+    "勝又自作アクティビティパック": "[1.0.41]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.10.4.0",
+  "projectVersion": "1.0.6836.24123",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": []
+  },
+  "expressionLanguage": "VisualBasic"
+}

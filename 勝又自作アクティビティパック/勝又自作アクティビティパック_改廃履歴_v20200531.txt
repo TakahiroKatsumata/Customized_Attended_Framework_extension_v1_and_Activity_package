@@ -1,0 +1,25 @@
+[勝又自作アクティビティパック] (C) 2020 Takahiro Katsumata
+　説明：
+　このコンポーネントはフリーソフトですので自由にご利用ください。
+　著作権は作者が保有しており，作者の個人活動によって作成されたものです。
+　このコンポーネントの一部はUiPath社公開"Attended Framework"のパーツを移植しています。
+
+各アクティビティの機能説明については，
+[勝又自作Attended_Framework_拡張v1]の "勝又自作アクティビティ使用例_vNNNNNNNN.xaml" を見た方が早いです。
+
+
+■2020/05/25	以下の部品を追加
+	Cast辞書Value_GV_Str
+
+■2020/05/25	以下の部品を追加
+	Text_to_StrList.xaml
+
+■2020/05/24	以下の部品を追加
+	Excel2列辞書化.xaml	※Attended_Frameworkに付属のワークフローパーツをベースに改造。
+
+■2020/05/18	以下の部品を追加
+	Str_to_SecureStr.xaml
+	ConvertToLetter.xaml
+	ログ_テキストv1.xaml
+	GetAppCredentials.xaml	※Attended_Frameworkに付属のワークフローパーツを移植。
+	TakeScreenshot.xaml	※Attended_Frameworkに付属のワークフローパーツを移植。

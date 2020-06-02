@@ -1,0 +1,10 @@
+# Attended_Framework_拡張v1 で Config.xlsx から設定情報を取得する対象シートをここに指定してください。
+
+#Settings   ←Frameworkデフォルトで読み込み対象です。
+#Constants  ←Frameworkデフォルトで読み込み対象です。
+#Assets     ←Frameworkデフォルトで読み込み対象です。
+#環境       ←Frameworkデフォルトで読み込み対象です。
+
+#以下，UOCで適宜追加してください。
+
+サンプルシート
