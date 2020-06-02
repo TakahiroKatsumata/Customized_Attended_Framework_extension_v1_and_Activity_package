@@ -1,0 +1,8 @@
+説明書変更来歴は以下に格納。
+
+勝又自作Attended_Framework_拡張v1
+　→勝又自作Attended_Framework_拡張v1\勝又自作Attended_Framework_拡張v1_パーツ\勝又自作Attended_Framework_拡張v1_説明書.txt
+　　勝又自作Attended_Framework_拡張v1\勝又自作Attended_Framework_拡張v1_パーツ\勝又自作Attended_Framework_拡張v1_改廃履歴_vYYYYMMDD.txt
+
+勝又自作アクティビティパック
+　→勝又自作アクティビティパック\勝又自作アクティビティパック_改廃履歴_vYYYYMMDD.txt
