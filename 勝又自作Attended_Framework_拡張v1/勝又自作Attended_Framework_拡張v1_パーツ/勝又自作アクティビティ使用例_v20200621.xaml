@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1065,1232</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>874,1332</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>自作アクティビティ使用例_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="48">
+    <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -64,7 +64,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="＜掲載情報一覧＞&#xA;勝又自作アクティビティパック：&#xA;　①&quot;ログ_テキストv1&quot; 使い方&#xD;&#xA;　②&quot;TakeScreenshot&quot; 使用例&#xD;&#xA;　③&quot;Str_to_SecureStr&quot; 使用例&#xD;&#xA;　④&quot;GetAppCredentials&quot; 使用例&#xD;&#xA;　⑤&quot;ConvertToLetter&quot; 使用例&#xD;&#xA;　⑥&quot;Excel2列辞書化&quot; 使用例&#xD;&#xA;　⑦&quot;Cast辞書Value_GV_Str&quot; 使用例&#xD;&#xA;　※&quot;Text_to_StrList&quot; は使用例を準備していません。&#xD;&#xA;.NETメソッド等の使用例：&#xA;　⑪特殊フォルダパス取得&#xA;" DisplayName="自作アクティビティ使用例" sap:VirtualizedContainerService.HintSize="744,1132" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="＜掲載情報一覧＞&#xA;勝又自作アクティビティパック：&#xA;　①&quot;ログ_テキストv1&quot; 使い方&#xA;　②&quot;TakeScreenshot&quot; 使用例&#xA;　③&quot;Str_to_SecureStr&quot; 使用例&#xA;　④&quot;GetAppCredentials&quot; 使用例&#xA;　⑤&quot;ConvertToLetter&quot; 使用例&#xA;　⑥&quot;Excel2列辞書化&quot; 使用例&#xA;　⑦&quot;Cast辞書Value_GV_Str&quot; 使用例&#xA;　※&quot;Text_to_StrList&quot; は使用例を準備していません。&#xA;既成のアクティビティや.NETメソッド等の使用例：&#xA;　⑪特殊フォルダパス取得（.NET）&#xD;&#xA;　⑫Windows資格情報マネージャーに登録（UiPath.Credentials.Activities）&#xA;" DisplayName="自作アクティビティ使用例" sap:VirtualizedContainerService.HintSize="764,1167" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strワーク" />
       <Variable x:TypeArguments="ss:SecureString" Name="securestrワーク" />
@@ -74,14 +74,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">300,0</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">330,75 330,474.5</av:PointCollection>
-        <x:Double x:Key="Width">709.5</x:Double>
-        <x:Double x:Key="Height">889</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">330,75 330,586 100,586 100,616</av:PointCollection>
+        <x:Double x:Key="Width">730</x:Double>
+        <x:Double x:Key="Height">909</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -156,7 +156,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">0,377</av:Point>
+          <av:Point x:Key="ShapeLocation">0,317</av:Point>
           <av:Size x:Key="ShapeSize">200,138</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -177,7 +177,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">0,543.5</av:Point>
+          <av:Point x:Key="ShapeLocation">0,483.5</av:Point>
           <av:Size x:Key="ShapeSize">200,93</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -254,7 +254,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">500,171</av:Point>
+          <av:Point x:Key="ShapeLocation">490,171</av:Point>
           <av:Size x:Key="ShapeSize">200,138</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -286,7 +286,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">490,397</av:Point>
+          <av:Point x:Key="ShapeLocation">490,327</av:Point>
           <av:Size x:Key="ShapeSize">200,168</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -314,14 +314,14 @@
         </ui:MessageBox>
       </Sequence>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID6">
+    <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">230,474.5</av:Point>
+          <av:Point x:Key="ShapeLocation">490,521</av:Point>
           <av:Size x:Key="ShapeSize">200,318</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart sap2010:Annotation.AnnotationText="以下の変数間の型変換を行うアクティビテです。&#xA;　　Dictionary&lt;String,GenericValue&gt;&#xA;　　Dictionary&lt;String,String&gt;&#xD;&#xA;※型変換の方向性_GVtoStr&#xA;　　True ：GenericValue→String&#xA;　　False：String→GenericValue&#xA;※変換先が is Nothing ならNewする。&#xA;※変換先が is Nothing でなければ，元のコレクションに追加・更新。" DisplayName="⑦&quot;Cast辞書Value_GV_Str&quot; 使用例" sap:VirtualizedContainerService.HintSize="200,318" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <Flowchart sap2010:Annotation.AnnotationText="以下の変数間の型変換を行うアクティビテです。&#xA;　　Dictionary&lt;String,GenericValue&gt;&#xA;　　Dictionary&lt;String,String&gt;&#xA;※型変換の方向性_GVtoStr&#xA;　　True ：GenericValue→String&#xA;　　False：String→GenericValue&#xA;※変換先が is Nothing ならNewする。&#xA;※変換先が is Nothing でなければ，元のコレクションに追加・更新。" DisplayName="⑦&quot;Cast辞書Value_GV_Str&quot; 使用例" sap:VirtualizedContainerService.HintSize="200,318" sap2010:WorkflowViewState.IdRef="Flowchart_2">
         <Flowchart.Variables>
           <Variable x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" Name="dictionaryStr_GV" />
           <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictionaryStr_Str" />
@@ -561,6 +561,97 @@
         <x:Reference>__ReferenceID2</x:Reference>
         <x:Reference>__ReferenceID3</x:Reference>
         <x:Reference>__ReferenceID4</x:Reference>
+      </Flowchart>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,616</av:Point>
+          <av:Size x:Key="ShapeSize">200,168</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart sap2010:Annotation.AnnotationText="&quot;Add credential&quot; アクティビティのCredentialTypeプロパティによって，「汎用資格情報」の登録，または「Windows資格情報」の登録を切り替えます。&#xD;&#xA;「Windows資格情報」はアクティビティで削除できません。" DisplayName="⑫Windows資格情報マネージャーに登録" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,230 220,230</av:PointCollection>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Flowchart.StartNode>
+          <x:Reference>__ReferenceID6</x:Reference>
+        </Flowchart.StartNode>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">380,138.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,183</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap2010:Annotation.AnnotationText="「Windows資格情報」の登録，削除の実行例です。&#xD;&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;DomainPassword&quot;に指定することで「Windows資格情報」に登録）" DisplayName="&quot;Windows資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="LOCAL_testCredential">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">UiPath_Frameworkサンプルプロセス.jp</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="LOCAL_testUsername">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">global\UiPathTestID2</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
+              <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AddCredential CredentialType="DomainPassword" DisplayName="Add credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddCredential_1" Password="[LOCAL_testPassword]" PersistanceType="Enterprise" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" Username="[LOCAL_testUsername]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「Windows資格情報」の登録を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;「Windows資格情報」はアクティビティで削除できませんので，&quot; + vbNewLine _&#xD;&#xA;+ &quot;削除は資格情報マネージャーから実施してください。&quot;]" />
+          </Sequence>
+        </FlowStep>
+        <FlowStep x:Name="__ReferenceID6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">20,146</av:Point>
+              <av:Size x:Key="ShapeSize">200,168</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap2010:Annotation.AnnotationText="「汎用資格情報」の登録，削除の実行例です。&#xD;&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;Generic&quot;に指定することで「汎用資格情報」に登録）" DisplayName="&quot;汎用資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="LOCAL_testCredential">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">UiPath_Frameworkサンプルプロセス.com</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="LOCAL_testUsername">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">global\UiPathTestID</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
+              <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AddCredential CredentialType="Generic" DisplayName="Add credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddCredential_3" Password="[LOCAL_testPassword]" PersistanceType="Enterprise" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" Username="[LOCAL_testUsername]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「汎用資格情報」の登録を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString]" />
+            <ui:DeleteCredential DisplayName="Delete credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_3" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;&quot;&quot;Delete credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「汎用資格情報」の削除を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString]" />
+          </Sequence>
+        </FlowStep>
       </Flowchart>
     </FlowStep>
   </Flowchart>
