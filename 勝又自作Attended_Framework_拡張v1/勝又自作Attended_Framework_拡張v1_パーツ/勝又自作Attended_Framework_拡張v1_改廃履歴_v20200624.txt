@@ -1,5 +1,11 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2020/06/24	改良
+	・"MainFramework.xaml" エラー発生時スクリーンショットファイル名を以下に変更
+		Config("ExScreenshotsFolderPath").ToString + "\MainFrameworkScreenshots.png"
+	・"わざとエラー発生テスト.xaml" 新規
+	・"MainProcess.xaml：主処理"内のエラーを発生させるサンプルプロセスを"わざとエラー発生テスト.xaml"呼び出しに変更。
+
 ■2020/06/21	改良
 	・勝又自作アクティビティ使用例.xaml に "⑫Windows資格情報マネージャーに登録" を追加。
 	・"MainProcess.xaml：初期化"セクションに＜Windows資格情報マネージャーに登録＞サンプルプロセスを追加。

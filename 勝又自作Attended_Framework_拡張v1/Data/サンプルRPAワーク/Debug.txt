@@ -1,0 +1,385 @@
+2020/06/24 22:05:21 [Info ] 
+2020/06/24 22:05:21 [Info ] ====================================================
+2020/06/24 22:05:21 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:05:21 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:05:21 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:05:21 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:05:21 [Info ] プロセススタートDateTime：06/24/2020 22:05:19
+2020/06/24 22:05:22 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:05:22 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:05:32 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:05:33 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:05:33 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:05:33 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:05:33 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:05:33 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:05:33 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:05:33 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:05:36 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:05:36 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:05:36 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_220519
+2020/06/24 22:05:36 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:05:36 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:05:36 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:05:37 [Info ] --- MainProcess.xaml：主処理：監視ブロック（エラースキップ）_Try の実行を開始しました ---
+2020/06/24 22:05:37 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:05:37 [Warn ] 今，エラーを検知：
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:05:37 [Warn ] エラーをスキップします。
+2020/06/24 22:05:38 [Info ] --- MainProcess.xaml：主処理 の実行を終了しました ---
+2020/06/24 22:05:38 [Info ] --- MainProcess.xaml：終了処理（通常） の実行を開始しました ---
+2020/06/24 22:05:38 [Info ] --- MainProcess.xaml：終了処理（通常） の実行を終了しました ---
+2020/06/24 22:05:38 [Info ] --- MainProcess.xaml の実行を終了しました ---
+2020/06/24 22:05:38 [Info ] 
+2020/06/24 22:07:27 [Info ] 
+2020/06/24 22:07:27 [Info ] ====================================================
+2020/06/24 22:07:27 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:07:27 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:07:27 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:07:27 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:07:27 [Info ] プロセススタートDateTime：06/24/2020 22:07:26
+2020/06/24 22:07:28 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:07:28 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:07:33 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:07:33 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:07:33 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:07:33 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:07:33 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:07:33 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:07:33 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:07:33 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:07:34 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:07:34 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:07:34 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_220726
+2020/06/24 22:07:34 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:07:34 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:07:35 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:07:39 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:07:39 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:07:39 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:07:39 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:07:39 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:07:39 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:07:39 [Info ] 
+2020/06/24 22:16:12 [Info ] 
+2020/06/24 22:16:12 [Info ] ====================================================
+2020/06/24 22:16:12 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:16:12 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:16:12 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:16:12 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:16:12 [Info ] プロセススタートDateTime：06/24/2020 22:16:11
+2020/06/24 22:16:14 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:16:14 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:16:17 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:16:18 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:16:18 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:16:18 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:16:18 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:16:18 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:16:18 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:16:18 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:16:18 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:16:18 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:16:18 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_221611
+2020/06/24 22:16:18 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:16:18 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:16:18 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:16:20 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:16:20 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:16:20 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:16:20 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:16:20 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:16:20 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:16:20 [Info ] 
+2020/06/24 22:18:48 [Info ] 
+2020/06/24 22:18:48 [Info ] ====================================================
+2020/06/24 22:18:48 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:18:48 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:18:48 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:18:48 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:18:48 [Info ] プロセススタートDateTime：06/24/2020 22:18:46
+2020/06/24 22:18:49 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:18:49 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:18:54 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:18:54 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:18:54 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:18:54 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:18:54 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:18:54 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:18:54 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:18:54 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:18:55 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:18:55 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:18:55 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_221846
+2020/06/24 22:18:55 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:18:55 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:18:55 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:18:57 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:18:57 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:18:57 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:18:57 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:18:57 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:18:57 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:18:57 [Info ] 
+2020/06/24 22:21:15 [Info ] 
+2020/06/24 22:21:15 [Info ] ====================================================
+2020/06/24 22:21:15 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:21:15 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:21:15 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:21:15 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:21:15 [Info ] プロセススタートDateTime：06/24/2020 22:21:13
+2020/06/24 22:21:16 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:21:16 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:21:20 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:21:20 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:21:20 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:21:20 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:21:20 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:21:20 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:21:20 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:21:20 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:21:21 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:21:21 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:21:21 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_222113
+2020/06/24 22:21:21 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:21:21 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:21:21 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:21:22 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:21:22 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:21:22 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:21:22 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:21:22 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:21:22 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:21:22 [Info ] 
+2020/06/24 22:28:02 [Info ] 
+2020/06/24 22:28:02 [Info ] ====================================================
+2020/06/24 22:28:02 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:28:02 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:28:02 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:28:02 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:28:02 [Info ] プロセススタートDateTime：06/24/2020 22:28:00
+2020/06/24 22:28:03 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:28:03 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:28:05 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:28:05 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:28:05 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:28:05 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:28:05 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:28:05 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:28:05 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:28:05 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:28:07 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:28:07 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:28:07 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_222800
+2020/06/24 22:28:07 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:28:07 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:28:07 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:28:08 [Info ] --- MainProcess.xaml：主処理：監視ブロック（エラー記憶）_Try の実行を開始しました ---
+2020/06/24 22:28:08 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:28:08 [Error] 今，エラーを検知：
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:28:08 [Error] エラーを記憶し続行します。
+2020/06/24 22:28:12 [Error] --- MainProcess.xaml：主処理 の実行を終了しました（エラースロー） ---
+2020/06/24 22:28:12 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:28:12 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:28:12 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:28:12 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:28:12 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:28:12 [Info ] 
+2020/06/24 22:33:54 [Info ] 
+2020/06/24 22:33:54 [Info ] ====================================================
+2020/06/24 22:33:54 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:33:54 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:33:54 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:33:54 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:33:54 [Info ] プロセススタートDateTime：06/24/2020 22:33:52
+2020/06/24 22:33:55 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:33:55 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:33:57 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:33:57 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:33:57 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:33:57 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:33:57 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:33:57 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:33:57 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:33:57 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:33:58 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:33:58 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:33:58 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_223352
+2020/06/24 22:33:58 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:33:58 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:33:58 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:33:58 [Info ] --- MainProcess.xaml：主処理：監視ブロック（エラー即スロー）_Try の実行を開始しました ---
+2020/06/24 22:33:59 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:33:59 [Error] 今，エラーを検知：
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:33:59 [Error] エラーを即時スローします。
+2020/06/24 22:33:59 [Error] --- MainProcess.xaml：主処理 の実行を終了しました（エラースロー） ---
+2020/06/24 22:33:59 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:33:59 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:33:59 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:33:59 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:33:59 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:33:59 [Info ] 
+2020/06/24 22:36:00 [Info ] 
+2020/06/24 22:36:00 [Info ] ====================================================
+2020/06/24 22:36:00 [Info ] ログ_テキストv1_テキストパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\Debug.txt
+2020/06/24 22:36:00 [Info ] ログ_テキストv1_テキスト出力レベルリミット：1
+2020/06/24 22:36:00 [Info ] "Config.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\Config.xlsx
+2020/06/24 22:36:00 [Info ] "Config.xlsx" から設定情報を一括取得しました。取得件数：26
+2020/06/24 22:36:00 [Info ] プロセススタートDateTime：06/24/2020 22:35:58
+2020/06/24 22:36:01 [Info ] --- MainProcess.xaml の実行を開始しました ---
+2020/06/24 22:36:01 [Info ] --- MainProcess.xaml：初期化 の実行を開始しました ---
+2020/06/24 22:36:03 [Info ] --- Credentials一括取得.xaml の実行を開始しました ---
+2020/06/24 22:36:03 [Info ] 資格情報"Ｘシステムクレデンシャル"のユーザー名を取得しました。
+2020/06/24 22:36:03 [Info ] 資格情報"Ｘシステムクレデンシャル"のパスワードを取得しました。
+2020/06/24 22:36:03 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のユーザー名を取得しました。
+2020/06/24 22:36:03 [Info ] 資格情報"UiPath_Frameworkサンプルプロセス.com"のパスワードを取得しました。
+2020/06/24 22:36:03 [Info ] --- Credentials一括取得.xaml の実行を終了しました ---
+2020/06/24 22:36:03 [Info ] "Credentials.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Credentials.xlsx
+2020/06/24 22:36:03 [Info ] "Credentials.xlsx" から資格情報を一括取得しました。取得件数：4
+2020/06/24 22:36:03 [Info ] "Parameters.xlsx" パス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\PARAM\Parameters.xlsx
+2020/06/24 22:36:03 [Info ] "Parameters.xlsx" から資格情報を一括取得しました。取得件数：2
+2020/06/24 22:36:03 [Info ] "yyyyMMdd_HHmmss"フォルダパス：C:\Users\Katsumata\Documents\GitHub\Clone\Customized_Attended_Framework_extension_v1_and_Activity_package\勝又自作Attended_Framework_拡張v1\Data\サンプルRPAワーク\プロセス実行毎アウトプット\20200624_223558
+2020/06/24 22:36:03 [Info ] "yyyyMMdd_HHmmss"フォルダを作成しました。
+2020/06/24 22:36:03 [Info ] --- MainProcess.xaml：初期化 の実行を終了しました ---
+2020/06/24 22:36:03 [Info ] --- MainProcess.xaml：主処理 の実行を開始しました ---
+2020/06/24 22:36:04 [Info ] --- わざとエラー発生テスト.xaml の実行を開始しました ---
+2020/06/24 22:36:05 [Error] --- MainProcess.xaml：主処理 中にエラーが存在していました ---
+Source              : エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+2020/06/24 22:36:05 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を開始しました ---
+2020/06/24 22:36:05 [Info ] --- MainProcess.xaml：終了処理（エラー時） の実行を終了しました ---
+2020/06/24 22:36:05 [Error] --- MainProcess.xaml の実行を終了しました（エラースロー） ---
+2020/06/24 22:36:05 [Error] Error in Process.
+Source              : スロー: エラーを起こす！
+Exception message   : セレクターが無効です: <wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='存在しないウィンドウ*' /> 。<html> セレクターが必要です。ブラウザーの tab 要素を指定していることをご確認ください。
+Exception Type      : UiPath.Core.BrowserOperationException
+Exception StackTrace:
+   場所 System.Activities.Statements.Throw.Execute(CodeActivityContext context)
+   場所 System.Activities.CodeActivity.InternalExecute(ActivityInstance instance, ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.ActivityInstance.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+   場所 System.Activities.Runtime.ActivityExecutor.ExecuteActivityWorkItem.ExecuteBody(ActivityExecutor executor, BookmarkManager bookmarkManager, Location resultLocation)
+--- 直前に例外がスローされた場所からのスタック トレースの終わり ---
+   場所 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   場所 UiPath.Executor.BaseRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Executor.InProcessRunner.EndExecute(IAsyncResult result)
+   場所 UiPath.Core.Activities.ExecutorInvokeActivity.EndExecute(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.System.Activities.IAsyncCodeActivity.FinishExecution(AsyncCodeActivityContext context, IAsyncResult result)
+   場所 System.Activities.AsyncCodeActivity.CompleteAsyncCodeActivityData.CompleteAsyncCodeActivityWorkItem.Execute(ActivityExecutor executor, BookmarkManager bookmarkManager)
+2020/06/24 22:36:05 [Info ] 
