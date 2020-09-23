@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="InitiAllSettings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:勝="clr-namespace:勝又自作アクティビティパック;assembly=勝又自作アクティビティパック">
   <x:Members>
     <x:Property Name="out_Config" Type="OutArgument(scg:Dictionary(x:String, ui:GenericValue))" />
+    <x:Property Name="in_ConfigFile" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>856,2561</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>817,6609</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -68,11 +69,11 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="このワークフローにより、設定ファイル(Config.xlsx)を読み込んで，プロジェクトで使用されるキー/値ペア形式の設定ディクショナリー（out_Config）が出力されます。設定はローカルの設定ファイルから読み取られ、次に Orchestrator のアセットから取得されます。&#xA;アセットは設定ファイルより優先されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;・Config.xlsxのシート「環境」はパス情報の環境依存解消機能として，&quot;%XXX%&quot;形式のキーワードを環境に応じた実際のフォルダパスに自動変換して設定ディクショナリーに出力します。&#xA;・Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。&#xA;・Frameworkデフォルトの読み込み対象シート以外に Config.xlsx の読み込み対象シート追加の際は，Config対象シートリスト.txt で対象シートを定義できます。" DisplayName="すべての設定を取得" sap:VirtualizedContainerService.HintSize="480,2396" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="このワークフローにより、設定ファイル(Config.xlsx)を読み込んで，プロジェクトで使用されるキー/値ペア形式の設定ディクショナリー（out_Config）が出力されます。&#xA;設定はローカルの設定ファイルから読み取られ、次に Orchestrator のアセットから取得されます。&#xA;アセットは設定ファイルより優先されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;&#xA;・Config.xlsxのファイルパスは &quot;MainFramework.xaml&quot; にてロボットプロセス自体の引数 &quot;in_ConfigFile&quot; により指定可能です。&#xD;&#xA;　（デフォルト値は変数 &quot;CONST_ConfigFileデフォルト&quot; で固定値設定）&#xA;・Config.xlsxのシート「環境」はパス情報の環境依存解消機能として，&quot;%XXX%&quot;形式のキーワードを環境に応じた実際のフォルダパスに自動変換して設定ディクショナリーに出力します。&#xA;・Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。&#xA;・Frameworkデフォルトの読み込み対象シート以外に Config.xlsx の読み込み対象シート追加の際は，Config対象シートリスト.txt で対象シートを定義できます。" DisplayName="すべての設定を取得" sap:VirtualizedContainerService.HintSize="797,6509" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Data\Config.xlsx" Name="CONST_ConfigFile" />
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;Settings&quot;,&quot;Constants&quot;}]" Name="CONST_Array_strConfigSheets_default" />
       <Variable x:TypeArguments="x:String" Default="勝又自作Attended_Framework_拡張v1_パーツ\Config必須項目リスト.txt" Name="CONST_Config必須項目リスト_txt" />
+      <Variable x:TypeArguments="x:String" Default="Data\Config.xlsx" Name="CONST_ConfigFileデフォルト" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -81,14 +82,37 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Frameworkデフォルトの読み込み対象シートと，Config対象シートリスト.txt に定義したシートから，設定情報を取得します。" DisplayName="その他シートから設定情報を取得" sap:VirtualizedContainerService.HintSize="438,138" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <If Condition="[String.IsNullOrWhiteSpace( in_ConfigFile )]" DisplayName="Config.xlsxファイルパス確定" sap:VirtualizedContainerService.HintSize="755,431" sap2010:WorkflowViewState.IdRef="If_9">
+      <If.Then>
+        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[”&quot;&quot;Config.xlsx&quot;&quot; パスの引数指定無し。デフォルト値を設定します。&quot;]" />
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[in_ConfigFile]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[System.IO.Directory.GetCurrentDirectory() + "\" + CONST_ConfigFileデフォルト]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[”&quot;&quot;Config.xlsx&quot;&quot; パスの引数指定あり。&quot;]" />
+      </If.Else>
+    </If>
+    <Sequence sap2010:Annotation.AnnotationText="Frameworkデフォルトの読み込み対象シートと，Config対象シートリスト.txt に定義したシートから，設定情報を取得します。" DisplayName="その他シートから設定情報を取得" sap:VirtualizedContainerService.HintSize="755,433" sap2010:WorkflowViewState.IdRef="Sequence_24">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="LOCAL_list_strConfigSheets_all" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -109,19 +133,19 @@
           <InArgument x:TypeArguments="s:String[]">[LOCAL_list_strConfigSheets_all.ToArray]</InArgument>
         </Assign.Value>
       </Assign>
-      <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_3" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[System.IO.Directory.GetCurrentDirectory() + &quot;\&quot; + CONST_ConfigFile]" in_xlsx_Sheets="[CONST_Array_strConfigSheets_default]" out_Dictionary="[out_Config]" />
+      <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_3" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[in_ConfigFile]" in_xlsx_Sheets="[CONST_Array_strConfigSheets_default]" out_Dictionary="[out_Config]" />
     </Sequence>
-    <Sequence DisplayName="シート「環境」から設定情報を取得" sap:VirtualizedContainerService.HintSize="438,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="シート「環境」から設定情報を取得" sap:VirtualizedContainerService.HintSize="755,1040" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" Name="LOCAL_環境_Config" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="340,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_4" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[System.IO.Directory.GetCurrentDirectory() + &quot;\&quot; + CONST_ConfigFile]" in_xlsx_Sheets="[{&quot;環境&quot;}]" out_Dictionary="[LOCAL_環境_Config]" />
+      <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="340,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_4" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[in_ConfigFile]" in_xlsx_Sheets="[{&quot;環境&quot;}]" out_Dictionary="[LOCAL_環境_Config]" />
       <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="340,886" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[LOCAL_環境_Config]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)">
@@ -198,17 +222,17 @@
         </ui:ForEach.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <TryCatch DisplayName="サーバー アセットの読み込みをトライ" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="サーバー アセットの読み込みをトライ" sap:VirtualizedContainerService.HintSize="755,1669" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
@@ -222,7 +246,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[assets]" DisplayName="範囲を読み込み (アセット)" sap:VirtualizedContainerService.HintSize="595,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Assets" WorkbookPath="[CONST_ConfigFile]" />
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[assets]" DisplayName="範囲を読み込み (アセット)" sap:VirtualizedContainerService.HintSize="595,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Assets" WorkbookPath="[in_ConfigFile]" />
           <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[assets]" DisplayName="繰り返し (各行)" sap:VirtualizedContainerService.HintSize="595,980" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
@@ -286,7 +310,7 @@
             </ui:ForEachRow.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -310,19 +334,19 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence sap2010:Annotation.AnnotationText="Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。" DisplayName="Config必須項目リストチェック" sap:VirtualizedContainerService.HintSize="438,138" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence sap2010:Annotation.AnnotationText="Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。" DisplayName="Config必須項目リストチェック" sap:VirtualizedContainerService.HintSize="755,923" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="LOCAL_intConfig必須キー無しカウント" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="LOCAL_list_strConfig必須項目" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="547,60" sap2010:WorkflowViewState.IdRef="Assign_26">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[LOCAL_intConfig必須キー無しカウント]</OutArgument>
         </Assign.To>
@@ -330,8 +354,8 @@
           <InArgument x:TypeArguments="x:Int32">0</InArgument>
         </Assign.Value>
       </Assign>
-      <勝:Text_to_StrList in_入力テキスト文字列="{x:Null}" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Text_to_StrList_4" in_コメントアウト行キー="#" in_入力テキストファイルパス="[System.IO.Directory.GetCurrentDirectory() + &quot;\&quot; + CONST_Config必須項目リスト_txt]" in_文字数ゼロ読み飛ばし="True" io_追加先文字列リスト="[LOCAL_list_strConfig必須項目]" />
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[LOCAL_list_strConfig必須項目]">
+      <勝:Text_to_StrList in_入力テキスト文字列="{x:Null}" sap:VirtualizedContainerService.HintSize="547,22" sap2010:WorkflowViewState.IdRef="Text_to_StrList_4" in_コメントアウト行キー="#" in_入力テキストファイルパス="[System.IO.Directory.GetCurrentDirectory() + &quot;\&quot; + CONST_Config必須項目リスト_txt]" in_文字数ゼロ読み飛ばし="True" io_追加先文字列リスト="[LOCAL_list_strConfig必須項目]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="547,194" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[LOCAL_list_strConfig必須項目]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
@@ -368,15 +392,15 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
-      <If Condition="[LOCAL_intConfig必須キー無しカウント =0]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_8">
+      <If Condition="[LOCAL_intConfig必須キー無しカウント =0]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="547,393" sap2010:WorkflowViewState.IdRef="If_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Else>
@@ -392,10 +416,10 @@
         </If.Else>
       </If>
     </Sequence>
-    <TryCatch DisplayName="「ログ_テキストv1」機能チェック" sap:VirtualizedContainerService.HintSize="438,1184" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="「ログ_テキストv1」機能チェック" sap:VirtualizedContainerService.HintSize="755,1184" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -456,13 +480,13 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence DisplayName="取得結果をログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="438,320" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence DisplayName="取得結果をログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="755,290" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Config.xlsx&quot;&quot; パス：” + System.IO.Directory.GetCurrentDirectory()+&quot;\&quot; + CONST_ConfigFile" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_7" in_Config="[out_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Config.xlsx&quot;&quot; パス：” + System.IO.Directory.GetCurrentDirectory()+&quot;\&quot; + CONST_ConfigFile]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+      <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Config.xlsx&quot;&quot; パス：” + in_ConfigFile" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_7" in_Config="[out_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Config.xlsx&quot;&quot; パス：” + in_ConfigFile]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
