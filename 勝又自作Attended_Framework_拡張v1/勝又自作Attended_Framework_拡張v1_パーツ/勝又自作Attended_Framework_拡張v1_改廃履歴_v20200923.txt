@@ -1,6 +1,6 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
-■2020/09/??	改良
+■2020/09/23	改良
 	・"Config.xlsx" のファイルパス（デフォルト値 "Data\Config.xlsx"）をロボットプロセス自体の引数 "in_ConfigFile" により指定できるように改修。
 	　これにより，一種類のロボットプロセスに対して，引数で複数の "Config.xlsx" を切り替え可能となった。
 	・"MainProcess.xaml：初期化"セクションのオプション機能を明確化し，デフォルトはオプション機能を実行しないシンプルプロセスバージョンにした。
