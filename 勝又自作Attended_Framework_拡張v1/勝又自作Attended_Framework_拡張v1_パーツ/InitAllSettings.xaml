@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>817,6609</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>859,7304</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetAllSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -69,7 +69,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="このワークフローにより、設定ファイル(Config.xlsx)を読み込んで，プロジェクトで使用されるキー/値ペア形式の設定ディクショナリー（out_Config）が出力されます。&#xA;設定はローカルの設定ファイルから読み取られ、次に Orchestrator のアセットから取得されます。&#xA;アセットは設定ファイルより優先されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;&#xA;・Config.xlsxのファイルパスは &quot;MainFramework.xaml&quot; にてロボットプロセス自体の引数 &quot;in_ConfigFile&quot; により指定可能です。&#xD;&#xA;　（デフォルト値は変数 &quot;CONST_ConfigFileデフォルト&quot; で固定値設定）&#xA;・Config.xlsxのシート「環境」はパス情報の環境依存解消機能として，&quot;%XXX%&quot;形式のキーワードを環境に応じた実際のフォルダパスに自動変換して設定ディクショナリーに出力します。&#xA;・Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。&#xA;・Frameworkデフォルトの読み込み対象シート以外に Config.xlsx の読み込み対象シート追加の際は，Config対象シートリスト.txt で対象シートを定義できます。" DisplayName="すべての設定を取得" sap:VirtualizedContainerService.HintSize="797,6509" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="このワークフローにより、設定ファイル(Config.xlsx)を読み込んで，プロジェクトで使用されるキー/値ペア形式の設定ディクショナリー（out_Config）が出力されます。&#xA;設定はローカルの設定ファイルから読み取られ、次に Orchestrator のアセットから取得されます。&#xA;アセットは設定ファイルより優先されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;&#xA;・Config.xlsxのファイルパスは &quot;MainFramework.xaml&quot; にてロボットプロセス自体の引数 &quot;in_ConfigFile&quot; により指定可能です。&#xD;&#xA;　また，ロボットプロセス自体の引数 &quot;in_ConfigFile&quot; に指定された文字列に対して以下のルールをサポートします。&#xD;&#xA;　　(1) 引数が未指定の場合のデフォルト値は &quot;Data\Config.xlsx&quot; です。（変数 &quot;CONST_ConfigFileデフォルト&quot; で固定値設定）&#xD;&#xA;　　(2) 指定された文字列は後述の＜フォルダパス環境依存解消機能＞をサポートし，&quot;%XXX%&quot;形式のキーワードを自動変換して処理します。&#xD;&#xA;・Config.xlsxのシート「環境」は後述の＜フォルダパス環境依存解消機能＞をサポートし，&quot;%XXX%&quot;形式のキーワードを自動変換して設定ディクショナリーに出力します。&#xA;・Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。&#xA;・Frameworkデフォルトの読み込み対象シート以外に Config.xlsx の読み込み対象シート追加の際は，Config対象シートリスト.txt で対象シートを定義できます。&#xD;&#xA;・＜フォルダパス環境依存解消機能＞&#xA;　フォルダが環境に依存する問題を解消する為，指定された文字列に含まれる&quot;%XXX%&quot;形式のキーワードを環境に応じた以下の実際のフォルダパスに自動変換します。&#xD;&#xA;　　　特殊ディレクトリ（Environment.SpecialFolder列挙体）：&#xD;&#xA;　　　　　%DesktopDirectory%&#xD;&#xA;　　　　　%MyDocuments%&#xD;&#xA;　　　　　%MyPictures%&#xD;&#xA;　　　　　%UserProfile%&#xD;&#xA;　　　実行時のカレントフォルダ&#xD;&#xA;　　　　　%GetCurrentDirectory%" DisplayName="すべての設定を取得" sap:VirtualizedContainerService.HintSize="839,7244" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;Settings&quot;,&quot;Constants&quot;}]" Name="CONST_Array_strConfigSheets_default" />
       <Variable x:TypeArguments="x:String" Default="勝又自作Attended_Framework_拡張v1_パーツ\Config必須項目リスト.txt" Name="CONST_Config必須項目リスト_txt" />
@@ -82,7 +82,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[String.IsNullOrWhiteSpace( in_ConfigFile )]" DisplayName="Config.xlsxファイルパス確定" sap:VirtualizedContainerService.HintSize="755,431" sap2010:WorkflowViewState.IdRef="If_9">
+    <If Condition="[String.IsNullOrWhiteSpace( in_ConfigFile )]" DisplayName="Config.xlsxファイルパス確定" sap:VirtualizedContainerService.HintSize="797,1031" sap2010:WorkflowViewState.IdRef="If_9">
       <If.Then>
         <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
@@ -102,10 +102,76 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[”&quot;&quot;Config.xlsx&quot;&quot; パスの引数指定あり。&quot;]" />
+        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,883" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="LOCAL_strValue" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[”&quot;&quot;Config.xlsx&quot;&quot; パスの引数指定あり。&quot;]" />
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[in_ConfigFile]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Replace&quot;%DesktopDirectory%&quot;" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue.Replace("%DesktopDirectory%", System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Replace&quot;%MyDocuments%&quot;" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue.Replace("%MyDocuments%", System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Replace&quot;%MyPictures%&quot;" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue.Replace("%MyPictures%", System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Replace&quot;%UserProfile%&quot;" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_42">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue.Replace("%UserProfile%", System.Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Replace&quot;%GetCurrentDirectory%&quot;" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_43">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[LOCAL_strValue]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue.Replace("%GetCurrentDirectory%", System.IO.Directory.GetCurrentDirectory())]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="キー/値ペアを追加" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_44">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[in_ConfigFile]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[LOCAL_strValue]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
       </If.Else>
     </If>
-    <Sequence sap2010:Annotation.AnnotationText="Frameworkデフォルトの読み込み対象シートと，Config対象シートリスト.txt に定義したシートから，設定情報を取得します。" DisplayName="その他シートから設定情報を取得" sap:VirtualizedContainerService.HintSize="755,433" sap2010:WorkflowViewState.IdRef="Sequence_24">
+    <Sequence sap2010:Annotation.AnnotationText="Frameworkデフォルトの読み込み対象シートと，Config対象シートリスト.txt に定義したシートから，設定情報を取得します。" DisplayName="その他シートから設定情報を取得" sap:VirtualizedContainerService.HintSize="797,433" sap2010:WorkflowViewState.IdRef="Sequence_24">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="LOCAL_list_strConfigSheets_all" />
       </Sequence.Variables>
@@ -135,7 +201,7 @@
       </Assign>
       <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_3" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[in_ConfigFile]" in_xlsx_Sheets="[CONST_Array_strConfigSheets_default]" out_Dictionary="[out_Config]" />
     </Sequence>
-    <Sequence DisplayName="シート「環境」から設定情報を取得" sap:VirtualizedContainerService.HintSize="755,1040" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="シート「環境」から設定情報を取得" sap:VirtualizedContainerService.HintSize="797,1040" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" Name="LOCAL_環境_Config" />
       </Sequence.Variables>
@@ -228,7 +294,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <TryCatch DisplayName="サーバー アセットの読み込みをトライ" sap:VirtualizedContainerService.HintSize="755,1669" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="サーバー アセットの読み込みをトライ" sap:VirtualizedContainerService.HintSize="797,1669" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -283,7 +349,7 @@
                     <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="511,308" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -334,7 +400,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence sap2010:Annotation.AnnotationText="Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。" DisplayName="Config必須項目リストチェック" sap:VirtualizedContainerService.HintSize="755,923" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence sap2010:Annotation.AnnotationText="Frameworkとして必須のConfig項目（Config必須項目リスト.txt）を読み込み，設定ディクショナリーと照合チェックします。" DisplayName="Config必須項目リストチェック" sap:VirtualizedContainerService.HintSize="797,923" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="LOCAL_intConfig必須キー無しカウント" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="LOCAL_list_strConfig必須項目" />
@@ -416,7 +482,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <TryCatch DisplayName="「ログ_テキストv1」機能チェック" sap:VirtualizedContainerService.HintSize="755,1184" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="「ログ_テキストv1」機能チェック" sap:VirtualizedContainerService.HintSize="797,1184" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -480,7 +546,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence DisplayName="取得結果をログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="755,290" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence DisplayName="取得結果をログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="797,290" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

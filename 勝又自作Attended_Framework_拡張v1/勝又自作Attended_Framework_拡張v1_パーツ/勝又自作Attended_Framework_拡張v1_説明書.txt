@@ -48,7 +48,9 @@
 　　　※"Config.xlsx"のファイルパスはロボットプロセス自体の引数で指定可能であり，
 　　　　一種類のロボットプロセスに対して，引数で複数の "Config.xlsx" を切り替え可能にしました。
 　　　　コマンドラインでの引数指定例：
-　　　　"C:\Program Files (x86)\UiPath\Studio\UiRobot.exe" execute -p Framework_テスト --input "{'in_ConfigFile' : 'D:\\RPAワーク\\Frameworkテスト\\Config.xlsx'}"
+　　　　　"C:\Program Files (x86)\UiPath\Studio\UiRobot.exe" execute -p Framework_テスト --input "{'in_ConfigFile' : 'C:\\Users\\XYZ\\Documents\\RPAワーク\\Frameworkテスト\\Config.xlsx'}"
+　　　　　または
+　　　　　"C:\Program Files (x86)\UiPath\Studio\UiRobot.exe" execute -p Framework_テスト --input "{'in_ConfigFile' : '%MyDocuments%\\RPAワーク\\Frameworkテスト\\Config.xlsx'}"
 ●＜ログ出力実装補助＞
 　・決まり文句（セクション通過メッセージ"XXXを開始します"などの数パターン）の文言をConfig定義できますので，
 　　出力メッセージ文言の統一に悩む必要がありません。（セクション名のCONST設定とアクティビティのコピー配置のみでＯＫ）
