@@ -1,7 +1,11 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2020/11/10	改良
+	・"MainProcess.xaml："終了処理"セクションにオプション機能＜Endタイムスタンプ出力＞を追加。
+	　勝又自作Attended_Framework_拡張v1_説明書.txt：オプション機能＜Endタイムスタンプ出力＞について追記。
+
 ■2020/10/28	改良
-　　・ロボットプロセス自体の引数 "in_ConfigFile" に＜フォルダパス環境依存解消機能＞として"%XXX%"形式のキーワードを指定可能に改修。
+	・"MainFramework.xaml"：ロボットプロセス自体の引数 "in_ConfigFile" に＜フォルダパス環境依存解消機能＞として"%XXX%"形式のキーワードを指定可能に改修。
 
 ■2020/09/23	改良
 	・"Config.xlsx" のファイルパス（デフォルト値 "Data\Config.xlsx"）をロボットプロセス自体の引数 "in_ConfigFile" により指定できるように改修。

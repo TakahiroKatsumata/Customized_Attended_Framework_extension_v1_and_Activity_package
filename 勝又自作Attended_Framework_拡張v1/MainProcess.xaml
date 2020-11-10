@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>746,1222</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>994,1394</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -64,7 +64,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] このファイルで他のプロセス固有のファイルがすべて呼び出されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様　　※&quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; も参照してください。&#xA;■このワークフロー（およびここから呼び出されるワークフロー）がUOCになります。&#xA;■＜ログ出力実装補助＞&#xA;　ログ出力を簡易に実装できるテンプレートを実装済みです。&#xA;　スコープが異なる共通変数名「LOCAL_CONST_strセクション名」の複数変数に，スコープに対応した各階層のセクション名を&#xA;　設定することで，セクション開始・終了メッセージに該当のセクション名が自動反映されます。&#xA;　　（スコープ違いで変数名をバッティングさせることで，適切なセクション名が出力される仕組み）&#xA;■&quot;主処理&quot;セクション内のエラーハンドリング制御のサンプル数パターン用意しています。【必要に応じて使用してください】&#xA;　&quot;主処理&quot;セクション内の発生エラーは変数ProcessExceptionに一時記憶し，&quot;Top&quot;セクションで終了処理を振り分け可能。&#xA;■&quot;初期化&quot;セクションで以下オプション機能を利用できます。【必要に応じて使用してください】&#xA;　　＜Windows資格情報マネージャーに登録＞＜Windows資格情報マネージャーから削除＞&#xA;　　＜資格情報の一括取得＞　※&quot;Credentials.xlsx&quot;にパスワードを指定することも可能。&#xA;　　＜パラメタ情報の一括取得＞&#xA;　　＜&quot;yyyyMMdd_HHmmss&quot;フォルダ生成＞" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1004,1214" sap2010:WorkflowViewState.IdRef="Flowchart_7">
+  <Flowchart sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] このファイルで他のプロセス固有のファイルがすべて呼び出されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様　　※&quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; も参照してください。&#xA;■このワークフロー（およびここから呼び出されるワークフロー）がUOCになります。&#xA;■＜ログ出力実装補助＞&#xA;　ログ出力を簡易に実装できるテンプレートを実装済みです。&#xA;　スコープが異なる共通変数名「LOCAL_CONST_strセクション名」の複数変数に，スコープに対応した各階層のセクション名を&#xA;　設定することで，セクション開始・終了メッセージに該当のセクション名が自動反映されます。&#xA;　　（スコープ違いで変数名をバッティングさせることで，適切なセクション名が出力される仕組み）&#xA;■&quot;主処理&quot;セクション内のエラーハンドリング制御のサンプル数パターン用意しています。【必要に応じて使用してください】&#xA;　&quot;主処理&quot;セクション内の発生エラーは変数ProcessExceptionに一時記憶し，&quot;Top&quot;セクションで終了処理を振り分け可能。&#xA;■&quot;初期化&quot;セクションで以下オプション機能を利用できます。【必要に応じて使用してください】&#xA;　　＜Windows資格情報マネージャーに登録＞＜Windows資格情報マネージャーから削除＞&#xA;　　＜資格情報の一括取得＞　※&quot;Credentials.xlsx&quot;にパスワードを指定することも可能。&#xA;　　＜パラメタ情報の一括取得＞&#xA;　　＜&quot;yyyyMMdd_HHmmss&quot;フォルダ生成＞&#xD;&#xA;■&quot;終了処理&quot;セクションで以下オプション機能を利用できます。【必要に応じて使用してください】&#xA;　　＜Endタイムスタンプ出力＞" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1004,1229" sap2010:WorkflowViewState.IdRef="Flowchart_7">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="MainProcess.xaml" Name="LOCAL_CONST_strセクション名" />
       <Variable x:TypeArguments="s:Exception" Name="ProcessException" />
@@ -86,14 +86,14 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID26</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID19" sap2010:Annotation.AnnotationText="先行のエラーはProcessExceptionに記憶されています。&#xA;テンプレートの構造をカスタマイズする際は，ProcessExceptionのリセット（NULL）が必要なケースがあるかもしれません。" Condition="[ProcessException is Nothing]" DisplayName="Exception is Nothing" sap:VirtualizedContainerService.HintSize="115,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
+    <FlowDecision x:Name="__ReferenceID19" sap2010:Annotation.AnnotationText="先行のエラーはProcessExceptionに記憶されています。&#xA;テンプレートの構造をカスタマイズする際は，ProcessExceptionのリセット（NULL）が必要なケースがあるかもしれません。" Condition="[ProcessException is Nothing]" DisplayName="Exception is Nothing" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">412,486.5</av:Point>
-          <av:Size x:Key="ShapeSize">115,87</av:Size>
+          <av:Size x:Key="ShapeSize">116,87</av:Size>
           <av:PointCollection x:Key="FalseConnector">527,530 664.5,530 664.5,566.5</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">412,530 190,530 190,696</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">412,530 190,530 190,646</av:PointCollection>
           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -101,12 +101,12 @@
         <FlowStep x:Name="__ReferenceID3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">90,696</av:Point>
-              <av:Size x:Key="ShapeSize">200,128</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">190,824 190,859</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">90,646</av:Point>
+              <av:Size x:Key="ShapeSize">200,168</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">190,814 190,859</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 出力データを書き込み、アプリケーションを閉じ、メールを送信します。" DisplayName="終了処理" sap:VirtualizedContainerService.HintSize="200,128" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 出力データを書き込み、アプリケーションを閉じ、メールを送信します。&#xD;&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるオプション機能を組み込んでいます。" DisplayName="終了処理" sap:VirtualizedContainerService.HintSize="242,456" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：終了処理" Name="LOCAL_CONST_strセクション名" />
             </Sequence.Variables>
@@ -118,6 +118,30 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_101" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+            <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】&#xA;Endタイムスタンプファイル&quot;EndTimeStamp_yyyyMMdd_HHmmss&quot;の出力" DisplayName="＜Endタイムスタンプ出力＞" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_61">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力します。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_142" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力します。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </勝:ログ_テキストv1>
+              <ui:AppendLine DisplayName="文字列を追加書き込み" Encoding="Shift-JIS" FileName="[io_Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\EndTimeStamp_&quot; + DateTime.Now.ToString(&quot;yyyyMMdd_HHmmss&quot;) + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="This is the end timestamp file." />
+              <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力しました。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_143" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力しました。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </勝:ログ_テキストv1>
+            </Sequence>
             <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_102" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
           </Sequence>
           <FlowStep.Next>
@@ -134,35 +158,60 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[ProcessException.GetType.Name.Equals(&quot;BusinessRuleException&quot;)]" DisplayName="BusinessRuleException" sap:VirtualizedContainerService.HintSize="125,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+        <FlowDecision x:Name="__ReferenceID1" Condition="[ProcessException.GetType.Name.Equals(&quot;BusinessRuleException&quot;)]" DisplayName="BusinessRuleException" sap:VirtualizedContainerService.HintSize="126,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">602,566.5</av:Point>
-              <av:Size x:Key="ShapeSize">125,87</av:Size>
-              <av:PointCollection x:Key="FalseConnector">727,610 780,610 780,697</av:PointCollection>
-              <av:PointCollection x:Key="TrueConnector">602,610 550,610 550,697</av:PointCollection>
+              <av:Size x:Key="ShapeSize">126,87</av:Size>
+              <av:PointCollection x:Key="FalseConnector">728,610 780,610 780,677</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">602,610 550,610 550,677</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
             <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">450,697</av:Point>
-                  <av:Size x:Key="ShapeSize">200,68</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">550,765 550,795 660,795 660,859</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">450,677</av:Point>
+                  <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">550,800 550,830 660,830 660,859</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="終了処理（ビズ例外時）" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence sap2010:Annotation.AnnotationText="＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるオプション機能を組み込んでいます。" DisplayName="終了処理（ビズ例外時）" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：終了処理（ビズ例外時）" Name="LOCAL_CONST_strセクション名" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_104" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】&#xA;BzErrEndタイムスタンプファイル&quot;EndTimeStamp_BzErr_yyyyMMdd_HHmmss&quot;の出力" DisplayName="＜BzErrEndタイムスタンプ出力＞" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力します。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_144" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力します。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                  <ui:AppendLine DisplayName="文字列を追加書き込み" Encoding="Shift-JIS" FileName="[io_Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\EndTimeStamp_BzErr_&quot; + DateTime.Now.ToString(&quot;yyyyMMdd_HHmmss&quot;) + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="This is the end timestamp file." />
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力しました。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_145" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力しました。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                </Sequence>
                 <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_105" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
               </Sequence>
               <FlowStep.Next>
@@ -200,21 +249,46 @@
             <FlowStep x:Name="__ReferenceID5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">680,697</av:Point>
-                  <av:Size x:Key="ShapeSize">200,68</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">780,765 780,795 660,795 660,859</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">680,677</av:Point>
+                  <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">780,800 780,830 660,830 660,859</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="終了処理（エラー時）" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence sap2010:Annotation.AnnotationText="＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるオプション機能を組み込んでいます。" DisplayName="終了処理（エラー時）" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：終了処理（エラー時）" Name="LOCAL_CONST_strセクション名" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_107" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】&#xA;ApErrEndタイムスタンプファイル&quot;EndTimeStamp_ApErr_yyyyMMdd_HHmmss&quot;の出力" DisplayName="＜ApErrEndタイムスタンプ出力＞" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力します。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_146" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力します。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                  <ui:AppendLine DisplayName="文字列を追加書き込み" Encoding="Shift-JIS" FileName="[io_Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\EndTimeStamp_ApErr_&quot; + DateTime.Now.ToString(&quot;yyyyMMdd_HHmmss&quot;) + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="This is the end timestamp file." />
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”Endタイムスタンプ出力しました。”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_147" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”Endタイムスタンプ出力しました。”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                </Sequence>
                 <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_108" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
               </Sequence>
               <FlowStep.Next>
@@ -232,10 +306,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">370,72</av:Point>
-          <av:Size x:Key="ShapeSize">200,176</av:Size>
+          <av:Size x:Key="ShapeSize">200,168</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 入力データを初期化してアプリケーションを開きます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるオプション機能を組み込んでいます。" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="200,176" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 入力データを初期化してアプリケーションを開きます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるオプション機能を組み込んでいます。" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Sequence_15">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：初期化" Name="LOCAL_CONST_strセクション名" />
         </Sequence.Variables>
@@ -532,11 +606,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">370,280</av:Point>
-          <av:Size x:Key="ShapeSize">200,160</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">470,440 470,470 469.5,470 469.5,486.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,153</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">470,433 470,463 469.5,463 469.5,486.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 実際の処理の全体的な括りです。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるエラーハンドリング制御のサンプル数パターンを組み込んでいます。" DisplayName="主処理" sap:VirtualizedContainerService.HintSize="200,160" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+      <TryCatch sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 実際の処理の全体的な括りです。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;必要に応じて使用できるエラーハンドリング制御のサンプル数パターンを組み込んでいます。" DisplayName="主処理" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="TryCatch_16">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：主処理" Name="LOCAL_CONST_strセクション名" />
         </TryCatch.Variables>
@@ -1234,11 +1308,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">90,73.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,160</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">190,233.5 190,282</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,153</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">190,226.5 190,282</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 入力データを初期化してアプリケーションを開きます。&#xD;&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xD;&#xA;シンプルプロセスバージョン" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="200,160" sap2010:WorkflowViewState.IdRef="Sequence_60">
+          <Sequence sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 入力データを初期化してアプリケーションを開きます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;シンプルプロセスバージョン" DisplayName="初期化" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="Sequence_60">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：初期化" Name="LOCAL_CONST_strセクション名" />
             </Sequence.Variables>
@@ -1257,11 +1331,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">90,282</av:Point>
-                  <av:Size x:Key="ShapeSize">200,128</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">190,410 190,696</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">190,405 190,646</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Flowchart sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 実際の処理の全体的な括りです。&#xD;&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xD;&#xA;シンプルプロセスバージョン" DisplayName="主処理" sap:VirtualizedContainerService.HintSize="200,128" sap2010:WorkflowViewState.IdRef="Flowchart_9">
+              <Flowchart sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] 実際の処理の全体的な括りです。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;シンプルプロセスバージョン" DisplayName="主処理" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Flowchart_9">
                 <Flowchart.Variables>
                   <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：主処理" Name="LOCAL_CONST_strセクション名" />
                 </Flowchart.Variables>

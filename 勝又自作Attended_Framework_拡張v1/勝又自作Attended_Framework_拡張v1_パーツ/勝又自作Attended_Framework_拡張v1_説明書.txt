@@ -73,6 +73,8 @@
 ●＜"yyyyMMdd_HHmmss"フォルダ生成＞　　　　　　【"MainProcess.xaml：初期化"セクションのオプション機能を必要に応じて使用してください】
 　プロセス実行毎アウトプット用の"yyyyMMdd_HHmmss"フォルダを生成します。
 　　※"yyyyMMdd_HHmmss"にはプロセススタート時間をio_Config("スタートDateTime")に記録したものを反映。
+●＜Endタイムスタンプ出力＞　　　　　　　　　【"MainProcess.xaml：終了処理"セクションのオプション機能を必要に応じて使用してください】
+　Endタイムスタンプファイル"EndTimeStamp_yyyyMMdd_HHmmss"を出力します。
 ●＜[勝又自作アクティビティパック]使用例＞
 　"勝又自作アクティビティ使用例_vNNNNNNNN.xaml"にて各アクティビティの使用例を説明しています。
 
