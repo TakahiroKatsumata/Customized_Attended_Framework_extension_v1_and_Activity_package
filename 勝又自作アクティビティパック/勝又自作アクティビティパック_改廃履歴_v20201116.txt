@@ -9,8 +9,11 @@
 [勝又自作Attended_Framework_拡張v1]の "勝又自作アクティビティ使用例_vNNNNNNNN.xaml" を見た方が早いです。
 
 
+■2020/11/16	以下の部品を追加
+	SpecialFolderPathGetAndReplace.xaml
+
 ■2020/05/25	以下の部品を追加
-	Cast辞書Value_GV_Str
+	Cast辞書Value_GV_Str.xaml
 
 ■2020/05/25	以下の部品を追加
 	Text_to_StrList.xaml

@@ -1,5 +1,20 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2020/11/16	改良
+	・勝又自作アクティビティパックに以下の新アクティビティを追加。
+	　　"SpecialFolderPathGetAndReplace"
+	　　入力パス文字列中の該当キーワード部分を環境に応じた特殊ディレクトリ(マイドキュメント，デスクトップ，等)のパス文字列にReplaceするアクティビティです。
+	・依存関係のライブラリパッケージのバージョンアップ
+	　　バージョンアップ前：勝又自作アクティビティパック.1.0.41
+	　　バージョンアップ後：勝又自作アクティビティパック.1.0.44
+	・"勝又自作アクティビティ使用例_v20201116.xaml"　（更新）
+	　　「"SpecialFolderPathGetAndReplace" 使用例」を追加。
+	・"InitAllSettings.xaml"　（修正）
+	　　内部ロジックの最適化のみ。＜フォルダパス環境依存解消機能＞の実装を "SpecialFolderPathGetAndReplace" アクティビティを使用するように内部処理変更。
+	・"UOCワークフローの例.xaml"　（追加）
+	・"MainProcess.xaml"　（修正）
+	　　主処理セクションにて，ループ中でUOCワークフローを呼び出すサンプル処理を実装。
+
 ■2020/11/10	改良
 	・"MainProcess.xaml："終了処理"セクションにオプション機能＜Endタイムスタンプ出力＞を追加。
 	　勝又自作Attended_Framework_拡張v1_説明書.txt：オプション機能＜Endタイムスタンプ出力＞について追記。

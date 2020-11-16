@@ -875,7 +875,7 @@
           "lib/net452/UiPath.Vision.dll": {}
         }
       },
-      "勝又自作アクティビティパック/1.0.41": {
+      "勝又自作アクティビティパック/1.0.44": {
         "type": "package",
         "dependencies": {
           "UiPath.Credentials.Activities": "1.1.6479.13204",
@@ -887,7 +887,16 @@
           "lib/net45/_._": {}
         },
         "runtime": {
-          "lib/net45/勝又自作アクティビティパック.dll": {}
+          "lib/net45/勝又自作アクティビティパック.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_11040441.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_12407180.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_34926995.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_369090.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_51759670.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_54652007.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_57032702.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_60810749.dll": {},
+          "lib/net45/勝又自作アクティビティパック_Expressions_65266939.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -1708,24 +1717,32 @@
         "uipath.vision.nuspec"
       ]
     },
-    "勝又自作アクティビティパック/1.0.41": {
-      "sha512": "f8IaThvBGCKGRp8VdOOzvSs+dSnNAFvyuEQN6qg8nWabp3DO3E+tamyt+oeEWyzPpaHxvbtZG4YRweBRM1vrvQ==",
+    "勝又自作アクティビティパック/1.0.44": {
+      "sha512": "LpmC3JN9ZP/SgAB2Wpqxb+IFKJjMo9Uxo7gsZZXOXHTi8oouEGSkPejFmMNvlDyx/aQYP3Gz4ySZKwvzz5lcMw==",
       "type": "package",
-      "path": "勝又自作アクティビティパック/1.0.41",
+      "path": "勝又自作アクティビティパック/1.0.44",
       "files": [
         ".nupkg.metadata",
         "contentFiles/any/any/.objects/.metadata",
         "contentFiles/any/any/.objects/.type",
-        "lib/net45/.objects/.metadata",
-        "lib/net45/.objects/.type",
         "lib/net45/.settings/Release/settings-1a5b880a.json",
         "lib/net45/.settings/Release/settings-5190454b.json",
         "lib/net45/.settings/Release/settings-590bb27b.json",
         "lib/net45/.settings/Release/settings-9e9290da.json",
+        "lib/net45/.tmh/config.json",
         "lib/net45/project.json",
         "lib/net45/勝又自作アクティビティパック.dll",
-        "lib/net45/勝又自作アクティビティパック_改廃履歴_v20200531.txt",
-        "勝又自作アクティビティパック.1.0.41.nupkg.sha512",
+        "lib/net45/勝又自作アクティビティパック_Expressions_11040441.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_12407180.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_34926995.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_369090.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_51759670.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_54652007.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_57032702.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_60810749.dll",
+        "lib/net45/勝又自作アクティビティパック_Expressions_65266939.dll",
+        "lib/net45/勝又自作アクティビティパック_改廃履歴_v20201116.txt",
+        "勝又自作アクティビティパック.1.0.44.nupkg.sha512",
         "勝又自作アクティビティパック.nuspec"
       ]
     }
@@ -1740,7 +1757,7 @@
       "UiPath.Mail.Activities >= 1.7.2 <= 1.7.2",
       "UiPath.System.Activities >= 19.10.1 <= 19.10.1",
       "UiPath.UIAutomation.Activities >= 19.11.1 <= 19.11.1",
-      "勝又自作アクティビティパック >= 1.0.41 <= 1.0.41"
+      "勝又自作アクティビティパック >= 1.0.44 <= 1.0.44"
     ]
   },
   "packageFolders": {
@@ -1795,7 +1812,7 @@
           "勝又自作アクティビティパック": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.41, 1.0.41]"
+            "version": "[1.0.44, 1.0.44]"
           }
         }
       }

@@ -149,7 +149,7 @@
     {
       "Package": {
         "Id": "勝又自作アクティビティパック",
-        "Version": "1.0.41"
+        "Version": "1.0.44"
       },
       "Assemblies": [
         "C:\\Users\\Katsumata\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
@@ -215,9 +215,18 @@
         "C:\\Users\\Katsumata\\.nuget\\packages\\uipath.vision/2.0.0\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
         "C:\\Users\\Katsumata\\.nuget\\packages\\uipath.vision/2.0.0\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Katsumata\\.nuget\\packages\\uipath.vision/2.0.0\\lib/net452/UiPath.Vision.dll",
-        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.41\\lib/net45/勝又自作アクティビティパック.dll"
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_11040441.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_12407180.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_34926995.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_369090.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_51759670.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_54652007.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_57032702.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_60810749.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック/1.0.44\\lib/net45/勝又自作アクティビティパック_Expressions_65266939.dll"
       ],
-      "Path": "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.41"
+      "Path": "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44"
     }
   ],
   "Conflicts": [],
@@ -477,7 +486,7 @@
     },
     "勝又自作アクティビティパック": {
       "Id": "勝又自作アクティビティパック",
-      "Version": "1.0.41",
+      "Version": "1.0.44",
       "Dependencies": [
         {
           "Item1": "UiPath.Credentials.Activities",
@@ -822,12 +831,21 @@
     {
       "Package": {
         "Id": "勝又自作アクティビティパック",
-        "Version": "1.0.41"
+        "Version": "1.0.44"
       },
       "Assemblies": [
-        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.41\\lib\\net45\\勝又自作アクティビティパック.dll"
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_11040441.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_12407180.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_34926995.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_369090.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_51759670.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_54652007.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_57032702.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_60810749.dll",
+        "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44\\lib\\net45\\勝又自作アクティビティパック_Expressions_65266939.dll"
       ],
-      "Path": "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.41"
+      "Path": "C:\\Users\\Katsumata\\.nuget\\packages\\勝又自作アクティビティパック\\1.0.44"
     }
   ]
 }

@@ -1,0 +1,127 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SpecialFolderPathGetAndReplace" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Replace前文字列を指定します。&#xA;以下の&quot;%XXX%&quot;形式キーワードを含むことができます。&#xA;特殊ディレクトリ(Environment.SpecialFolder列挙体)：&#xA;　　%DesktopDirectory%&#xA;　　%MyDocuments%&#xA;　　%MyPictures%&#xA;　　%UserProfile%&#xA;実行時のカレントフォルダ：&#xA;　　%GetCurrentDirectory%" Name="i_strReplace前パス" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property sap2010:Annotation.AnnotationText="Replace結果文字列を出力します。" Name="o_strReplace後パス" Type="OutArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property sap2010:Annotation.AnnotationText="カレントフォルダパスを指定してください。&#xA;（アクティビティ内ではカレントフォルダパスを取得できないため）&#xA;カレントフォルダパスは以下の記述で指定できます。&#xA;System.IO.Directory.GetCurrentDirectory()" Name="i_strカレントフォルダパス" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>917,1139</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="入力パス文字列中の該当キーワード部分を環境に応じた特殊ディレクトリ(マイドキュメント，デスクトップ，等)のパス文字列にReplaceするアクティビティです。&#xA;&#xA;以下の&quot;%XXX%&quot;形式キーワードの特殊ディレクトリに対応しています。&#xA;特殊ディレクトリ(Environment.SpecialFolder列挙体)：&#xA;　　%DesktopDirectory%&#xA;　　%MyDocuments%&#xA;　　%MyPictures%&#xA;　　%UserProfile%&#xA;実行時のカレントフォルダ：&#xA;　　%GetCurrentDirectory%" DisplayName="SpecialFolderPathGetAndReplace" sap:VirtualizedContainerService.HintSize="304,974" sap2010:WorkflowViewState.IdRef="Sequence_84">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strワーク" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign DisplayName="入力値セット" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[i_strReplace前パス]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Replace&quot;%DesktopDirectory%&quot;" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strワーク.Replace("%DesktopDirectory%", System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Replace&quot;%MyDocuments%&quot;" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strワーク.Replace("%MyDocuments%", System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Replace&quot;%MyPictures%&quot;" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strワーク.Replace("%MyPictures%", System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Replace&quot;%UserProfile%&quot;" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[strワーク.Replace("%UserProfile%", System.Environment.GetFolderPath( Environment.SpecialFolder.UserProfile)  )]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Replace&quot;%GetCurrentDirectory%&quot;" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[strワーク.Replace("%GetCurrentDirectory%",  i_strカレントフォルダパス )]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="出力値セット" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[o_strReplace後パス]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[strワーク]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>

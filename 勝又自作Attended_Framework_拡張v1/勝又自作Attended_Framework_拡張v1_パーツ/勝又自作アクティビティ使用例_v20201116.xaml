@@ -5,10 +5,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>874,1332</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>866,1332</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>自作アクティビティ使用例_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="25">
+    <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -34,10 +34,11 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Net</x:String>
+      <x:String>勝又自作アクティビティパック</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -57,6 +58,16 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_18827900</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_21479776</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_24685292</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_11796440</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_14105196</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_56743965</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_65741883</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_58376831</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_66830726</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -64,7 +75,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="＜掲載情報一覧＞&#xA;勝又自作アクティビティパック：&#xA;　①&quot;ログ_テキストv1&quot; 使い方&#xA;　②&quot;TakeScreenshot&quot; 使用例&#xA;　③&quot;Str_to_SecureStr&quot; 使用例&#xA;　④&quot;GetAppCredentials&quot; 使用例&#xA;　⑤&quot;ConvertToLetter&quot; 使用例&#xA;　⑥&quot;Excel2列辞書化&quot; 使用例&#xA;　⑦&quot;Cast辞書Value_GV_Str&quot; 使用例&#xA;　※&quot;Text_to_StrList&quot; は使用例を準備していません。&#xA;既成のアクティビティや.NETメソッド等の使用例：&#xA;　⑪特殊フォルダパス取得（.NET）&#xD;&#xA;　⑫Windows資格情報マネージャーに登録（UiPath.Credentials.Activities）&#xA;" DisplayName="自作アクティビティ使用例" sap:VirtualizedContainerService.HintSize="764,1167" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="＜掲載情報一覧＞&#xA;勝又自作アクティビティパック：&#xA;　①&quot;ログ_テキストv1&quot; 使い方&#xA;　②&quot;TakeScreenshot&quot; 使用例&#xA;　③&quot;Str_to_SecureStr&quot; 使用例&#xA;　④&quot;GetAppCredentials&quot; 使用例&#xA;　⑤&quot;ConvertToLetter&quot; 使用例&#xA;　⑥&quot;Excel2列辞書化&quot; 使用例&#xA;　⑦&quot;Cast辞書Value_GV_Str&quot; 使用例&#xA;　⑧&quot;SpecialFolderPathGetAndReplace&quot; 使用例&#xA;　※&quot;Text_to_StrList&quot; は使用例を準備していません。&#xA;既成のアクティビティや.NETメソッド等の使用例：&#xA;　⑪Windows資格情報マネージャーに登録（UiPath.Credentials.Activities）&#xA;" DisplayName="自作アクティビティ使用例" sap:VirtualizedContainerService.HintSize="764,1167" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strワーク" />
       <Variable x:TypeArguments="ss:SecureString" Name="securestrワーク" />
@@ -74,14 +85,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">300,0</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">330,75 330,586 100,586 100,616</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">330,75 330,105 100,105 100,481</av:PointCollection>
         <x:Double x:Key="Width">730</x:Double>
         <x:Double x:Key="Height">909</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -173,21 +184,6 @@
         <勝:Excel2列辞書化 sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_2" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[System.IO.Directory.GetCurrentDirectory() + &quot;\Data\Config.xlsx&quot;]" in_xlsx_Sheets="[{&quot;Settings&quot;}]" out_Dictionary="[テスト辞書]" />
         <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[テスト辞書(&quot;logF_BusinessProcessName&quot;)]" />
       </Sequence>
-    </FlowStep>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">0,483.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,93</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="特殊フォルダパスを取得するメソッド使用例(デスクトップの例)です。" DisplayName="⑪特殊フォルダパス取得" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:MessageBox>
     </FlowStep>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -563,14 +559,14 @@
         <x:Reference>__ReferenceID4</x:Reference>
       </Flowchart>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID7">
+    <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">0,616</av:Point>
+          <av:Point x:Key="ShapeLocation">0,686</av:Point>
           <av:Size x:Key="ShapeSize">200,168</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart sap2010:Annotation.AnnotationText="&quot;Add credential&quot; アクティビティのCredentialTypeプロパティによって，「汎用資格情報」の登録，または「Windows資格情報」の登録を切り替えます。&#xD;&#xA;「Windows資格情報」はアクティビティで削除できません。" DisplayName="⑫Windows資格情報マネージャーに登録" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+      <Flowchart sap2010:Annotation.AnnotationText="&quot;Add credential&quot; アクティビティのCredentialTypeプロパティによって，「汎用資格情報」の登録，または「Windows資格情報」の登録を切り替えます。&#xA;「Windows資格情報」はアクティビティで削除できません。" DisplayName="⑪Windows資格情報マネージャーに登録" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Flowchart_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -591,18 +587,10 @@
               <av:Size x:Key="ShapeSize">200,183</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="「Windows資格情報」の登録，削除の実行例です。&#xD;&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;DomainPassword&quot;に指定することで「Windows資格情報」に登録）" DisplayName="&quot;Windows資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence sap2010:Annotation.AnnotationText="「Windows資格情報」の登録，削除の実行例です。&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;DomainPassword&quot;に指定することで「Windows資格情報」に登録）" DisplayName="&quot;Windows資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="LOCAL_testCredential">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">UiPath_Frameworkサンプルプロセス.jp</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="LOCAL_testUsername">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">global\UiPathTestID2</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="UiPath_Frameworkサンプルプロセス.jp" Name="LOCAL_testCredential" />
+              <Variable x:TypeArguments="x:String" Default="global\UiPathTestID2" Name="LOCAL_testUsername" />
               <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
               <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
             </Sequence.Variables>
@@ -614,7 +602,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:AddCredential CredentialType="DomainPassword" DisplayName="Add credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddCredential_1" Password="[LOCAL_testPassword]" PersistanceType="Enterprise" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" Username="[LOCAL_testUsername]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「Windows資格情報」の登録を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;「Windows資格情報」はアクティビティで削除できませんので，&quot; + vbNewLine _&#xD;&#xA;+ &quot;削除は資格情報マネージャーから実施してください。&quot;]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xA;+ &quot;以下の「Windows資格情報」の登録を実行しました。&quot; + vbNewLine _&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xA;+ LOCAL_Result.ToString + vbNewLine + vbNewLine _&#xA;+ &quot;「Windows資格情報」はアクティビティで削除できませんので，&quot; + vbNewLine _&#xA;+ &quot;削除は資格情報マネージャーから実施してください。&quot;]" />
           </Sequence>
         </FlowStep>
         <FlowStep x:Name="__ReferenceID6">
@@ -624,18 +612,10 @@
               <av:Size x:Key="ShapeSize">200,168</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="「汎用資格情報」の登録，削除の実行例です。&#xD;&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;Generic&quot;に指定することで「汎用資格情報」に登録）" DisplayName="&quot;汎用資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence sap2010:Annotation.AnnotationText="「汎用資格情報」の登録，削除の実行例です。&#xA;（&quot;Add credential&quot; のCredentialTypeプロパティを&quot;Generic&quot;に指定することで「汎用資格情報」に登録）" DisplayName="&quot;汎用資格情報&quot;の例" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="LOCAL_testCredential">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">UiPath_Frameworkサンプルプロセス.com</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="LOCAL_testUsername">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">global\UiPathTestID</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="UiPath_Frameworkサンプルプロセス.com" Name="LOCAL_testCredential" />
+              <Variable x:TypeArguments="x:String" Default="global\UiPathTestID" Name="LOCAL_testUsername" />
               <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
               <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
             </Sequence.Variables>
@@ -647,11 +627,117 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:AddCredential CredentialType="Generic" DisplayName="Add credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddCredential_3" Password="[LOCAL_testPassword]" PersistanceType="Enterprise" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" Username="[LOCAL_testUsername]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「汎用資格情報」の登録を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xA;+ &quot;以下の「汎用資格情報」の登録を実行しました。&quot; + vbNewLine _&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xA;+ LOCAL_Result.ToString]" />
             <ui:DeleteCredential DisplayName="Delete credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_3" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;&quot;&quot;Delete credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xD;&#xA;+ &quot;以下の「汎用資格情報」の削除を実行しました。&quot; + vbNewLine _&#xD;&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xD;&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xD;&#xA;+ LOCAL_Result.ToString]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;&quot;&quot;Delete credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xA;+ &quot;以下の「汎用資格情報」の削除を実行しました。&quot; + vbNewLine _&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xA;+ LOCAL_Result.ToString]" />
           </Sequence>
         </FlowStep>
+      </Flowchart>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,481</av:Point>
+          <av:Size x:Key="ShapeSize">200,138</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart sap2010:Annotation.AnnotationText="入力パス文字列中の該当キーワード部分を環境に応じた特殊ディレクトリ(マイドキュメント，デスクトップ，等)のパス文字列にReplaceするアクティビティです。" DisplayName="⑧&quot;SpecialFolderPathGetAndReplace&quot; 使用例" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">0,0</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">30,75 30,163 70,163</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Flowchart.StartNode>
+          <x:Reference>__ReferenceID9</x:Reference>
+        </Flowchart.StartNode>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">360,179</av:Point>
+              <av:Size x:Key="ShapeSize">200,93</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="特殊フォルダパスを取得する.NETメソッド例" DisplayName="参考" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+        </FlowStep>
+        <FlowStep x:Name="__ReferenceID7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">100,221</av:Point>
+              <av:Size x:Key="ShapeSize">200,258</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">200,479 200,509</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap2010:Annotation.AnnotationText="以下の&quot;%XXX%&quot;形式キーワードの特殊ディレクトリに対応しています。&#xA;特殊ディレクトリ(Environment.SpecialFolder列挙体)：&#xA;　　%DesktopDirectory%&#xA;　　%MyDocuments%&#xA;　　%MyPictures%&#xA;　　%UserProfile%&#xA;実行時のカレントフォルダ：&#xA;　　%GetCurrentDirectory%" DisplayName="アクティビティ実行例" sap:VirtualizedContainerService.HintSize="200,258" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <勝:SpecialFolderPathGetAndReplace sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SpecialFolderPathGetAndReplace_1" i_strReplace前パス="[strワーク]" i_strカレントフォルダパス="[System.IO.Directory.GetCurrentDirectory()]" o_strReplace後パス="[strワーク]" />
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">100,509</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[strワーク]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+        <FlowStep x:Name="__ReferenceID9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">70,131</av:Point>
+              <av:Size x:Key="ShapeSize">262,64</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">201,195 200,195 200,221</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="Assign_17">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strワーク]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["%DesktopDirectory%\abc" + vbNewLine + _
+"%MyDocuments%\abc" + vbNewLine + _
+"%MyPictures%\abc" + vbNewLine + _
+"%UserProfile%\abc" + vbNewLine + _
+"%GetCurrentDirectory%\abc"]</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID7</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
+        <x:Reference>__ReferenceID8</x:Reference>
       </Flowchart>
     </FlowStep>
   </Flowchart>

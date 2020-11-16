@@ -10,9 +10,10 @@
     "UiPath.Mail.Activities": "1.7.2",
     "UiPath.System.Activities": "19.10.1",
     "UiPath.UIAutomation.Activities": "19.11.1",
-    "勝又自作アクティビティパック": "[1.0.41]"
+    "勝又自作アクティビティパック": "[1.0.44]"
   },
   "webServices": [],
+  "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.10.4.0",
   "projectVersion": "1.0.1000",
@@ -25,7 +26,9 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -34,7 +37,11 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
   "arguments": {
     "input": [
@@ -47,5 +54,16 @@
     ],
     "output": []
   },
-  "expressionLanguage": "VisualBasic"
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "勝又自作Attended_Framework_拡張v1_パーツ\\MainFramework.xaml",
+      "uniqueId": "880ddfc5-bb37-4de1-96bf-ffa9c735fa70",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
 }
