@@ -10,10 +10,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>694,853</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>858,933</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="22">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +36,19 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>勝又自作アクティビティパック</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,6 +73,19 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_34926995</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_11040441</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_369090</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_12407180</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_60810749</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_51759670</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_65266939</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_54652007</AssemblyReference>
+      <AssemblyReference>勝又自作アクティビティパック_Expressions_57032702</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -72,7 +94,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="REFrameWork for Attended Robot は REFrameWork に基づいており、シンプルで繰り返しのないプロセス向けのフレームワークです。&#xA;REFrameWork と互換性があり、コンポーネント、ログ フィールド、およびメッセージを再利用できます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;・本ワークフロー(MainFramework.xaml)がプロジェクト&quot;main&quot;になります（ロボットプロセス実行時に最初に起動）。&#xA;・本フレームワーク（勝又自作Attended_Framework_拡張v1）の説明は&#xA;　「勝又自作Attended_Framework_拡張v1_説明書.txt」を参照ください。" DisplayName="MainFramework" sap:VirtualizedContainerService.HintSize="674,753" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="REFrameWork for Attended Robot は REFrameWork に基づいており、シンプルで繰り返しのないプロセス向けのフレームワークです。&#xA;REFrameWork と互換性があり、コンポーネント、ログ フィールド、およびメッセージを再利用できます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;・本ワークフロー(MainFramework.xaml)がプロジェクト&quot;main&quot;になります（ロボットプロセス実行時に最初に起動）。&#xA;・本フレームワーク（勝又自作Attended_Framework_拡張v1）の説明は&#xA;　「勝又自作Attended_Framework_拡張v1_説明書.txt」を参照ください。" DisplayName="MainFramework" sap:VirtualizedContainerService.HintSize="634,768" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="[Environment.UserDomainName+&quot;\&quot;+ Environment.UserName+&quot;_&quot;+Environment.MachineName+&quot;_&quot;+Now.ToString(&quot;yyyy/MM/dd_HH:mm:ss.fff&quot;)]" Name="TransactionID" />
       <Variable x:TypeArguments="s:Exception" Name="ProcessException" />
@@ -86,7 +108,6 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">60,37.5 90,37.5 90,40 99,40</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        <x:Double x:Key="Width">640</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -95,206 +116,695 @@
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">420,347</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:Point x:Key="ShapeLocation">340,314.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,82</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="最終処理" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_39">
+      <If sap2010:Annotation.AnnotationText="実行結果の評価" Condition="[ProcessException is Nothing]" DisplayName="最終処理" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[ProcessException is Nothing]" DisplayName="実行結果が成功の場合" sap:VirtualizedContainerService.HintSize="1401,1709" sap2010:WorkflowViewState.IdRef="If_14">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <If.Then>
-            <Sequence DisplayName="成功" sap:VirtualizedContainerService.HintSize="376,349" sap2010:WorkflowViewState.IdRef="Sequence_34">
+        <If.Then>
+          <Sequence DisplayName="Normal" sap:VirtualizedContainerService.HintSize="242,755" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If sap2010:Annotation.AnnotationText="キー&quot;TimeStampFile_Enable_Start_Delete&quot;存否チェックし，Trueの場合File削除。" Condition="[Config.ContainsKey(&quot;TimeStampFile_Enable_Start_Delete&quot;)]" DisplayName="条件分岐：TimeStampFile Start Delete" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <勝:ログ_テキストv1 DisplayName="テキスト出力：空行" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_15" in_Config="[Config]" テキスト出力レベル="2" ログレベル="[LogLevel.Info]" ログ出力オン="False">
-                <勝:ログ_テキストv1.メッセージ>
-                  <InArgument x:TypeArguments="x:String">
-                    <Literal x:TypeArguments="x:String" Value="" />
-                  </InArgument>
-                </勝:ログ_テキストv1.メッセージ>
-              </勝:ログ_テキストv1>
-              <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="AddLogFields_13">
-                <ui:AddLogFields.Fields>
-                  <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">Success</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
-                </ui:AddLogFields.Fields>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:AddLogFields>
-              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Process successful.&quot;]" />
-            </Sequence>
-          </If.Then>
-          <If.Else>
-            <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="980,1561" sap2010:WorkflowViewState.IdRef="Sequence_38">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[ProcessException.GetType.Name.Equals(&quot;BusinessRuleException&quot;)]" DisplayName="ビジネス例外またはアプリケーション例外が発生した場合" sap:VirtualizedContainerService.HintSize="938,1469" sap2010:WorkflowViewState.IdRef="If_13">
-                <If.Then>
-                  <Sequence DisplayName="ビジネス例外" sap:VirtualizedContainerService.HintSize="242,399" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;Business Error in Process.&quot;&#xA;・Source&#xA;・Exception message" DisplayName="テキスト出力" sap:VirtualizedContainerService.HintSize="200,79" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_16" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;Business Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message]" ログレベル="[LogLevel.Error]" ログ出力オン="False">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </勝:ログ_テキストv1>
-                    <勝:ログ_テキストv1 DisplayName="テキスト出力：空行" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_17" in_Config="[Config]" テキスト出力レベル="2" ログレベル="[LogLevel.Info]" ログ出力オン="False">
-                      <勝:ログ_テキストv1.メッセージ>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" Value="" />
-                        </InArgument>
-                      </勝:ログ_テキストv1.メッセージ>
-                    </勝:ログ_テキストv1>
-                    <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="AddLogFields_14">
-                      <ui:AddLogFields.Fields>
-                        <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">BusinessException</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
-                      </ui:AddLogFields.Fields>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:AddLogFields>
-                    <Throw DisplayName="ビジネス例外をスロー" Exception="[new BusinessRuleException(&quot;Business Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message, ProcessException)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_14" />
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence DisplayName="アプリケーション例外" sap:VirtualizedContainerService.HintSize="651,1321" sap2010:WorkflowViewState.IdRef="Sequence_37">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[Config(&quot;Enable_Screenshot&quot;)]" DisplayName="設定が有効な場合はスクリーンショットを撮影" sap:VirtualizedContainerService.HintSize="609,852" sap2010:WorkflowViewState.IdRef="If_12">
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;TimeStampFile_Enable_Start_Delete&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,798" sap2010:WorkflowViewState.IdRef="If_24">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：TimeStampFile" sap:VirtualizedContainerService.HintSize="438,650" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If.Then>
-                        <TryCatch DisplayName="トライ キャッチ - TakeScreenshot" sap:VirtualizedContainerService.HintSize="438,704" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="242,218" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch.Try>
-                            <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
-                              </Sequence.Variables>
+                          <ui:Delete ContinueOnError="{x:Null}" DisplayName="削除" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\&quot; + Config(&quot;TimeStampFile_ファイル名_Start&quot;).ToString]" />
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile End Normal を出力。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_30" in_Config="[Config]" テキスト出力レベル="2" メッセージ="TimeStampFile Start を削除。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile Delete error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_31" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;TimeStampFile Delete error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[fpathMainFrameworkScreenshots]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Config("ExScreenshotsFolderPath").ToString + "\MainFrameworkScreenshots.png"]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <勝:TakeScreenshot in_Folder="{x:Null}" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3" io_FilePath="[fpathMainFrameworkScreenshots]" />
-                            </Sequence>
-                          </TryCatch.Try>
-                          <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,160" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <If sap2010:Annotation.AnnotationText="キー&quot;TimeStampFile_Enable_End&quot;存否チェックし，Trueの場合File作成。" Condition="[Config.ContainsKey(&quot;TimeStampFile_Enable_End_Normal&quot;)]" DisplayName="条件分岐：TimeStampFile End Normal" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_21">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;TimeStampFile_Enable_End_Normal&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,1012" sap2010:WorkflowViewState.IdRef="If_20">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：TimeStampFile" sap:VirtualizedContainerService.HintSize="438,864" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="376,432" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="代入：Replace" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_17">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[Config("TimeStampFile_ファイル名_End_Normal")]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="ui:GenericValue" xml:space="preserve">[New GenericValue( Config("TimeStampFile_ファイル名_End_Normal").ToString _
+.Replace( "【sYMDhms】", DateTime.Parse(Config("スタートDateTime")).ToString("yyyyMMdd_HHmmss") ) _
+.Replace( "【eYMDhms】", DateTime.Now.ToString("yyyyMMdd_HHmmss") ) _
+)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:AppendLine DisplayName="文字列を追加書き込み" Encoding="Shift-JIS" FileName="[Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\&quot; + Config(&quot;TimeStampFile_ファイル名_End_Normal&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="This is the timestamp file." />
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile End Normal を出力。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_26" in_Config="[Config]" テキスト出力レベル="2" メッセージ="TimeStampFile End Normal を出力。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_27" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;TimeStampFile error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ActivityAction x:TypeArguments="s:Exception">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                </ActivityAction.Argument>
-                                <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn" Message="[&quot;Take screenshot failed with error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:LogMessage>
-                              </ActivityAction>
-                            </Catch>
-                          </TryCatch.Catches>
-                        </TryCatch>
-                      </If.Then>
-                    </If>
-                    <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;Error in Process.&quot;&#xA;・Source &#xA;・Exception message&#xA;・Exception Type&#xA;・Exception StackTrace" DisplayName="テキスト出力" sap:VirtualizedContainerService.HintSize="609,109" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_18" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;Error in Process.&quot;+Environment.NewLine+&quot;Source              : &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message   : &quot;+Processexception.Message+Environment.NewLine+&quot;Exception Type      : &quot;+Processexception.GetType.ToString+Environment.NewLine+&quot;Exception StackTrace:&quot;+Environment.NewLine+Processexception.StackTrace]" ログレベル="[LogLevel.Error]" ログ出力オン="False">
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <If sap2010:Annotation.AnnotationText="キー&quot;EndSmtpSend_Enable&quot;存否チェックし，Trueの場合Send実行。" Condition="[Config.ContainsKey(&quot;EndSmtpSend_Enable_Normal&quot;)]" DisplayName="条件分岐：EndSmtpSend Normal" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;EndSmtpSend_Enable_Normal&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,962" sap2010:WorkflowViewState.IdRef="If_15">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：EndSmtpSend" sap:VirtualizedContainerService.HintSize="438,814" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </勝:ログ_テキストv1>
-                    <勝:ログ_テキストv1 DisplayName="テキスト出力：空行" sap:VirtualizedContainerService.HintSize="609,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_19" in_Config="[Config]" テキスト出力レベル="2" ログレベル="[LogLevel.Info]" ログ出力オン="False">
-                      <勝:ログ_テキストv1.メッセージ>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" Value="" />
-                        </InArgument>
-                      </勝:ログ_テキストv1.メッセージ>
-                    </勝:ログ_テキストv1>
-                    <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="609,64" sap2010:WorkflowViewState.IdRef="AddLogFields_15">
-                      <ui:AddLogFields.Fields>
-                        <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">ApplicationException</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
-                      </ui:AddLogFields.Fields>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="304,382" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="代入：Replace" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="Assign_15">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[Config("EndSmtpSend_本文_Normal")]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="ui:GenericValue" xml:space="preserve">[New GenericValue( Config("EndSmtpSend_本文_Normal").ToString _
+.Replace( "【アウトプットフォルダ】", Config("プロセス実行毎アウトプットフォルダ").ToString ) _
+)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="EndSmtpSend Normal" Bcc="[Config(&quot;EndSmtpSend_Bcc_Normal&quot;).ToString]" Body="[Config(&quot;EndSmtpSend_本文_Normal&quot;).ToString]" Cc="[Config(&quot;EndSmtpSend_Cc_Normal&quot;).ToString]" DisplayName="SMTP メール メッセージを送信：Normal" Email="[Config(&quot;EndSmtpSendメールアカウント&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="262,82" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[Config(&quot;EndSmtpSendパスワード&quot;).ToString]" Port="[Config(&quot;EndSmtpSend_ポート番号&quot;).ToInt]" SecureConnection="Auto" Server="[Config(&quot;EndSmtpSend_サーバー&quot;).ToString]" Subject="[Config(&quot;EndSmtpSend_件名_Normal&quot;).ToString]" To="[Config(&quot;EndSmtpSend_To_Normal&quot;).ToString]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendMail>
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="EndSmtpSend Normal を実行。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_21" in_Config="[Config]" テキスト出力レベル="2" メッセージ="EndSmtpSend Normal を実行。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_13">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="EndSmtpSend error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_23" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;EndSmtpSend error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="AddLogFields_13">
+              <ui:AddLogFields.Fields>
+                <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">Success</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
+              </ui:AddLogFields.Fields>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AddLogFields>
+            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;Process successful.&quot;" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_24" in_Config="[Config]" テキスト出力レベル="2" メッセージ="Process successful." ログレベル="[LogLevel.Info]" ログ出力オン="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </勝:ログ_テキストv1>
+            <勝:ログ_テキストv1 DisplayName="テキスト出力：空行" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_15" in_Config="[Config]" テキスト出力レベル="2" ログレベル="[LogLevel.Info]" ログ出力オン="False">
+              <勝:ログ_テキストv1.メッセージ>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </勝:ログ_テキストv1.メッセージ>
+            </勝:ログ_テキストv1>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Exception" sap:VirtualizedContainerService.HintSize="242,740" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[ProcessException.GetType.Name.Equals(&quot;BusinessRuleException&quot;)]" DisplayName="ビジネス例外またはアプリケーション例外が発生した場合" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="ビジネス例外" sap:VirtualizedContainerService.HintSize="242,171" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;Business Error in Process.&quot;&#xA;・Source&#xA;・Exception message" DisplayName="テキスト出力" sap:VirtualizedContainerService.HintSize="200,79" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_16" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;Business Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message]" ログレベル="[LogLevel.Error]" ログ出力オン="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="アプリケーション例外" sap:VirtualizedContainerService.HintSize="242,292" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Config(&quot;Enable_Screenshot&quot;)]" DisplayName="設定が有効な場合はスクリーンショットを撮影" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <TryCatch DisplayName="トライ キャッチ - TakeScreenshot" sap:VirtualizedContainerService.HintSize="438,684" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <TryCatch.Try>
+                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[fpathMainFrameworkScreenshots]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[Config("ExScreenshotsFolderPath").ToString + "\MainFrameworkScreenshots.png"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <勝:TakeScreenshot in_Folder="{x:Null}" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3" io_FilePath="[fpathMainFrameworkScreenshots]" />
+                          </Sequence>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,160" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn" Message="[&quot;Take screenshot failed with error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:LogMessage>
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                    </If.Then>
+                  </If>
+                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;Error in Process.&quot;&#xA;・Source &#xA;・Exception message&#xA;・Exception Type&#xA;・Exception StackTrace" DisplayName="テキスト出力" sap:VirtualizedContainerService.HintSize="200,109" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_18" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;Error in Process.&quot;+Environment.NewLine+&quot;Source              : &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message   : &quot;+Processexception.Message+Environment.NewLine+&quot;Exception Type      : &quot;+Processexception.GetType.ToString+Environment.NewLine+&quot;Exception StackTrace:&quot;+Environment.NewLine+Processexception.StackTrace]" ログレベル="[LogLevel.Error]" ログ出力オン="False">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </勝:ログ_テキストv1>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If sap2010:Annotation.AnnotationText="キー&quot;TimeStampFile_Enable_Start_Delete&quot;存否チェックし，Trueの場合File削除。" Condition="[Config.ContainsKey(&quot;TimeStampFile_Enable_Start_Delete&quot;)]" DisplayName="条件分岐：TimeStampFile Start Delete" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_29">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;TimeStampFile_Enable_Start_Delete&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,798" sap2010:WorkflowViewState.IdRef="If_28">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：TimeStampFile" sap:VirtualizedContainerService.HintSize="438,650" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:AddLogFields>
-                    <Throw DisplayName="アプリケーション例外をスロー" Exception="[new Exception(&quot;Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message, ProcessException)]" sap:VirtualizedContainerService.HintSize="609,22" sap2010:WorkflowViewState.IdRef="Throw_15" />
-                  </Sequence>
-                </If.Else>
-              </If>
-            </Sequence>
-          </If.Else>
-        </If>
-      </Sequence>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="242,218" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Delete ContinueOnError="{x:Null}" DisplayName="削除" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_3" Path="[Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\&quot; + Config(&quot;TimeStampFile_ファイル名_Start&quot;).ToString]" />
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile End Normal を出力。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_34" in_Config="[Config]" テキスト出力レベル="2" メッセージ="TimeStampFile Start を削除。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile Delete error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_35" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;TimeStampFile Delete error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <If sap2010:Annotation.AnnotationText="キー&quot;TimeStampFile_Exception_End&quot;存否チェックし，Trueの場合File作成。" Condition="[Config.ContainsKey(&quot;TimeStampFile_Enable_End_Exception&quot;)]" DisplayName="条件分岐：TimeStampFile End Exception" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_23">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;TimeStampFile_Enable_End_Exception&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,1012" sap2010:WorkflowViewState.IdRef="If_22">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：TimeStampFile" sap:VirtualizedContainerService.HintSize="438,864" sap2010:WorkflowViewState.IdRef="TryCatch_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="376,432" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="代入：Replace" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_18">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[Config("TimeStampFile_ファイル名_End_Exception")]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="ui:GenericValue" xml:space="preserve">[New GenericValue( Config("TimeStampFile_ファイル名_End_Exception").ToString _
+.Replace( "【sYMDhms】", DateTime.Parse(Config("スタートDateTime")).ToString("yyyyMMdd_HHmmss") ) _
+.Replace( "【eYMDhms】", DateTime.Now.ToString("yyyyMMdd_HHmmss") ) _
+)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:AppendLine DisplayName="文字列を追加書き込み" Encoding="Shift-JIS" FileName="[Config(&quot;プロセス実行毎アウトプットフォルダ&quot;).ToString + &quot;\&quot; + Config(&quot;TimeStampFile_ファイル名_End_Exception&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="This is the timestamp file." />
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile End Normal を出力。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_28" in_Config="[Config]" テキスト出力レベル="2" メッセージ="TimeStampFile End Exception を出力。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="TimeStampFile error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_29" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;TimeStampFile error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <If sap2010:Annotation.AnnotationText="キー&quot;EndSmtpSend_Enable&quot;存否チェックし，Trueの場合Send実行。" Condition="[Config.ContainsKey(&quot;EndSmtpSend_Enable_Exception&quot;)]" DisplayName="条件分岐：EndSmtpSend Exception" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <If Condition="[Boolean.Parse(Config(&quot;EndSmtpSend_Enable_Exception&quot;).ToString)]" DisplayName="条件分岐：Enableチェック" sap:VirtualizedContainerService.HintSize="609,962" sap2010:WorkflowViewState.IdRef="If_17">
+                  <If.Then>
+                    <TryCatch DisplayName="トライ キャッチ：EndSmtpSend" sap:VirtualizedContainerService.HintSize="438,814" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="304,382" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="fpathMainFrameworkScreenshots" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="代入：Replace" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="Assign_16">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[Config("EndSmtpSend_本文_Exception")]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="ui:GenericValue" xml:space="preserve">[New GenericValue( Config("EndSmtpSend_本文_Exception").ToString _
+.Replace( "【アウトプットフォルダ】", Config("プロセス実行毎アウトプットフォルダ").ToString ) _
+.Replace( "【エクセプション情報】", _
+"Error in Process." + vbNewLine + _
+"  Source              : " + Processexception.Source + vbNewLine + _
+"  Exception message   : "+Processexception.Message _
+) )]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="EndSmtpSend Exception" Bcc="[Config(&quot;EndSmtpSend_Bcc_Exception&quot;).ToString]" Body="[Config(&quot;EndSmtpSend_本文_Exception&quot;).ToString]" Cc="[Config(&quot;EndSmtpSend_Cc_Exception&quot;).ToString]" DisplayName="SMTP メール メッセージを送信：Exception" Email="[Config(&quot;EndSmtpSendメールアカウント&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="262,82" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[Config(&quot;EndSmtpSendパスワード&quot;).ToString]" Port="[Config(&quot;EndSmtpSend_ポート番号&quot;).ToInt]" SecureConnection="Auto" Server="[Config(&quot;EndSmtpSend_サーバー&quot;).ToString]" Subject="[Config(&quot;EndSmtpSend_件名_Exception&quot;).ToString]" To="[Config(&quot;EndSmtpSend_To_Exception&quot;).ToString]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                            </ui:SendMail.Files>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendMail>
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="EndSmtpSend Exception を実行。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_22" in_Config="[Config]" テキスト出力レベル="2" メッセージ="EndSmtpSend Exception を実行。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </勝:ログ_テキストv1>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,122" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="EndSmtpSend error" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_25" in_Config="[Config]" テキスト出力レベル="2" メッセージ="[&quot;EndSmtpSend error: &quot;+exception.Message+&quot; at Source: &quot;+exception.Source]" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </勝:ログ_テキストv1>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
+              </If.Then>
+            </If>
+            <勝:ログ_テキストv1 DisplayName="テキスト出力：空行" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_17" in_Config="[Config]" テキスト出力レベル="2" ログレベル="[LogLevel.Info]" ログ出力オン="False">
+              <勝:ログ_テキストv1.メッセージ>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </勝:ログ_テキストv1.メッセージ>
+            </勝:ログ_テキストv1>
+            <If Condition="[ProcessException.GetType.Name.Equals(&quot;BusinessRuleException&quot;)]" DisplayName="ビジネス例外またはアプリケーション例外が発生した場合：スロー" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_19">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="ビジネス例外" sap:VirtualizedContainerService.HintSize="242,218" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="AddLogFields_14">
+                    <ui:AddLogFields.Fields>
+                      <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">BusinessException</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
+                    </ui:AddLogFields.Fields>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AddLogFields>
+                  <Throw DisplayName="ビジネス例外をスロー" Exception="[new BusinessRuleException(&quot;Business Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message, ProcessException)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_16" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="アプリケーション例外" sap:VirtualizedContainerService.HintSize="242,218" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddLogFields sap2010:Annotation.AnnotationText="logF_TransactionStatus&#xA;logF_TransactionID" DisplayName="トランザクション ログ フィールドを追加" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="AddLogFields_15">
+                    <ui:AddLogFields.Fields>
+                      <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">ApplicationException</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[TransactionID]</InArgument>
+                    </ui:AddLogFields.Fields>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AddLogFields>
+                  <Throw DisplayName="アプリケーション例外をスロー" Exception="[new Exception(&quot;Error in Process.&quot;+Environment.NewLine+&quot;Source: &quot;+Processexception.Source+Environment.NewLine+&quot;Exception message: &quot;+Processexception.Message, ProcessException)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_17" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </If.Else>
+      </If>
     </FlowStep>
     <FlowStep x:Name="__ReferenceID2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">380,98.5</av:Point>
+          <av:Point x:Key="ShapeLocation">340,98.5</av:Point>
           <av:Size x:Key="ShapeSize">200,183</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">380,190 230,190 230,281</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">340,190 190,190 190,241</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="設定ファイル (Config.xlsx) および Orchestrator のアセットから設定を読み込みます。&#xA;=================&#xA;※他の既存ロボット Main.xaml に Attended_Framework_拡張v1 機能を移植する場合はこのコンテナをコピー可能。" DisplayName="初期化 - 設定を読み込み" sap:VirtualizedContainerService.HintSize="459,963" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+      <TryCatch sap2010:Annotation.AnnotationText="設定ファイル (Config.xlsx) および Orchestrator のアセットから設定を読み込みます。&#xA;=================&#xA;※他の既存ロボット Main.xaml に Attended_Framework_拡張v1 機能を移植する場合はこのコンテナをコピー可能。" DisplayName="初期化 - 設定を読み込み" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="TryCatch_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -367,9 +877,9 @@
         <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">130,281</av:Point>
+              <av:Point x:Key="ShapeLocation">90,241</av:Point>
               <av:Size x:Key="ShapeSize">200,198</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">330,380 420,380</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">290,340 320,340 320,355.5 340,355.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch sap2010:Annotation.AnnotationText="実際の業務プロセス（&quot;MainProcess.xaml&quot;）の呼び出し。&#xA;=================&#xA;※他の既存ロボットへFramework機能移植の場合は，&quot;MainProcess.xaml&quot;のInvokeでの”Config”引継ぎを参考にしてください。" DisplayName="プロセス" sap:VirtualizedContainerService.HintSize="200,198" sap2010:WorkflowViewState.IdRef="TryCatch_11">
@@ -455,7 +965,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">99,10</av:Point>
           <av:Size x:Key="ShapeSize">262,60</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">361,40 480,40 480,98.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">361,40 440,40 440,98.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
