@@ -8,6 +8,8 @@
 ・資格情報の一括取得  
 ・パラメタ情報の一括取得  
 ・"yyyyMMdd_HHmmss"フォルダ生成  
+・Time Stamp File(Start,End_Normal,End_Exception,Start_Delete)  
+・End SMTP Send(Normal,Exception)  
 ・[勝又自作アクティビティパック]使用例  
 
 ※詳細情報は "説明書トップ.txt" から辿ってください。  
