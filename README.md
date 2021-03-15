@@ -11,7 +11,7 @@
 ・Time Stamp File(Start,End_Normal,End_Exception,Start_Delete)  
 ・End SMTP Send(Normal,Exception)  
 ・[勝又自作アクティビティパック]使用例  
-・[勝又自作ワークフローパーツ使用例_v20210315]使用例  
+・[勝又自作ワークフローパーツ]使用例  
 
 ※詳細情報は "説明書トップ.txt" から辿ってください。  
 ※このコンポーネントはUiPath社公開"Attended Framework"をカスタマイズし機能拡張したものです。  
