@@ -1,11 +1,3 @@
-■宿題メモ
-　★処理Ａ，Ｂの説明注釈追加
-　★「ダウンロード完了」表示待ちのタイムアウト時間を引数化した。
-　　　→異常系のテストできていません！
-　★ダウンロードテストに使えるサイト
-　　https://support.casio.jp/download.php?cid=001&pid=567
-
-
 ■変更履歴
 2021/03/15　i_str対象ブラウザウィンドウtitle
 　　　　　　　title文字列末尾 " - Internet Explorer" の有・無の両方に対応。
@@ -32,14 +24,6 @@
 　トレースログ情報を引数で出力します。
 
 
-
-■制限事項等
-◇最終保存先ファイル名が重複の場合はエラーになります。
-◇ダウンロード操作でのIE通知バーのみ対応。ダイアログには未対応。
-↓参考
-https://social.msdn.microsoft.com/Forums/vstudio/ja-JP/a14d06fd-c7e9-4d28-8630-0e13c4076de1/-?forum=edgeiesupportteamja
-
-
 ■引数説明
 ◇i_str保存ファイルパス
 ◇i_str対象ブラウザウィンドウtitle
@@ -52,3 +36,17 @@ https://social.msdn.microsoft.com/Forums/vstudio/ja-JP/a14d06fd-c7e9-4d28-8630-0
 ◇o_str結果ログ
 　　トレースログ情報を書き込みます。
 　　exception発生時はエラー内容も書き込みます。
+
+
+■制限事項等
+◇最終保存先ファイル名が重複の場合はエラーになります。
+◇ダウンロード操作でのIE通知バーのみ対応。ダイアログには未対応。
+↓参考
+https://social.msdn.microsoft.com/Forums/vstudio/ja-JP/a14d06fd-c7e9-4d28-8630-0e13c4076de1/-?forum=edgeiesupportteamja
+
+
+■参考：ダウンロードの実験に使えそうなサイト
+　　https://support.casio.jp/download.php?cid=001&pid=567
+　　　※私が実験したところ，今のところ常に通知バーでDLする。
+　　https://www.gtec-ni.com/sample.html
+　　　※私が実験したところ，クライアント環境によって通知バーだったりダイアログだったりした。
