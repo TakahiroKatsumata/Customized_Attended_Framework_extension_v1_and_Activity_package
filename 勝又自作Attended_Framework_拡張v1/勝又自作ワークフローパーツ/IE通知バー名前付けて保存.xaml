@@ -6,7 +6,7 @@
     <x:Property Name="i_str保存ファイルパス" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="DL操作の対象となるブラウザウィンドウtitle文字列を指定してください。&#xD;&#xA;title文字列末尾 &quot; - Internet Explorer&quot; の有・無の両方に対応します。（無なら内部的に末尾に付加して処理）&#xA;ワイルドカード(&quot;*&quot;)を使用できます。&#xA;" Name="i_str対象ブラウザウィンドウtitle" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1028,858</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>823,858</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="19">
@@ -56,14 +56,14 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="同じフォルダ内の&#xA;IE通知バー名前付けて保存_vYYYYMMDD.txt&#xA;に変更履歴，特徴，制限事項，引数説明を記載します。" DisplayName="Top" sap:VirtualizedContainerService.HintSize="714,693" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="同じフォルダ内の&#xA;IE通知バー名前付けて保存_vYYYYMMDD.txt&#xA;に変更履歴，特徴，制限事項，引数説明を記載します。" DisplayName="Top" sap:VirtualizedContainerService.HintSize="714,723" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default="&lt;wnd app='iexplore.exe' cls='#32768' /&gt;&lt;ctrl name='コンテキスト' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" Name="selector設定_通知バー_保存ドロップダウン_名前を付けて保存" />
-      <Variable x:TypeArguments="x:String" Default="&lt;wnd app='iexplore.exe' cls='IEFrame' title='■' /&gt;&lt;wnd aaname='通知' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='保存' role='split button' /&gt;&lt;ctrl role='drop down button' /&gt;" Name="selector設定_通知バー_保存ドロップダウン" />
-      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="バックグラウンド対応目的で以下の修正したが，意味が無いので後で戻す予定。&#xA;&quot;&lt;wnd ctrlid='1001' /&gt;&quot;&#xA;&quot;&lt;wnd ctrlid='1001' cls='Edit' /&gt;&quot;&#xA;" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd aaname='ファイル名:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' cls='Edit' /&gt;" Name="selector設定_名前を付けて保存ダイアログ_ファイル名" />
-      <Variable x:TypeArguments="x:String" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;" Name="selector設定_名前を付けて保存ダイアログ" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="別バージョン処理用なので基本使いません。" Default="&lt;wnd app='iexplore.exe' cls='#32768' /&gt;&lt;ctrl name='コンテキスト' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" Name="selector設定_通知バー_保存ドロップダウン_名前を付けて保存" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="別バージョン処理用なので基本使いません。" Default="&lt;wnd app='iexplore.exe' cls='IEFrame' title='■' /&gt;&lt;wnd aaname='通知' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='保存' role='split button' /&gt;&lt;ctrl role='drop down button' /&gt;" Name="selector設定_通知バー_保存ドロップダウン" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="別バージョン処理用なので基本使いません。&#xD;&#xA;以下を試したが，いずれもバックグラウンド実行を実現できなかった。&#xA;&quot;&lt;wnd ctrlid='1001' /&gt;&quot;&#xA;&quot;&lt;wnd ctrlid='1001' cls='Edit' /&gt;&quot;&#xA;" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;&lt;wnd aaname='Explorer ウィンドウ' cls='DirectUIHWND' /&gt;&lt;wnd aaname='ファイル名:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' cls='Edit' /&gt;" Name="selector設定_名前を付けて保存ダイアログ_ファイル名" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="別バージョン処理用なので基本使いません。" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;" Name="selector設定_名前を付けて保存ダイアログ" />
       <Variable x:TypeArguments="x:Boolean" Name="booleanExists" />
-      <Variable x:TypeArguments="x:String" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;&lt;wnd ctrlid='1' title='保存(&amp;amp;S)' /&gt;" Name="selector設定_名前を付けて保存ダイアログ_保存" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="別バージョン処理用なので基本使いません。" Default="&lt;wnd app='iexplore.exe' cls='#32770' title='名前を付けて保存' /&gt;&lt;wnd ctrlid='1' title='保存(&amp;amp;S)' /&gt;" Name="selector設定_名前を付けて保存ダイアログ_保存" />
       <Variable x:TypeArguments="x:String" Default="&lt;wnd app='iexplore.exe' cls='IEFrame' title='■' /&gt;&lt;wnd aaname='通知' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='閉じる' role='push button' /&gt;" Name="selector設定_通知バー_クローズ" />
       <Variable x:TypeArguments="x:Int32" Default="10" Name="int設定Retry回数" />
       <Variable x:TypeArguments="x:Int32" Default="1000" Name="int設定Retryアクティビティタイムアウトms" />
@@ -81,6 +81,7 @@
         <av:PointCollection x:Key="ConnectorLocation">60,40 90,40 90,0 250,0 250,20</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         <x:Double x:Key="Width">680</x:Double>
+        <x:Double x:Key="Height">630</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -116,7 +117,7 @@
               <av:PointCollection x:Key="ConnectorLocation">250,173 250,197</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="ウィンドウtitle文字列確定" sap:VirtualizedContainerService.HintSize="526,431" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="ウィンドウtitle文字列確定" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -255,7 +256,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">150,304.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">250,355.5 250,410</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">250,355.5 250,570</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch DisplayName="トライ キャッチ：主処理" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
@@ -794,7 +795,7 @@
                     <FlowStep x:Name="__ReferenceID16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">119,410</av:Point>
+                          <av:Point x:Key="ShapeLocation">119,570</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -824,15 +825,16 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">480,304.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">580,355.5 580,385.5 250,385.5 250,410</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">400,304.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,198</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">500,502.5 500,532.5 250,532.5 250,570</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="トライ キャッチ：主処理（別バージョン）" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="参考として，別バージョンロジックを残しておきます。&#xD;&#xA;本ロジックはバックグラウンド実行を実現できなかったため不採用。&#xD;&#xA;本ロジックは，通知バーの保存ドロップダウン→「名前を付けて保存」→「名前を付けて保存」ダイアログ，で最終的な保存先ファイルパスにDLする処理の流れです。" DisplayName="トライ キャッチ：主処理（別バージョン）" sap:VirtualizedContainerService.HintSize="200,198" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
