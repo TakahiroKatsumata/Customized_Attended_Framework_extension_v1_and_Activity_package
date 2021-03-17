@@ -8,8 +8,8 @@
 ・資格情報の一括取得  
 ・パラメタ情報の一括取得  
 ・"yyyyMMdd_HHmmss"フォルダ生成  
-・Time Stamp File(Start,End_Normal,End_Exception,Start_Delete)  
-・End SMTP Send(Normal,Exception)  
+・タイムスタンプファイル出力(Start/EndTimeStampFile)  
+・終了時実行結果メール自動送信(EndSmtpSend)  
 ・[勝又自作アクティビティパック]使用例  
 ・[勝又自作ワークフローパーツ]使用例  
 
