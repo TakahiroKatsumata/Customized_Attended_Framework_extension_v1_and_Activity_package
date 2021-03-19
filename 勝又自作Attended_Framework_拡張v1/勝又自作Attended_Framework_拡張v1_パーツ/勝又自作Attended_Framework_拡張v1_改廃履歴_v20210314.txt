@@ -1,8 +1,24 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2021/03/19	改良
+	・パーツ格納場所変更：勝又自作アクティビティ使用例_v20201116.xaml
+	　　変更前：勝又自作Attended_Framework_拡張v1_パーツ
+	　　変更後：勝又自作ワークフローパーツ
+	★対応中：パーツ格納場所変更：エラーハンドリング制御ワークフロー雛形パターン
+	　　変更前："MainProcess.xaml：主処理"セクション内
+	　　変更後："勝又自作ワークフローパーツ"フォルダ内に"(コピー利用)エラーハンドリング雛形パターン_v20210319.xaml"として切り出し
+	★対応中：説明書きの見直し：勝又自作Attended_Framework_拡張v1_説明書.txt
+	　　・標準実装機能，選択利用機能を切り分けて記載。
+
+■2021/03/15	改良
+	・"勝又自作ワークフローパーツ"フォルダ追加。
+	・"勝又自作ワークフローパーツ"フォルダ内の以下改修。
+	　　・"IE通知バー名前付けて保存.xaml" 新規追加。
+
 ■2021/03/14	改良
-	・TimeStampFile(Start,End_Normal,End_Exception,Start_Delete)
-	・EndSmtpSend(Normal,Exception)
+	・"MainFramework.xaml"，"MainProcess.xaml" に以下機能実装の改良。
+	　　・TimeStampFile(Start,End_Normal,End_Exception,Start_Delete)
+	　　・EndSmtpSend(Normal,Exception)
 
 ■2020/11/16	改良
 	・勝又自作アクティビティパックに以下の新アクティビティを追加。
