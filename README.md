@@ -7,7 +7,7 @@
 ・エラーハンドリング制御を数パターン用意  
 ・資格情報の一括取得  
 ・パラメタ情報の一括取得  
-・"yyyyMMdd_HHmmss"フォルダ生成  
+・"yyyyMMdd_HHmmss"フォルダ自動生成  
 ・タイムスタンプファイル出力(Start/EndTimeStampFile)  
 ・終了時実行結果メール自動送信(EndSmtpSend)  
 ・[勝又自作アクティビティパック]使用例  
