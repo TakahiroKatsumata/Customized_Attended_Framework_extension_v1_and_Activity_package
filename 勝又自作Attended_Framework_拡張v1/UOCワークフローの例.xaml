@@ -5,7 +5,7 @@
     <x:Property Name="io_dictionaryCredentials" Type="InOutArgument(scg:Dictionary(x:String, x:String))" />
     <x:Property Name="i_int呼び出し回数" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>771,831</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1248,831</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -91,7 +91,7 @@
               <av:PointCollection x:Key="ConnectorLocation">300,189.04 300,206.04</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;&quot;&quot;&quot; +LOCAL_CONST_strセクション名 + &quot;&quot;&quot; ：&quot; + i_int呼び出し回数.ToString + &quot; 回目の実行&quot;]">
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Hello World!&quot; + vbNewLine + vbNewLine + &quot;&quot;&quot;&quot; +LOCAL_CONST_strセクション名 + &quot;&quot;&quot; ：&quot; + i_int呼び出し回数.ToString + &quot; 回目の実行&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
