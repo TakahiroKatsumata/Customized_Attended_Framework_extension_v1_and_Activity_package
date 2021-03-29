@@ -1,4 +1,8 @@
 # Customized_Attended_Framework_extension_v1_and_Activity_package
+  
+本FrameworkのUiPathプロジェクトは，何の加工もせずにロボットプロセス実行のテストを実施できます。  
+この場合，サンプル処理として"Hello World!"のメッセージボックス出力処理のみを行います。  
+
 ■"Attended_Framework"からの主な拡張機能  
 ・設定情報一括取得における環境依存解消機能  
 ・ログ出力実装補助  
