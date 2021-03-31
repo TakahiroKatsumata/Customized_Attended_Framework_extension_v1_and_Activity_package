@@ -1,13 +1,52 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2021/04/01	インターフェース変更
+	◆Config.xlsx
+	　　・設定項目追加：GetCredentials_Enable
+	　　・設定項目追加：MkYmdHmsFolder_Enable
+	　　・設定項目追加：MkYmdHmsFolder_Format
+	◆MainFramework.xaml
+	　　・変数追加：dictionaryCredentials
+	　　・＜資格情報の一括取得＞処理の追加　※MainProcess.xamlから移植
+	　　・"MainProcess.xaml"呼び出しの引数：io_dictionaryCredentialsに変数：dictionaryCredentialsを引き渡し。
+	　　・OptFunc.xamlに以下の機能を切り出し
+			Credentials一括取得
+			TimeStampファイル(Start)削除
+			TimeStampファイル(End_Normal)作成
+			TimeStampファイル(End_Exception)作成
+			SMTPメール(Normal)
+			SMTPメール(Exception)
+	◆MainProcess.xaml
+	　　・＜資格情報の一括取得＞処理の廃止　※MainFramework.xamlに移植
+	　　・dictionaryCredentialsを引数：io_dictionaryCredentialsに変更。
+	　　・OptFunc.xamlに以下の機能を切り出し
+			TimeStampファイル(Start)作成
+			YMDhmsフォルダ作成
+	◆OptFunc.xaml
+		MainFramework.xaml，MainProcess.xamlから以下の機能を切り出して構造化。
+			Credentials一括取得
+			YMDhmsフォルダ作成
+			TimeStampファイル(Start)作成
+			TimeStampファイル(Start)削除
+			TimeStampファイル(End_Normal)作成
+			TimeStampファイル(End_Exception)作成
+			SMTPメール(Normal)
+			SMTPメール(Exception)
+	◆UOCワークフローの例.xaml
+		サンプル処理として，Parameters.xlsxから繰り返し要素を持ってくるように修正。
+	◆Parameters.xlsx
+		サンプル処理として，Parameters.xlsxから繰り返し要素を持ってくるように修正。
+	◆勝又自作Attended_Framework_拡張v1_説明書.txt
+		説明文の修正
+
 ■2021/03/19	改良
 	・パーツ格納場所変更：勝又自作アクティビティ使用例_v20201116.xaml
 	　　変更前：勝又自作Attended_Framework_拡張v1_パーツ
 	　　変更後：勝又自作ワークフローパーツ
-	★対応中：パーツ格納場所変更：エラーハンドリング制御ワークフロー雛形パターン
+	・パーツ格納場所変更：エラーハンドリング制御ワークフロー雛形パターン
 	　　変更前："MainProcess.xaml：主処理"セクション内
 	　　変更後："勝又自作ワークフローパーツ"フォルダ内に"(コピー利用)エラーハンドリング雛形パターン_v20210319.xaml"として切り出し
-	★対応中：説明書きの見直し：勝又自作Attended_Framework_拡張v1_説明書.txt
+	・説明書きの見直し：勝又自作Attended_Framework_拡張v1_説明書.txt
 	　　・標準実装機能，選択利用機能を切り分けて記載。
 
 ■2021/03/15	改良
