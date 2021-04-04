@@ -1,5 +1,9 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2021/04/01	バグフィックス
+	◆OptFunc.xaml
+	　　・"条件分岐：Enableキー存否チェック"，"条件分岐：EnableキーTrueチェック" のElseに "代入：True→o_boolean成功" を追加。
+
 ■2021/04/01	インターフェース変更
 	◆Config.xlsx
 	　　・設定項目追加：GetCredentials_Enable
