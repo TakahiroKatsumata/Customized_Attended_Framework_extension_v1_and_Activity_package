@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1189,1243</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>937,1243</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -79,6 +79,7 @@
       <AssemblyReference>勝又自作アクティビティパック_Expressions_12407180</AssemblyReference>
       <AssemblyReference>勝又自作アクティビティパック_Expressions_57032702</AssemblyReference>
       <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -593,7 +594,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">210,142 210,179</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart DisplayName="サンプル処理" sap:VirtualizedContainerService.HintSize="746,636" sap2010:WorkflowViewState.IdRef="Flowchart_11">
+                  <Flowchart DisplayName="サンプル処理" sap:VirtualizedContainerService.HintSize="684,636" sap2010:WorkflowViewState.IdRef="Flowchart_11">
                     <Flowchart.Variables>
                       <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：主処理：サンプル処理" Name="LOCAL_CONST_strセクション名" />
                     </Flowchart.Variables>
@@ -601,10 +602,10 @@
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                        <av:Point x:Key="ShapeLocation">290,2.5</av:Point>
                         <av:Size x:Key="ShapeSize">60,75</av:Size>
-                        <x:Double x:Key="Width">712.5</x:Double>
-                        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
+                        <x:Double x:Key="Width">650</x:Double>
+                        <av:PointCollection x:Key="ConnectorLocation">320,77.5 320,107.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Flowchart.StartNode>
@@ -613,9 +614,9 @@
                     <FlowStep x:Name="__ReferenceID7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">200,313.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">220,323.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,364.5 300,414.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">320,374.5 320,424.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UOCワークフローの例 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="UOCワークフローの例.xaml">
@@ -629,7 +630,7 @@
                         <FlowStep x:Name="__ReferenceID6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,414.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">220,424.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -640,9 +641,9 @@
                     <FlowStep>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">430,314.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">450,324.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">530,365.5 530,395.5 300,395.5 300,414.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">550,375.5 550,405.5 320,405.5 320,424.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="わざとエラー発生テスト.xaml" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="わざとエラー発生テスト.xaml">
@@ -666,9 +667,9 @@
                     <FlowStep x:Name="__ReferenceID9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">220,107.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,199.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">320,158.5 320,179.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_153" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
@@ -676,9 +677,9 @@
                         <FlowStep x:Name="__ReferenceID8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,199.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">220,179.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,93</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,292.5 300,313.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">320,272.5 320,323.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”ログ・テキストファイル同時出力のサンプル処理”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_154" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”ログ・テキストファイル同時出力のサンプル処理”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
@@ -695,6 +696,25 @@
                       </FlowStep.Next>
                     </FlowStep>
                     <x:Reference>__ReferenceID8</x:Reference>
+                    <FlowStep>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">0,339</av:Point>
+                          <av:Size x:Key="ShapeSize">200,22</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">100,361 100,391 320,391 320,424.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Throw DisplayName="スロー" Exception="[new BusinessRuleException(&quot;わざとビジネス例外スローで中断。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Throw>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID6</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
                   </Flowchart>
                   <FlowStep.Next>
                     <FlowStep x:Name="__ReferenceID10">

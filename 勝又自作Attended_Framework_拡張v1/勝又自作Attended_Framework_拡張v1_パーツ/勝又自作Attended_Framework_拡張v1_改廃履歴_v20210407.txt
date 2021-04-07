@@ -1,5 +1,9 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
 
+■2021/04/07	改良
+	◆OptFunc.xaml：EndSmtpSend_本文，件名の"【Machine】"変換対応。
+	◆Config.xlsx：Valueの小さな変更。
+
 ■2021/04/05	改良
 	◆OptFunc.xaml：EndSmtpSend_本文_Normal，EndSmtpSend_本文_Exceptionの"【eYMDhms】"・"【sYMDhms】"変換対応。
 	◆Config.xlsx：Valueの小さな変更。
