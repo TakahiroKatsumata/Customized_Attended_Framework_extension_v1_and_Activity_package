@@ -1,0 +1,8 @@
+Start:20220423_235044 End:20220423_235207　on KATSUMATA-PC
+  Error in Process.
+    Source              : 範囲を読み込み (設定)
+    Exception message   : ブックが存在しません。
+Start:20220505_215818 End:20220505_215908　on KATSUMATA-PC
+  Error in Process.
+    Source              : スロー：Credentials一括取得
+    Exception message   : Credentials一括取得が失敗しました。

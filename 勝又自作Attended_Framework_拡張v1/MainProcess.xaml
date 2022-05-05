@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MainProcess" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:勝="clr-namespace:勝又自作アクティビティパック;assembly=勝又自作アクティビティパック">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainProcess" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:勝="clr-namespace:勝又自作アクティビティパック;assembly=勝又自作アクティビティパック">
   <x:Members>
     <x:Property Name="io_Config" Type="InOutArgument(scg:Dictionary(x:String, ui:GenericValue))" />
     <x:Property Name="io_dictionaryCredentials" Type="InOutArgument(scg:Dictionary(x:String, x:String))" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>937,1243</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1186,1043</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -40,10 +40,11 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>勝又自作アクティビティパック</x:String>
       <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>System.Security</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -79,8 +80,9 @@
       <AssemblyReference>勝又自作アクティビティパック_Expressions_12407180</AssemblyReference>
       <AssemblyReference>勝又自作アクティビティパック_Expressions_57032702</AssemblyReference>
       <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -88,7 +90,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="[FrameworkTemplate説明] このファイルで他のプロセス固有のファイルがすべて呼び出されます。&#xA;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝&#xA;以下，自作拡張仕様&#xA;　　※その他詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;■以下のオプション機能は必要に応じて &quot;Config.xlsx&quot; で有効/無効を設定してください。&#xA;　　＜資格情報の一括取得＞　※&quot;Credentials.xlsx&quot;に直接平文でパスワードを指定することも可能。&#xA;　　＜YMDhmsフォルダ作成＞&#xA;　　＜タイムスタンプファイル出力(Start/EndTimeStampFile)＞&#xA;　　＜終了時実行結果メール自動送信(EndSmtpSend)＞&#xA;■&quot;初期化&quot;セクション&#xA;　以下オプション機能を実行しています。【不要な場合は削除してください】&#xA;　　＜パラメタ情報の一括取得＞&#xA;　その他，UOCを組み込んでください。&#xA;■&quot;主処理&quot;セクション&#xA;　サンプル処理として，&quot;Hello World!&quot; をメッセージボックス出力するだけの&#xA;　&quot;UOCワークフローの例.xaml&quot; を実行していますので，UOCで組み直してください。&#xA;■&quot;終了処理&quot;セクション&#xA;　適宜，UOCを組み込んでください。&#xA;■変数&quot;LOCAL_CONST_strセクション名&quot;について&#xA;　＜ログ出力実装補助＞機能として，トレースログ出力を簡易に実装するための変数です。&#xA;　使い方：&#xA;　トレースログとして開始・終了メッセージを出力したい処理ブロック・ネスト(スコープ)それぞれについて，&#xA;　この共通の変数名称で，スコープに対応した名称のセクション名を変数規定値に設定してください。&#xA;　適切なタイミングで適切なセクション名が開始・終了メッセージに出力されます。&#xA;　（スコープ違いで変数名をバッティングさせることで，処理中スコープに対応した変数値が採用される仕組み）" DisplayName="Top" sap:VirtualizedContainerService.HintSize="634,1038" sap2010:WorkflowViewState.IdRef="Flowchart_7">
+  <Flowchart sap2010:Annotation.AnnotationText="※詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;■以下のオプション機能は必要に応じて &quot;Config.xlsx&quot; で有効/無効を設定してください。&#xA;　　&quot;InitialProcess.xaml&quot; から呼び出し&#xA;　　　　＜Credentials一括取得＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜YMDhmsフォルダ作成＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜TimeStampファイル(Start)作成＞　　　　　　※デフォルトは &quot;有効&quot;&#xA;　　&quot;MainProcess.xaml&quot; から呼び出し&#xA;　　　　無し&#xA;　　&quot;EndProcess.xaml&quot; から呼び出し&#xA;　　　　＜TimeStampファイル(Start)削除，(End)作成＞　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜リネームアウトプットフォルダ名＞　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜アウトプットフォルダ移動＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜完了目印ファイル更新＞　　　　　　　　　※デフォルトは &quot;有効&quot;&#xD;&#xA;　　　　＜SMTPメール＞　　　　　　　　　　　　　※デフォルトは &quot;無効&quot;&#xA;■変数&quot;LOCAL_CONST_strセクション名&quot;について&#xA;　＜ログ出力実装補助＞機能として，トレースログ出力を簡易に実装するための変数です。&#xA;　使い方：&#xA;　トレースログとして開始・終了メッセージを出力したい処理ブロック・ネスト(スコープ)それぞれについて，&#xA;　この共通の変数名称で，スコープに対応した名称のセクション名を変数規定値に設定してください。&#xA;　適切なタイミングで適切なセクション名が開始・終了メッセージに出力されます。&#xA;　（スコープ違いで変数名をバッティングさせることで，処理中スコープに対応した変数値が採用される仕組み）" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1083,978" sap2010:WorkflowViewState.IdRef="Flowchart_7">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="MainProcess.xaml" Name="LOCAL_CONST_strセクション名" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" Name="dictionaryParameters" />
@@ -96,663 +98,339 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">0,0</av:Point>
+        <av:Point x:Key="ShapeLocation">0,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">60,37.5 90,37.5 90,25.5 300,25.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">60,40 80,40</av:PointCollection>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Double x:Key="Width">1049</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID13">
+    <FlowStep x:Name="__ReferenceID10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">300,226</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">400,292 400,319</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="終了処理" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
-        <Sequence.Variables>
-          <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：終了処理" Name="LOCAL_CONST_strセクション名" />
-        </Sequence.Variables>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_101" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-        <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_102" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-      </Sequence>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID15">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">300,319</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_103" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-        </FlowStep>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID14">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">300,72</av:Point>
+          <av:Point x:Key="ShapeLocation">80,14.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,97.5 160,97.5 160,142</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">180,65.5 180,95.5 420,95.5 420,111.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="初期化" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_10">
-        <Flowchart.Variables>
-          <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：初期化" Name="LOCAL_CONST_strセクション名" />
-        </Flowchart.Variables>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <av:Point x:Key="ShapeLocation">30,0</av:Point>
-            <av:Size x:Key="ShapeSize">60,75</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">90,37.5 130,37.5 130,80</av:PointCollection>
-            <x:Double x:Key="Height">645</x:Double>
-            <x:Double x:Key="Width">980</x:Double>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <Flowchart.StartNode>
-          <x:Reference>__ReferenceID5</x:Reference>
-        </Flowchart.StartNode>
-        <FlowStep x:Name="__ReferenceID5">
+      <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_90" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">30,80</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">230,105.5 260,105.5 260,88.5 280,88.5</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">320,111.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,138</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">320,180.5 180,180.5 180,212</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_91" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+          <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】&#xA;パラメタ情報(Parameters.xlsx)をdictionaryParametersに読み込みます。" DisplayName="パラメタ読込" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_75">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：パラメタ読込" Name="LOCAL_CONST_strセクション名" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </勝:ログ_テキストv1>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID4">
+            <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_161" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">280,27</av:Point>
-                  <av:Size x:Key="ShapeSize">200,123</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">480,88.5 510,88.5 510,0 630,0 630,20</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="＜YMDhmsフォルダ作成＞　　　　　　　　　　　　　　　&#xA;※&quot;Config.xlsx&quot; で機能の有効/無効を設定してください。" DisplayName="＜YMDhmsフォルダ作成＞" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_72">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Boolean成功" />
-                </Sequence.Variables>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="OptFunc(MkYmdHmsFolder)" sap:VirtualizedContainerService.HintSize="547,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="勝又自作Attended_Framework_拡張v1_パーツ\OptFunc.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
-                    <OutArgument x:TypeArguments="x:Boolean" x:Key="o_boolean成功">[LOCAL_Boolean成功]</OutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="i_strオプション機能名">MkYmdHmsFolder</InArgument>
-                    <InArgument x:TypeArguments="s:Exception" x:Key="i_ProcessException" />
-                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials">[io_dictionaryCredentials]</InOutArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:InvokeWorkflowFile>
-                <If Condition="[LOCAL_Boolean成功]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="547,393" sap2010:WorkflowViewState.IdRef="If_1">
-                  <If.Else>
-                    <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_71">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;YMDhmsフォルダ作成が失敗しました。&quot;]" />
-                      <Throw DisplayName="ビジネス例外をスロー" Exception="[new BusinessRuleException(&quot;YMDhmsフォルダ作成が失敗しました。&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                    </Sequence>
-                  </If.Else>
-                </If>
-              </Sequence>
-              <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">530,20</av:Point>
-                      <av:Size x:Key="ShapeSize">200,123</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">630,143 630,291.5</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="＜タイムスタンプファイル出力(Start)＞&#xA;※&quot;Config.xlsx&quot; で機能の有効/無効を設定してください。" DisplayName="OptFunc(TimeStampFile_Start)" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="勝又自作Attended_Framework_拡張v1_パーツ\OptFunc.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="o_boolean成功" />
-                      <InArgument x:TypeArguments="x:String" x:Key="i_strオプション機能名">TimeStampFile_Start</InArgument>
-                      <InArgument x:TypeArguments="s:Exception" x:Key="i_ProcessException" />
-                      <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials" />
-                    </ui:InvokeWorkflowFile.Arguments>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:InvokeWorkflowFile>
-                  <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID0">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">530,291.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,97</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">730,340 760,340 760,0 880,0 880,20</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】" DisplayName="＜パラメタ情報の一括取得＞" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <勝:Excel2列辞書化 sap2010:Annotation.AnnotationText="パラメタ情報(Parameters.xlsx)の一括取り込み" sap:VirtualizedContainerService.HintSize="200,64" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_1" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[io_Config(&quot;Parameters_xlsx_パス&quot;)]" in_xlsx_Sheets="[{&quot;Sheet1&quot;}]" out_Dictionary="[dictionaryParameters]">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </勝:Excel2列辞書化>
-                        <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="無視されたアクティビティ" sap:VirtualizedContainerService.HintSize="421,158" sap2010:WorkflowViewState.IdRef="Sequence_57">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Debug用出力" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_54">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;&lt;dictionaryParameters メンバ一覧&gt;&quot;" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="337,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_136" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="&lt;dictionaryParameters メンバ一覧&gt;" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </勝:ログ_テキストv1>
-                                <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="337,194" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[dictionaryParameters]">
-                                  <ui:ForEach.Body>
-                                    <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" Name="item" />
-                                      </ActivityAction.Argument>
-                                      <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="item.Key + &quot;：&quot; + item.Value" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_137" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="[item.Key + &quot;：&quot; + item.Value]" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </勝:ログ_テキストv1>
-                                    </ActivityAction>
-                                  </ui:ForEach.Body>
-                                </ui:ForEach>
-                              </Sequence>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:CommentOut>
-                        <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Parameters.xlsx&quot;&quot; パス：” + io_Config(&quot;Parameters_xlsx_パス&quot;)" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,79" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_129" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Parameters.xlsx&quot;&quot; パス：” + io_Config(&quot;Parameters_xlsx_パス&quot;)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </勝:ログ_テキストv1>
-                        <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Parameters.xlsx&quot;&quot; から資格情報を一括取得しました。取得件数：” + dictionary_Parameter.Count.ToString" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,109" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_128" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Parameters.xlsx&quot;&quot; から資格情報を一括取得しました。取得件数：” + dictionaryParameters.Count.ToString]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </勝:ログ_テキストv1>
-                      </Sequence>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID1">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">780,20</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_92" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </勝:ログ_テキストv1>
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                  </FlowStep.Next>
-                </FlowStep>
-              </FlowStep.Next>
-            </FlowStep>
-          </FlowStep.Next>
-        </FlowStep>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">740,457</av:Point>
-              <av:Size x:Key="ShapeSize">200,66</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">840,523 840,537</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Debug出力用" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_52">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;&lt;io_Config メンバ一覧&gt;&quot;" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="337,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_132" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="&lt;io_Config メンバ一覧&gt;" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </勝:ログ_テキストv1>
-            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="337,194" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[io_Config]">
-              <ui:ForEach.Body>
-                <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" Name="item" />
-                  </ActivityAction.Argument>
-                  <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="item.Key + &quot;：&quot; + item.Value" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_133" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="[item.Key + &quot;：&quot; + item.Value]" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </勝:ログ_テキストv1>
-                </ActivityAction>
-              </ui:ForEach.Body>
-            </ui:ForEach>
-          </Sequence>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID3">
+            <勝:Excel2列辞書化 sap2010:Annotation.AnnotationText="パラメタ情報(Parameters.xlsx)の一括取り込み" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Excel2列辞書化_2" in_Key列名="Name" in_Value列名="Value" in_xlsx_Path="[io_Config(&quot;Parameters_xlsx_パス&quot;)]" in_xlsx_Sheets="[{&quot;Sheet1&quot;}]" out_Dictionary="[dictionaryParameters]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">740,537</av:Point>
-                  <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">420,193 420,236 290,236</av:PointCollection>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Debug出力用" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;&lt;dictionaryCredentials メンバ一覧&gt;&quot;" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="337,64" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_151" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="&lt;dictionaryCredentials メンバ一覧&gt;" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
+            </勝:Excel2列辞書化>
+            <ui:CommentOut DisplayName="コメント アウト：Debug用" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="無視されたアクティビティ" sap:VirtualizedContainerService.HintSize="518,920" sap2010:WorkflowViewState.IdRef="Sequence_74">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </勝:ログ_テキストv1>
-                <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="337,194" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[io_dictionaryCredentials]">
-                  <ui:ForEach.Body>
-                    <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="item" />
-                      </ActivityAction.Argument>
-                      <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="item.Key + &quot;：&quot; + item.Value" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_152" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="[item.Key + &quot;：&quot; + item.Value]" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </勝:ログ_テキストv1>
-                    </ActivityAction>
-                  </ui:ForEach.Body>
-                </ui:ForEach>
-              </Sequence>
-            </FlowStep>
-          </FlowStep.Next>
-        </FlowStep>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">30,286</av:Point>
-              <av:Size x:Key="ShapeSize">200,168</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】&#xA;「汎用資格情報」の登録例です。ファイルサーバアクセス用の「Windows資格情報」登録例は勝又自作アクティビティ使用例.xamlを参照してください。" DisplayName="＜Windows資格情報マネージャーに登録＞" sap:VirtualizedContainerService.HintSize="200,168" sap2010:WorkflowViewState.IdRef="Sequence_58">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="UiPath_Frameworkサンプルプロセス.com" Name="LOCAL_testCredential" />
-              <Variable x:TypeArguments="x:String" Default="global\UiPathTestID" Name="LOCAL_testUsername" />
-              <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
-              <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:AddCredential CredentialType="Generic" DisplayName="Add credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddCredential_1" Password="[LOCAL_testPassword]" PersistanceType="Enterprise" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" Username="[LOCAL_testUsername]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_15" Text="[&quot;&quot;&quot;Add credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xA;+ &quot;以下の「汎用資格情報」の登録を実行しました。&quot; + vbNewLine _&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xA;+ LOCAL_Result.ToString]" />
-          </Sequence>
-        </FlowStep>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">30,491.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,97</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="【必要に応じて使用してください】" DisplayName="＜Windows資格情報マネージャーから削除＞" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_59">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="UiPath_Frameworkサンプルプロセス.com" Name="LOCAL_testCredential" />
-              <Variable x:TypeArguments="x:String" Default="global\UiPathTestID" Name="LOCAL_testUsername" />
-              <Variable x:TypeArguments="x:String" Default="TestPWD" Name="LOCAL_testPassword" />
-              <Variable x:TypeArguments="x:Boolean" Name="LOCAL_Result" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:DeleteCredential DisplayName="Delete credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_1" Result="[LOCAL_Result]" Target="[LOCAL_testCredential]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[&quot;&quot;&quot;Delete credential&quot;&quot; アクティビティで&quot; + vbNewLine _&#xA;+ &quot;以下の「汎用資格情報」の削除を実行しました。&quot; + vbNewLine _&#xA;+ &quot;&quot;&quot;&quot; + LOCAL_testCredential + &quot;&quot;&quot;&quot; + vbNewLine + vbNewLine _&#xA;+ &quot;結果は以下の通りです。（Trueで成功）&quot; + vbNewLine _&#xA;+ LOCAL_Result.ToString]" />
-          </Sequence>
-        </FlowStep>
-        <x:Reference>__ReferenceID0</x:Reference>
-        <x:Reference>__ReferenceID1</x:Reference>
-        <x:Reference>__ReferenceID2</x:Reference>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,222.5</av:Point>
-              <av:Size x:Key="ShapeSize">334,55</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="ここから下はUOC">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:Comment>
-        </FlowStep>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,162.5</av:Point>
-              <av:Size x:Key="ShapeSize">334,55</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_3" Text="ここから上はFramework機能で予約">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:Comment>
-        </FlowStep>
-        <FlowStep>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">273,453</av:Point>
-              <av:Size x:Key="ShapeSize">334,172</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap2010:Annotation.AnnotationText="①＜Windows資格情報マネージャーに登録＞&#xA;②＜YMDhmsフォルダ生成＞&#xA;③OptFunc(TimeStampFile_Start)&#xA;&#xA;※①でファイルサーバにアクセス可能になってから②を実行できるパターンがある為。&#xA;※②で作成されたフォルダに対して③でファイル出力する為。" DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="Comment_4" Text="上記の順序制約があります。">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:Comment>
-        </FlowStep>
-        <x:Reference>__ReferenceID3</x:Reference>
-        <x:Reference>__ReferenceID4</x:Reference>
-      </Flowchart>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID16">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">60,142</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">260,167.5 400,167.5 400,226</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Flowchart DisplayName="主処理" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_9">
-            <Flowchart.Variables>
-              <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：主処理" Name="LOCAL_CONST_strセクション名" />
-            </Flowchart.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <av:Point x:Key="ShapeLocation">0,0</av:Point>
-                <av:Size x:Key="ShapeSize">60,75</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">60,37.5 90,37.5 90,54.5 110,54.5</av:PointCollection>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Flowchart.StartNode>
-              <x:Reference>__ReferenceID12</x:Reference>
-            </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID12">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">110,29</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">210,80 210,91</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_140" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-              <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID11">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">110,91</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">210,142 210,179</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart DisplayName="サンプル処理" sap:VirtualizedContainerService.HintSize="684,636" sap2010:WorkflowViewState.IdRef="Flowchart_11">
-                    <Flowchart.Variables>
-                      <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：主処理：サンプル処理" Name="LOCAL_CONST_strセクション名" />
-                    </Flowchart.Variables>
+                  <Sequence DisplayName="Debug用出力" sap:VirtualizedContainerService.HintSize="476,899" sap2010:WorkflowViewState.IdRef="Sequence_73">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <av:Point x:Key="ShapeLocation">290,2.5</av:Point>
-                        <av:Size x:Key="ShapeSize">60,75</av:Size>
-                        <x:Double x:Key="Width">650</x:Double>
-                        <av:PointCollection x:Key="ConnectorLocation">320,77.5 320,107.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Flowchart.StartNode>
-                      <x:Reference>__ReferenceID9</x:Reference>
-                    </Flowchart.StartNode>
-                    <FlowStep x:Name="__ReferenceID7">
+                    <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="&quot;&lt;dictionaryParameters メンバ一覧&gt;&quot;" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_156" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="&lt;dictionaryParameters メンバ一覧&gt;" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">220,323.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">320,374.5 320,424.5</av:PointCollection>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke UOCワークフローの例 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="UOCワークフローの例.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_dictionaryParameters">[dictionaryParameters]</InOutArgument>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials">[io_dictionaryCredentials]</InOutArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID6">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">220,424.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_155" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <FlowStep>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">450,324.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">550,375.5 550,405.5 320,405.5 320,424.5</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="わざとエラー発生テスト.xaml" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="わざとエラー発生テスト.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_dictionaryParameters">[dictionaryParameters]</InOutArgument>
-                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials">[io_dictionaryCredentials]</InOutArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:InvokeWorkflowFile>
-                      <FlowStep.Next>
-                        <x:Reference>__ReferenceID6</x:Reference>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <x:Reference>__ReferenceID6</x:Reference>
-                    <FlowStep x:Name="__ReferenceID9">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">220,107.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">320,158.5 320,179.5</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_153" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID8">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">220,179.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,93</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">320,272.5 320,323.5</av:PointCollection>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”ログ・テキストファイル同時出力のサンプル処理”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_154" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”ログ・テキストファイル同時出力のサンプル処理”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                    </勝:ログ_テキストv1>
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="434,445" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[dictionaryParameters]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" Name="item" />
+                          </ActivityAction.Argument>
+                          <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="item.Key + &quot;：&quot; + item.Value" DisplayName="テキスト出力(開発Lv.)" sap:VirtualizedContainerService.HintSize="284,322" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_157" in_Config="[io_Config]" テキスト出力レベル="1" メッセージ="[item.Key + &quot;：&quot; + item.Value]" ログレベル="[LogLevel.Trace]" ログ出力オン="False">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </勝:ログ_テキストv1>
-                          <FlowStep.Next>
-                            <x:Reference>__ReferenceID7</x:Reference>
-                          </FlowStep.Next>
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <x:Reference>__ReferenceID8</x:Reference>
-                    <FlowStep>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Parameters.xlsx&quot;&quot; パス：” + io_Config(&quot;Parameters_xlsx_パス&quot;)" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_158" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Parameters.xlsx&quot;&quot; パス：” + io_Config(&quot;Parameters_xlsx_パス&quot;)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </勝:ログ_テキストv1>
+            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”&quot;&quot;Parameters.xlsx&quot;&quot; からパラメタ情報を一括取得しました。取得件数：” + dictionary_Parameter.Count.ToString" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_159" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”&quot;&quot;Parameters.xlsx&quot;&quot; から資格情報を一括取得しました。取得件数：” + dictionaryParameters.Count.ToString]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </勝:ログ_テキストv1>
+            <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_160" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </勝:ログ_テキストv1>
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">80,212</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">180,263 180,294.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart DisplayName="メイン処理" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_9">
+                <Flowchart.Variables>
+                  <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：メインループ処理" Name="LOCAL_CONST_strセクション名" />
+                </Flowchart.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">0,0</av:Point>
+                    <av:Size x:Key="ShapeSize">60,75</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">60,37.5 90,37.5 90,54.5 110,54.5</av:PointCollection>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Flowchart.StartNode>
+                  <x:Reference>__ReferenceID6</x:Reference>
+                </Flowchart.StartNode>
+                <FlowStep x:Name="__ReferenceID6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">110,29</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">210,80 210,108.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_140" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">0,339</av:Point>
-                          <av:Size x:Key="ShapeSize">200,22</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">100,361 100,391 320,391 320,424.5</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">110,108.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,138</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">210,246.5 210,284.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Throw DisplayName="スロー" Exception="[new BusinessRuleException(&quot;わざとビジネス例外スローで中断。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2">
+                      <Flowchart sap2010:Annotation.AnnotationText="サンプル処理として，&quot;Hello World!&quot; をメッセージボックス出力するだけの&quot;UOCワークフローの例.xaml&quot; を実行していますので，UOCで組み直してください。" DisplayName="サンプル処理" sap:VirtualizedContainerService.HintSize="684,678" sap2010:WorkflowViewState.IdRef="Flowchart_11">
+                        <Flowchart.Variables>
+                          <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：メインループ処理：サンプル処理" Name="LOCAL_CONST_strセクション名" />
+                        </Flowchart.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">290,2.5</av:Point>
+                            <av:Size x:Key="ShapeSize">60,75</av:Size>
+                            <x:Double x:Key="Width">650</x:Double>
+                            <av:PointCollection x:Key="ConnectorLocation">320,77.5 320,107.5</av:PointCollection>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </Throw>
+                        <Flowchart.StartNode>
+                          <x:Reference>__ReferenceID3</x:Reference>
+                        </Flowchart.StartNode>
+                        <FlowStep x:Name="__ReferenceID1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">220,323.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">320,374.5 320,424.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UOCワークフローの例 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="サンプルUOCワークフロー.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_dictionaryParameters">[dictionaryParameters]</InOutArgument>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials">[io_dictionaryCredentials]</InOutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID0">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">220,424.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_155" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                        <FlowStep>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">450,324.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">550,375.5 550,405.5 320,405.5 320,424.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="わざとエラー発生テスト.xaml" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="わざとエラー発生テスト.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_dictionaryParameters">[dictionaryParameters]</InOutArgument>
+                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictionaryCredentials">[io_dictionaryCredentials]</InOutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                        <x:Reference>__ReferenceID0</x:Reference>
+                        <FlowStep x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">220,107.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">320,158.5 320,179.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_153" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">220,179.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,93</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">320,272.5 320,323.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="”ログ・テキストファイル同時出力のサンプル処理”" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_154" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[”ログ・テキストファイル同時出力のサンプル処理”]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </勝:ログ_テキストv1>
+                              <FlowStep.Next>
+                                <x:Reference>__ReferenceID1</x:Reference>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                        <x:Reference>__ReferenceID2</x:Reference>
+                        <FlowStep>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">0,339</av:Point>
+                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">100,361 100,391 320,391 320,424.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw DisplayName="スロー：ビジネスエラーを生成" Exception="[new BusinessRuleException(&quot;わざとビジネス例外スローで中断。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Throw>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </Flowchart>
                       <FlowStep.Next>
-                        <x:Reference>__ReferenceID6</x:Reference>
+                        <FlowStep x:Name="__ReferenceID4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">110,284.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_141" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                        </FlowStep>
                       </FlowStep.Next>
-                    </FlowStep>
-                  </Flowchart>
-                  <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID10">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">110,179</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_141" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
+                <x:Reference>__ReferenceID4</x:Reference>
+                <x:Reference>__ReferenceID5</x:Reference>
+              </Flowchart>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">80,294.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <勝:ログ_テキストv1 DisplayName="セクション終了" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_103" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション終了文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
+                </FlowStep>
               </FlowStep.Next>
             </FlowStep>
-            <x:Reference>__ReferenceID10</x:Reference>
-            <x:Reference>__ReferenceID11</x:Reference>
-          </Flowchart>
-          <FlowStep.Next>
-            <x:Reference>__ReferenceID13</x:Reference>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID17">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">300,0</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">400,51 400,72</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <勝:ログ_テキストv1 DisplayName="セクション開始" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_90" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[io_Config(&quot;ログ_テキストv1_セクション開始文字列&quot;).ToString.Replace(&quot;%セクション%&quot;,LOCAL_CONST_strセクション名)]" ログレベル="[LogLevel.Info]" ログ出力オン="True" />
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID14</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <x:Reference>__ReferenceID15</x:Reference>
-    <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
   </Flowchart>
 </Activity>

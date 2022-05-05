@@ -1,4 +1,26 @@
-[勝又自作Attended_Framework_拡張v1] (C) 2020 Takahiro Katsumata
+[勝又自作Attended_Framework_拡張v1] (C) 2022 Takahiro Katsumata
+
+■2022/05/06	改良
+	◆依存関係ライブラリパッケージのバージョンアップ
+	　　Microsoft.Activities			1.0.1				※変更無し
+	　　Microsoft.Activities.Extensions	2.0.6.9				※変更無し
+	　●UiPath.Credentials.Activities	2.0.0				※変更前：1.1.6479.13204
+	　　UiPath.Excel.Activities			2.7.2				※変更無し
+	　●UiPath.Mail.Activities			1.12.3				※変更前：1.7.2
+	　●UiPath.System.Activities		21.10.4				※変更前：19.10.1
+	　●UiPath.UIAutomation.Activities	21.10.5				※変更前：19.11.1
+	　●勝又自作アクティビティパック	1.0.45				※変更前：1.0.44
+	◆OptFunc.xaml：オプション機能「SMTPメール」にメール添付ファイル機能を追加。
+	◆OptFunc.xaml：オプション機能「完了目印ファイル更新」を追加。
+	◆OptFunc.xaml：オプション機能「リネームアウトプットフォルダ名」を追加。
+	◆OptFunc.xaml：オプション機能「アウトプットフォルダ移動」を追加。
+	◆Frameworkのワークフロー構成を以下に見直し。
+	　　MainFramework.xaml
+	　　　├　InitialProcess.xaml　※今回追加
+	　　　├　MainProcess.xaml
+	　　　└　EndProcess.xaml　　　※今回追加
+	◆
+	◆Config.xlsx：メンテナンス効率化の改善。
 
 ■2021/04/07	改良
 	◆OptFunc.xaml：EndSmtpSend_本文，件名の"【Machine】"変換対応。
@@ -125,5 +147,5 @@
 	・"勝又自作アクティビティパック" パッケージバージョンアップ
 
 ■2020/05/25	新規作成
-	勝又自作Attended_Framework_拡張v1	Attended_Frameworkをベースにカスタマイズ
+	勝又自作Attended_Framework_拡張v1	Attended_Framework_v1.2をベースにカスタマイズ
 

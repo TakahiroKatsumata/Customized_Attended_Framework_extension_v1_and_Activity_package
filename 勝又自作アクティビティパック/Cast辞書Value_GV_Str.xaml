@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Cast辞書Value_GV_Str" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Cast辞書Value_GV_Str" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="以下の変数間の型変換を行う。&#xA;　Dictionary&lt;String,GenericValue&gt;&#xA;　Dictionary&lt;String,String&gt;" Name="io_dictionaryStr_GV" Type="InOutArgument(scg:Dictionary(x:String, ui:GenericValue))">
       <x:Property.Attributes>
@@ -16,7 +16,7 @@
       </x:Property.Attributes>
     </x:Property>
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1065,1127</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1265,827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -37,10 +37,13 @@
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -53,9 +56,10 @@
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>netstandard</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="以下の変数間の型変換を行う。&#xA;　　Dictionary&lt;String,GenericValue&gt;&#xA;　　Dictionary&lt;String,String&gt;&#xA;※型変換の方向性_GVtoStr&#xA;　　True ：GenericValue→String&#xA;　　False：String→GenericValue&#xA;※変換先が is Nothing ならNewする。&#xA;※変換先が is Nothing でなければ，元のコレクションに追加・更新。" DisplayName="Cast辞書Value_GV_Str" sap:VirtualizedContainerService.HintSize="1055,962" sap2010:WorkflowViewState.IdRef="Sequence_14">
+  <Sequence sap2010:Annotation.AnnotationText="以下の変数間の型変換を行う。&#xA;　　Dictionary&lt;String,GenericValue&gt;&#xA;　　Dictionary&lt;String,String&gt;&#xA;※型変換の方向性_GVtoStr&#xA;　　True ：GenericValue→String&#xA;　　False：String→GenericValue&#xA;※変換先が is Nothing ならNewする。&#xA;※変換先が is Nothing でなければ，元のコレクションに追加・更新。" DisplayName="Cast辞書Value_GV_Str" sap:VirtualizedContainerService.HintSize="955,657" sap2010:WorkflowViewState.IdRef="Sequence_14">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -63,9 +67,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[i_型変換の方向性_GVtoStr]" DisplayName="is Nothing ならNew" sap:VirtualizedContainerService.HintSize="1013,356" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[i_型変換の方向性_GVtoStr]" DisplayName="is Nothing ならNew" sap:VirtualizedContainerService.HintSize="913,51" sap2010:WorkflowViewState.IdRef="If_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <If Condition="[io_dictionaryStr_Str is Nothing]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_2">
+        <If Condition="[io_dictionaryStr_Str is Nothing]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -85,7 +95,7 @@
         </If>
       </If.Then>
       <If.Else>
-        <If Condition="[io_dictionaryStr_GV is Nothing]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_3">
+        <If Condition="[io_dictionaryStr_GV is Nothing]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -105,9 +115,15 @@
         </If>
       </If.Else>
     </If>
-    <If Condition="[i_型変換の方向性_GVtoStr]" DisplayName="コレクションを変換しながらコピー" sap:VirtualizedContainerService.HintSize="1013,342" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[i_型変換の方向性_GVtoStr]" DisplayName="コレクションを変換しながらコピー" sap:VirtualizedContainerService.HintSize="913,342" sap2010:WorkflowViewState.IdRef="If_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="337,194" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[io_dictionaryStr_GV]">
+        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[io_dictionaryStr_GV]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)">
               <ActivityAction.Argument>
@@ -132,7 +148,7 @@
         </ui:ForEach>
       </If.Then>
       <If.Else>
-        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="337,194" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[io_dictionaryStr_Str]">
+        <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[io_dictionaryStr_Str]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
               <ActivityAction.Argument>
