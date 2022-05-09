@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1296,2404</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1257,2404</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -1196,11 +1196,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">3,126.5</av:Point>
-          <av:Size x:Key="ShapeSize">334,217</av:Size>
+          <av:Size x:Key="ShapeSize">334,142</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">636.312311156353,278.982602203576 636.312311156353,288.982602203576</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap2010:Annotation.AnnotationText="★Edgeダウンロード部品&#xA;★説明書きで補完するつもり&#xA;→ローカルフォルダ，アウトプットフォルダの使い分けサンプルロジックの提供（最初にLOCALにアウトプットフォルダ作って，最後にアウトプットフォルダを移動する。移動失敗時はメール添付）&#xA;★パラメタ辞書をコンフィグ辞書に継承のサンプルロジックの提供&#xA;★メールアドレス指定中の改行を;置換，スペース除去。これによりメアド指定がフリーFormatになるはず。" DisplayName="コメント：改修要件" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="Comment_6" Text="">
+      <ui:Comment sap2010:Annotation.AnnotationText="★Edgeダウンロード部品&#xA;★パラメタ辞書をコンフィグ辞書に継承のサンプルロジックの提供&#xA;★メールアドレス指定中の改行を;置換，スペース除去。これによりメアド指定がフリーFormatになるはず。" DisplayName="コメント：改修要件" sap:VirtualizedContainerService.HintSize="334,142" sap2010:WorkflowViewState.IdRef="Comment_6" Text="">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

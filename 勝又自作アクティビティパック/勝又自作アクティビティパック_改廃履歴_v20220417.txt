@@ -10,6 +10,7 @@
 
 
 ■2022/04/17	改良
+勝又自作アクティビティパック.1.0.45.nupkg
 	・依存関係ライブラリパッケージのバージョンアップ
 	　●UiPath.Credentials.Activities	2.0.0				※変更前：1.1.6479.13204
 	　　UiPath.Excel.Activities			2.7.2				※変更無し
