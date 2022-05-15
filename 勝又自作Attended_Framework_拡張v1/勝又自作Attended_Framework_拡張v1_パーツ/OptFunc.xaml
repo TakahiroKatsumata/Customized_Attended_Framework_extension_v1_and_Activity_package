@@ -9,7 +9,7 @@
   <this:オプション機能モジュール.i_ProcessException>
     <InArgument x:TypeArguments="s:Exception" />
   </this:オプション機能モジュール.i_ProcessException>
-  <sap:VirtualizedContainerService.HintSize>1215,1623</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,1623</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -92,6 +92,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -251,7 +252,7 @@
                                 <av:PointCollection x:Key="ConnectorLocation">1160,730.5 1190,730.5 1190,2 980,2 980,32</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Flowchart DisplayName="SMTPメール" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_8">
+                            <Flowchart DisplayName="SMTPメール" sap:VirtualizedContainerService.HintSize="851,1617" sap2010:WorkflowViewState.IdRef="Flowchart_8">
                               <Flowchart.Variables>
                                 <Variable x:TypeArguments="x:String" Name="strSmtp本文キー" />
                                 <Variable x:TypeArguments="x:String" Name="strSmtp件名キー" />
@@ -567,7 +568,7 @@
                                                                       <ActivityAction.Argument>
                                                                         <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, ui:GenericValue)" Name="item" />
                                                                       </ActivityAction.Argument>
-                                                                      <If Condition="[item.Key.ToString.StartsWith(&quot;EndSmtpSend_添付パス&quot;)]" DisplayName="Key ”EndSmtpSend_添付パス”：条件分岐" sap:VirtualizedContainerService.HintSize="833,859" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                      <If Condition="[item.Key.ToString.StartsWith(&quot;EndSmtpSend_添付パス&quot;) and Not String.IsNullOrWhiteSpace(item.Value.ToString)]" DisplayName="Key ”EndSmtpSend_添付パス”：条件分岐" sap:VirtualizedContainerService.HintSize="833,859" sap2010:WorkflowViewState.IdRef="If_8">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2446,7 +2447,7 @@
                                 <av:PointCollection x:Key="ConnectorLocation">1160,1070 1190,1070 1190,2 980,2 980,32</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Flowchart DisplayName="リネームアウトプットフォルダ" sap:VirtualizedContainerService.HintSize="1431,2115" sap2010:WorkflowViewState.IdRef="Flowchart_10">
+                            <Flowchart DisplayName="リネームアウトプットフォルダ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_10">
                               <Flowchart.Variables>
                                 <Variable x:TypeArguments="x:String" Name="LOCAL_str変更予定フォルダパス" />
                                 <Variable x:TypeArguments="x:String" Name="LOCAL_str元フォルダパス分解_フォルダ名" />
@@ -3225,13 +3226,13 @@
           </If>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,532" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,525" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="オプション機能モジュールを実行しません。（オプション機能に対するEnableキー指定無し）" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,340" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_11" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[&quot;オプション機能モジュール：&quot; + strMsg表示用処理内容 + &quot; を実行しません。（オプション機能に対するEnableキー指定無し）&quot;]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
+            <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="オプション機能モジュールを実行しません。（オプション機能に対するEnableキー指定無し）" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,333" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_11" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="[&quot;オプション機能モジュール：&quot; + strMsg表示用処理内容 + &quot; を実行しません。（オプション機能に対するEnableキー指定無し）&quot;]" ログレベル="[LogLevel.Info]" ログ出力オン="True">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

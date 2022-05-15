@@ -1,6 +1,6 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2022 Takahiro Katsumata
 
-■2022/05/06	改良
+■2022/05/15	改良
 	◆依存関係ライブラリパッケージのバージョンアップ
 	　　Microsoft.Activities			1.0.1				※変更無し
 	　　Microsoft.Activities.Extensions	2.0.6.9				※変更無し
@@ -19,7 +19,11 @@
 	　　　├　InitialProcess.xaml　※今回追加
 	　　　├　MainProcess.xaml
 	　　　└　EndProcess.xaml　　　※今回追加
-	◆
+	◆EndProcess.xamlに以下のサンプルUOC追加：
+	　　・先行 "MainProcess.xaml" の成功時に，メール添付ファイル機能の有効化スイッチをONに設定。
+	　　・外部フォルダ移動が失敗した時に，フォルダ "YYYYMMDDhhmmss_成功" をZIP圧縮してメール添付に設定。
+	◆"勝又自作ワークフローパーツ"フォルダ内の以下改修。
+	　　・"クリックDL結果ファイル格納.xaml" 新規追加。
 	◆Config.xlsx：メンテナンス効率化の改善。
 
 ■2021/04/07	改良

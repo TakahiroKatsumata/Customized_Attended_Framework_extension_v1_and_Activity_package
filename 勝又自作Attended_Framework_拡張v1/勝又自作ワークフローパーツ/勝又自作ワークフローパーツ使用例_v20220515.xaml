@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="勝又自作ワークフローパーツ使用例_v20210315" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1186,917" sap2010:WorkflowViewState.IdRef="勝又自作ワークフローパーツ使用例_v20210315_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="勝又自作ワークフローパーツ使用例_v20210315" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1154,917" sap2010:WorkflowViewState.IdRef="勝又自作ワークフローパーツ使用例_v20210315_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="24">
+    <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -25,10 +25,12 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -53,6 +55,8 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="使用例Top" sap:VirtualizedContainerService.HintSize="1164,852" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -67,7 +71,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID16</x:Reference>
+      <x:Reference>__ReferenceID17</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -474,7 +478,7 @@
         <x:Reference>__ReferenceID10</x:Reference>
       </Flowchart>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID16">
+    <FlowStep x:Name="__ReferenceID17">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">50,80</av:Point>
@@ -492,11 +496,11 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 430,107.5 430,240 400,240</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 430,107.5 430,153 400,153</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID13</x:Reference>
+          <x:Reference>__ReferenceID16</x:Reference>
         </Flowchart.StartNode>
         <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
@@ -565,7 +569,7 @@
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="System.Environment.GetFolderPath( Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;" />
                   </InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="i_ダウンロードタイムアウト秒">
-                    <Literal x:TypeArguments="x:Int32" Value="30" />
+                    <Literal x:TypeArguments="x:Int32" Value="60" />
                   </InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="i_クリックアクティビティプロパティ_タイムアウトミリ秒">
                     <Literal x:TypeArguments="x:Int32" Value="30000" />
@@ -574,7 +578,7 @@
                     <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strＤＬ部品実行ログ" />
                   </OutArgument>
                   <InArgument x:TypeArguments="x:Boolean" x:Key="i_エクセプションスロー有効">
-                    <Literal x:TypeArguments="x:Boolean" />
+                    <Literal x:TypeArguments="x:Boolean" Value="True" />
                   </InArgument>
                   <InArgument x:TypeArguments="x:Int32" x:Key="i_パス指定モード">
                     <Literal x:TypeArguments="x:Int32" />
@@ -585,11 +589,20 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="o_格納結果ファイルパス">
                     <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="str格納結果ファイルパス" />
                   </OutArgument>
-                  <InArgument x:TypeArguments="x:Boolean" x:Key="o_Result成否">
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="blnResult成否" />
-                  </InArgument>
+                  <OutArgument x:TypeArguments="x:Boolean" x:Key="o_Result成否">
+                    <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="blnResult成否" />
+                  </OutArgument>
                   <InArgument x:TypeArguments="x:Boolean" x:Key="i_上書許容">
                     <Literal x:TypeArguments="x:Boolean" Value="True" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="i_クリックアクティビティプロパティ_UIオプション">
+                    <Literal x:TypeArguments="x:Int32" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="i_エラー時リトライ回数">
+                    <Literal x:TypeArguments="x:Int32" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="i_ファイル移動モード">
+                    <Literal x:TypeArguments="x:Int32" />
                   </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
@@ -604,7 +617,7 @@
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
-        <FlowStep>
+        <FlowStep x:Name="__ReferenceID16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,127.5</av:Point>

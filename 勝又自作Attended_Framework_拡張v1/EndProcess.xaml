@@ -89,7 +89,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="　　※その他詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1251,1344" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="　　※その他詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1261,1344" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="EndProcess.xaml" Name="LOCAL_CONST_strセクション名" />
       <Variable x:TypeArguments="x:Int32" Name="intEndProsess内エラー回数" />
@@ -104,7 +104,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
         <av:PointCollection x:Key="ConnectorLocation">60,37.5 180,37.5 180,54</av:PointCollection>
         <x:Double x:Key="Height">1251</x:Double>
-        <x:Double x:Key="Width">1217</x:Double>
+        <x:Double x:Key="Width">1227</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -179,7 +179,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">663,12</av:Point>
                       <av:Size x:Key="ShapeSize">334,55</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">830,67 830,86.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">830,67 830,126.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_3" Text="UOC追加：↓ここから">
@@ -195,10 +195,10 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">780.5,86.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">780.5,126.5</av:Point>
                           <av:Size x:Key="ShapeSize">99,87</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">780.5,130 720,130 720,146.5</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">879.5,130 1050,130 1050,202.5</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">780.5,170 720,170 720,186.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">879.5,170 1050,170 1050,232.5</av:PointCollection>
                           <x:String x:Key="FalseLabel">エラー</x:String>
                           <x:String x:Key="TrueLabel">成功</x:String>
                         </scg:Dictionary>
@@ -209,10 +209,10 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">671.5,146.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">671.5,186.5</av:Point>
                               <av:Size x:Key="ShapeSize">97,87</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">671.5,190 610,190 610,352.5</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">768.5,190 830,190 830,272.5</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">671.5,230 610,230 610,392.5</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">768.5,230 830,230 830,312.5</av:PointCollection>
                               <x:String x:Key="FalseLabel">エラー</x:String>
                               <x:String x:Key="TrueLabel">成功</x:String>
                             </scg:Dictionary>
@@ -221,9 +221,9 @@
                             <FlowStep x:Name="__ReferenceID60">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">443,352.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">443,392.5</av:Point>
                                   <av:Size x:Key="ShapeSize">334,55</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">610,407.5 610,437.5</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">610,447.5 610,477.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_15" Text="UOC：成功時">
@@ -237,9 +237,9 @@
                                 <FlowStep x:Name="__ReferenceID61">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">479,437.5</av:Point>
+                                      <av:Point x:Key="ShapeLocation">479,477.5</av:Point>
                                       <av:Size x:Key="ShapeSize">262,117</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">610,554.5 610,584.5 830,584.5 830,662.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">610,594.5 610,624.5 830,624.5 830,662.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Assign sap2010:Annotation.AnnotationText="【UOCで適宜，改廃してください】&#xA;オプション機能「SMTPメール」のメール添付ファイル機能の有効化スイッチをON。" DisplayName="代入：True→EndSmtpSend_添付_Enable" sap:VirtualizedContainerService.HintSize="262,117" sap2010:WorkflowViewState.IdRef="Assign_58">
@@ -1048,7 +1048,7 @@
                                                               <av:PointCollection x:Key="ConnectorLocation">180,828 180,874</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <TryCatch DisplayName="フォルダ圧縮＆メール添付設定：トライ キャッチ" sap:VirtualizedContainerService.HintSize="672,1942" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                                          <TryCatch DisplayName="フォルダ圧縮＆メール添付設定：トライ キャッチ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1075,7 +1075,7 @@
                                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       <av:Point x:Key="ShapeLocation">211.5,336.5</av:Point>
                                                                       <av:Size x:Key="ShapeSize">97,87</av:Size>
-                                                                      <av:PointCollection x:Key="TrueConnector">211.5,380 170,380 170,472</av:PointCollection>
+                                                                      <av:PointCollection x:Key="TrueConnector">211.5,380 170,380 170,452</av:PointCollection>
                                                                       <x:String x:Key="FalseLabel">エラー</x:String>
                                                                       <x:String x:Key="TrueLabel">成功</x:String>
                                                                     </scg:Dictionary>
@@ -1084,9 +1084,9 @@
                                                                     <FlowStep x:Name="__ReferenceID29">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <av:Point x:Key="ShapeLocation">70,472</av:Point>
+                                                                          <av:Point x:Key="ShapeLocation">70,452</av:Point>
                                                                           <av:Size x:Key="ShapeSize">200,93</av:Size>
-                                                                          <av:PointCollection x:Key="ConnectorLocation">170,565 170,618</av:PointCollection>
+                                                                          <av:PointCollection x:Key="ConnectorLocation">170,545 170,578</av:PointCollection>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                       <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="「フォルダ圧縮＆メール添付設定」を実行開始。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_51" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="「フォルダ圧縮＆メール添付設定」を実行開始。" ログレベル="[LogLevel.Info]" ログ出力オン="True">
@@ -1101,9 +1101,9 @@
                                                                         <FlowStep x:Name="__ReferenceID27">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <av:Point x:Key="ShapeLocation">70,618</av:Point>
+                                                                              <av:Point x:Key="ShapeLocation">70,578</av:Point>
                                                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                              <av:PointCollection x:Key="ConnectorLocation">170,670 170,710</av:PointCollection>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">170,629 170,660</av:PointCollection>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                           <uascw:CompressFiles CompressedFileInfo="{x:Null}" Password="{x:Null}" CodePage="Default" CompressedFileName="[io_Config(&quot;プロセス実行毎アウトプットフォルダ&quot;) + &quot;.zip&quot;]" CompressionLevel="Normal" DisplayName="ファイルを圧縮/zip 圧縮" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CompressFiles_2" OverrideExistingFile="True">
@@ -1122,14 +1122,14 @@
                                                                             <FlowStep x:Name="__ReferenceID30">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <av:Point x:Key="ShapeLocation">39,710</av:Point>
+                                                                                  <av:Point x:Key="ShapeLocation">39,660</av:Point>
                                                                                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                  <av:PointCollection x:Key="ConnectorLocation">170,770 170,810</av:PointCollection>
+                                                                                  <av:PointCollection x:Key="ConnectorLocation">170,720 170,750</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <Assign DisplayName="メール添付ファイルパス設定：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_147">
                                                                                 <Assign.To>
-                                                                                  <OutArgument x:TypeArguments="ui:GenericValue">[io_Config("EndSmtpSend_添付パス03")]</OutArgument>
+                                                                                  <OutArgument x:TypeArguments="ui:GenericValue">[io_Config("EndSmtpSend_添付パス00")]</OutArgument>
                                                                                 </Assign.To>
                                                                                 <Assign.Value>
                                                                                   <InArgument x:TypeArguments="ui:GenericValue">[New GenericValue( io_Config("プロセス実行毎アウトプットフォルダ") + ".zip" )]</InArgument>
@@ -1145,12 +1145,12 @@
                                                                                 <FlowStep x:Name="__ReferenceID31">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                      <av:Point x:Key="ShapeLocation">39,810</av:Point>
-                                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                      <av:PointCollection x:Key="ConnectorLocation">170,870 170,930</av:PointCollection>
+                                                                                      <av:Point x:Key="ShapeLocation">39,750</av:Point>
+                                                                                      <av:Size x:Key="ShapeSize">262,117</av:Size>
+                                                                                      <av:PointCollection x:Key="ConnectorLocation">170,867 170,910</av:PointCollection>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <Assign DisplayName="メール本文：「ZIPを添付しました」追記：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_154">
+                                                                                  <Assign sap2010:Annotation.AnnotationText="メール追記：&quot;★アウトプットファイルを指定のフォルダに配置できなかった為，ZIP圧縮して本メールに添付しました。&quot; " DisplayName="メール本文：「ZIPを添付しました」追記：代入" sap:VirtualizedContainerService.HintSize="262,117" sap2010:WorkflowViewState.IdRef="Assign_154">
                                                                                     <Assign.To>
                                                                                       <OutArgument x:TypeArguments="ui:GenericValue">[io_Config("EndSmtpSend_本文_Normal")]</OutArgument>
                                                                                     </Assign.To>
@@ -1161,6 +1161,7 @@
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                   </Assign>
@@ -1168,7 +1169,7 @@
                                                                                     <FlowStep x:Name="__ReferenceID28">
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                          <av:Point x:Key="ShapeLocation">70,930</av:Point>
+                                                                                          <av:Point x:Key="ShapeLocation">70,910</av:Point>
                                                                                           <av:Size x:Key="ShapeSize">200,93</av:Size>
                                                                                           <av:PointCollection x:Key="ConnectorLocation">980,125 980,150</av:PointCollection>
                                                                                         </scg:Dictionary>
@@ -1230,7 +1231,7 @@
                                                               </Flowchart>
                                                             </TryCatch.Try>
                                                             <TryCatch.Catches>
-                                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="638,573" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="638,572" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1241,14 +1242,14 @@
                                                                   <ActivityAction.Argument>
                                                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                                   </ActivityAction.Argument>
-                                                                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                                                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,503" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="「フォルダ圧縮＆メール添付設定」を実行完了。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_52" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="「フォルダ圧縮＆メール添付設定」で何らかのエラー発生。" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
+                                                                    <勝:ログ_テキストv1 sap2010:Annotation.AnnotationText="「フォルダ圧縮＆メール添付設定」で何らかのエラー発生。" DisplayName="ログ＆テキスト出力" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="ログ_テキストv1_52" in_Config="[io_Config]" テキスト出力レベル="2" メッセージ="「フォルダ圧縮＆メール添付設定」で何らかのエラー発生。" ログレベル="[LogLevel.Warn]" ログ出力オン="True">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1257,7 +1258,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </勝:ログ_テキストv1>
-                                                                    <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,75" sap2010:WorkflowViewState.IdRef="Comment_50" Text="フォルダ圧縮＆メール添付設定の失敗はエラー回数にカウントする。">
+                                                                    <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_50" Text="フォルダ圧縮＆メール添付設定の失敗はエラー回数にカウントする。">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1667,9 +1668,9 @@
                             <FlowStep x:Name="__ReferenceID59">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">663,272.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">663,312.5</av:Point>
                                   <av:Size x:Key="ShapeSize">334,55</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">830,327.5 830,662.5</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">830,367.5 830,662.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_14" Text="UOC：MainProcessでエラー時">
@@ -1690,9 +1691,9 @@
                         <FlowStep x:Name="__ReferenceID58">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">883,202.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">883,232.5</av:Point>
                               <av:Size x:Key="ShapeSize">334,55</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">1050,257.5 1050,632.5 830,632.5 830,662.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">1050,287.5 1050,632.5 830,632.5 830,662.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_13" Text="UOC：InitialProcessでエラー時">
@@ -1724,10 +1725,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">883,23</av:Point>
-          <av:Size x:Key="ShapeSize">334,74</av:Size>
+          <av:Size x:Key="ShapeSize">334,93</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_10" Text="※後続「Frameworkの各オプション機能実行」を実行する為，基本，TryCach実行すること。">
+      <ui:Comment DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="Comment_10" Text="※後続「Frameworkの各オプション機能実行」を実行する為，追加するUOCは，基本，TryCach実行すること。">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1767,22 +1768,5 @@
       </ui:Comment>
     </FlowStep>
     <x:Reference>__ReferenceID66</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">683,756</av:Point>
-          <av:Size x:Key="ShapeSize">334,277</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">673,700 387,700 387,332 190,332 190,362</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap2010:Annotation.AnnotationText="●ロジック見直し：リネームフォルダとフォルダ移動を一つのフローチャートないで組み直し。リネーム失敗時のフォルダ移動中止はフローチャート内で表現。&#xA;○メール文面に追記「所定フォルダにアウトプットデータを配置できませんでした。アウトプットデータを添付します。」&#xA;○説明書き（前提のとこ）&#xA;初期状態の設定・サンプルUOCにて，以下の挙動を。&#xA;・YYYYMMDDhhmmssフォルダ作成（オプション機能）&#xA;・タイムスタンプファイル&#xA;・フォルダリネーム&#xA;・フォルダ移動&#xA;・フォルダ移動のエラー時はフォルダ圧縮＆メール添付設定（&#xA;UOC）&#xA;" DisplayName="コメント" sap:VirtualizedContainerService.HintSize="334,277" sap2010:WorkflowViewState.IdRef="Comment_51" Text="←★やること２つ">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:Comment>
-    </FlowStep>
   </Flowchart>
 </Activity>

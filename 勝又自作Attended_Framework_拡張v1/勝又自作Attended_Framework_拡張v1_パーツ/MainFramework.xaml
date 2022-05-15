@@ -1192,39 +1192,5 @@
     </FlowStep>
     <x:Reference>__ReferenceID34</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">3,126.5</av:Point>
-          <av:Size x:Key="ShapeSize">334,142</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">636.312311156353,278.982602203576 636.312311156353,288.982602203576</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap2010:Annotation.AnnotationText="★Edgeダウンロード部品&#xA;★パラメタ辞書をコンフィグ辞書に継承のサンプルロジックの提供&#xA;★メールアドレス指定中の改行を;置換，スペース除去。これによりメアド指定がフリーFormatになるはず。" DisplayName="コメント：改修要件" sap:VirtualizedContainerService.HintSize="334,142" sap2010:WorkflowViewState.IdRef="Comment_6" Text="">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:Comment>
-    </FlowStep>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">643,114</av:Point>
-          <av:Size x:Key="ShapeSize">334,247</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">646.312311156353,288.982602203576 646.312311156353,298.982602203576</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap2010:Annotation.AnnotationText="◆設定ファイル一括反映処理つくりたい！&#xA;・差分チェックし，バックアップFolderも指定する感じで。&#xA;・フォルダ単位，ファイル単位を選択&#xA;・無人モードと確認しながらモードも実装。&#xA;　　→毎朝無人モード実行すれば，&#xA;　　　メアド変更は他の人にやっといてもらえる。&#xA;　　　（件名に変更あり無し反映されるといいね）&#xA;※これを実装するのは，本番ジョブを極力，外部ストレージに触らないようにしたいから。（外部ストレージのパラメタは，事前にLOCALに取り込んでおく考え）&#xA;※外部ストレージコピーが失敗したものをリスト追加し，遅延でコピーさせるために，この処理を活用できないか？" DisplayName="コメント：改修要件" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="Comment_7" Text="">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:Comment>
-    </FlowStep>
   </Flowchart>
 </Activity>

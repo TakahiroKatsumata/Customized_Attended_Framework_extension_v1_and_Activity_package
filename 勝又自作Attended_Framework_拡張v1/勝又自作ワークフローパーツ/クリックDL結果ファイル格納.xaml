@@ -1,27 +1,27 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ダウンロード" this:ダウンロード.i_監視対象フォルダパス="[System.Environment.GetFolderPath( Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;]" this:ダウンロード.i_ダウンロードタイムアウト秒="30" this:ダウンロード.i_クリックアクティビティプロパティ_タイムアウトミリ秒="30000" this:ダウンロード.i_エクセプションスロー有効="True" this:ダウンロード.i_パス指定モード="0" this:ダウンロード.i_上書許容="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ダウンロード" this:ダウンロード.i_監視対象フォルダパス="[System.Environment.GetFolderPath( Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;]" this:ダウンロード.i_ダウンロードタイムアウト秒="60" this:ダウンロード.i_クリックアクティビティプロパティ_タイムアウトミリ秒="30000" this:ダウンロード.i_エクセプションスロー有効="True" this:ダウンロード.i_パス指定モード="0" this:ダウンロード.i_上書許容="True" this:ダウンロード.i_クリックアクティビティプロパティ_UIオプション="0" this:ダウンロード.i_エラー時リトライ回数="0" this:ダウンロード.i_ファイル移動モード="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="i_クリックアクティビティプロパティ_セレクター" Type="InArgument(x:String)" />
     <x:Property Name="i_監視対象フォルダパス" Type="InArgument(x:String)" />
     <x:Property Name="i_ダウンロードタイムアウト秒" Type="InArgument(x:Int32)" />
     <x:Property Name="i_クリックアクティビティプロパティ_タイムアウトミリ秒" Type="InArgument(x:Int32)" />
     <x:Property Name="o_実行ログ情報" Type="OutArgument(x:String)" />
-    <x:Property Name="i_エクセプションスロー有効" Type="InArgument(x:Boolean)" />
-    <x:Property Name="i_パス指定モード" Type="InArgument(x:Int32)" />
-    <x:Property Name="i_格納先" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="True：スローする&#xD;&#xA;False：しない" Name="i_エクセプションスロー有効" Type="InArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="0,Default：&#xD;&#xA;　格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xA;1：&#xD;&#xA;　格納先ファイルパス指定を引数とする。" Name="i_パス指定モード" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="i_パス指定モード=0：フォルダパスを指定してください。&#xA;i_パス指定モード=1：ファイルパスを指定してください。" Name="i_格納先" Type="InArgument(x:String)" />
     <x:Property Name="o_格納結果ファイルパス" Type="OutArgument(x:String)" />
-    <x:Property Name="o_Result成否" Type="InArgument(x:Boolean)" />
-    <x:Property Name="i_上書許容" Type="InArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="True：成功&#xD;&#xA;False：失敗" Name="o_Result成否" Type="OutArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="True：上書許容する&#xD;&#xA;False：しない" Name="i_上書許容" Type="InArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="0,Default：ノーマル&#xD;&#xA;1：ウィンドウメッセージを送信&#xD;&#xA;2：クリックをシミュレート" Name="i_クリックアクティビティプロパティ_UIオプション" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="※将来実装予定" Name="i_エラー時リトライ回数" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="0,Default：&#xD;&#xA;　MoveFile命令でファイル移動し格納&#xA;1：&#xD;&#xA;　CopyFile命令＆DeleteFile命令でFile移動し格納" Name="i_ファイル移動モード" Type="InArgument(x:Int32)" />
   </x:Members>
   <this:ダウンロード.i_格納先>
     <InArgument x:TypeArguments="x:String" />
   </this:ダウンロード.i_格納先>
-  <this:ダウンロード.o_Result成否>
-    <InArgument x:TypeArguments="x:Boolean" />
-  </this:ダウンロード.o_Result成否>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1186,4264</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,5142</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ダウンロード_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -80,10 +80,10 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -91,16 +91,16 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="クリックDL結果ファイル格納&#xD;&#xA;クリックでＤＬし，結果ファイルをパス指定で格納する。&#xD;&#xA;&#xD;&#xA;【前提】&#xD;&#xA;◆１クリックで１ファイルDLのパターンのみに対応。&#xD;&#xA;◆ＤＬ実行前に指定フォルダの有無をチェックし，指定フォルダが存在しなければエラーになります。&#xD;&#xA;&#xD;&#xA;【引数】&#xD;&#xA;●　i_パス指定モード&#xD;&#xA;　　　0,Default　：　格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xD;&#xA;　　　1　　　　　：　格納先ファイルパス指定を引数とする。　←★テスト予定&#xD;&#xA;●　i_ファイル移動モード&#xD;&#xA;　　　0,Default　：　MoveFile命令でファイル移動し格納&#xD;&#xA;　　　1　　　　　：　CopyFile命令＆DeleteFile命令でFile移動し格納&#xD;&#xA;●　i_上書許容&#xD;&#xA;　　　（上書許容するTrue，しないFalse）&#xD;&#xA;●　i_監視対象フォルダパス&#xD;&#xA;◎　i_ダウンロードタイムアウト秒&#xD;&#xA;○　i_ダウンロードタイムアウト時リトライ回数&#xD;&#xA;●　i_格納先&#xD;&#xA;　　　（ファイルパスorフォルダパス）&#xD;&#xA;●　o_格納結果ファイルパス&#xD;&#xA;●　i_エクセプションスロー有効&#xD;&#xA;　　　（スローするTrue，しないFalse）&#xD;&#xA;●　o_Result成否（成功True，失敗False）&#xD;&#xA;●　o_実行ログ情報&#xD;&#xA;◎　i_クリックアクティビティプロパティ_セレクター&#xD;&#xA;◎　i_クリックアクティビティプロパティ_タイムアウトミリ秒&#xD;&#xA;○　i_クリックアクティビティプロパティ_UIオプション&#xD;&#xA;　　　（ウィンドウメッセージを送信，クリックをシミュレート，ノーマル）" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1194,4199" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="クリックDL結果ファイル格納&#xA;クリックでＤＬし，結果ファイルをパス指定で格納する。&#xA;&#xA;【前提】&#xA;◆１クリックで１ファイルDLのパターンのみに対応。&#xA;◆ＤＬ実行前に指定フォルダの有無をチェックし，指定フォルダが存在しなければエラーになります。&#xA;&#xA;【引数】&#xA;●　i_パス指定モード&#xA;　　　0,Default　：　格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xA;　　　1　　　　　：　格納先ファイルパス指定を引数とする。&#xA;●　i_ファイル移動モード&#xA;　　　0,Default　：　MoveFile命令でファイル移動し格納&#xA;　　　1　　　　　：　CopyFile命令＆DeleteFile命令でFile移動し格納&#xA;●　i_上書許容&#xA;　　　（上書許容するTrue，しないFalse）&#xA;●　i_監視対象フォルダパス&#xA;●　i_ダウンロードタイムアウト秒&#xA;◎　i_エラー時リトライ回数　※将来実装予定&#xA;●　i_格納先&#xA;　　　（ファイルパスorフォルダパスを指定してください。）&#xA;●　o_格納結果ファイルパス&#xA;●　i_エクセプションスロー有効&#xA;　　　（スローするTrue，しないFalse）&#xA;●　o_Result成否（成功True，失敗False）&#xA;●　o_実行ログ情報&#xA;●　i_クリックアクティビティプロパティ_セレクター&#xA;●　i_クリックアクティビティプロパティ_タイムアウトミリ秒&#xA;●　i_クリックアクティビティプロパティ_UIオプション&#xD;&#xA;　　　0,Default：ノーマル&#xD;&#xA;　　　1：ウィンドウメッセージを送信&#xD;&#xA;　　　2：クリックをシミュレート&#xA;" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1194,5077" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="トライ キャッチ" sap:VirtualizedContainerService.HintSize="1152,3616" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="トライ キャッチ" sap:VirtualizedContainerService.HintSize="1152,4446" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Flowchart DisplayName="Try" sap:VirtualizedContainerService.HintSize="1114,2596" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+        <Flowchart DisplayName="Try" sap:VirtualizedContainerService.HintSize="1114,3676" sap2010:WorkflowViewState.IdRef="Flowchart_4">
           <Flowchart.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="blnパス存在チェック結果" />
             <Variable x:TypeArguments="x:String" Name="strＤＬファイル名" />
@@ -116,18 +116,18 @@
               <av:Size x:Key="ShapeSize">60,75</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">30,77.5 30,90 129,90 129,30 159,30</av:PointCollection>
               <x:Double x:Key="Width">1080</x:Double>
-              <x:Double x:Key="Height">2560</x:Double>
+              <x:Double x:Key="Height">3640</x:Double>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID24</x:Reference>
+            <x:Reference>__ReferenceID46</x:Reference>
           </Flowchart.StartNode>
-          <FlowStep x:Name="__ReferenceID0">
+          <FlowStep x:Name="__ReferenceID6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">159,2370</av:Point>
+                <av:Point x:Key="ShapeLocation">159,3470</av:Point>
                 <av:Size x:Key="ShapeSize">262,60</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">290,2430 290,2480</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">290,3530 290,3580</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -144,10 +144,10 @@
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID16">
+              <FlowStep x:Name="__ReferenceID22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">159,2480</av:Point>
+                    <av:Point x:Key="ShapeLocation">159,3580</av:Point>
                     <av:Size x:Key="ShapeSize">262,60</av:Size>
                     <av:PointCollection x:Key="ConnectorLocation">250,70 250,140</av:PointCollection>
                   </scg:Dictionary>
@@ -169,341 +169,7 @@
               </FlowStep>
             </FlowStep.Next>
           </FlowStep>
-          <FlowStep x:Name="__ReferenceID6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">190,864.5</av:Point>
-                <av:Size x:Key="ShapeSize">200,52</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">290,916.5 290,945.5</av:PointCollection>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:GetLastDownloadedFile DisplayName="ダウンロードを待機" DownloadFolder="[i_監視対象フォルダパス]" File="[fileinfoＤＬファイル]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_3" Timeout="[i_ダウンロードタイムアウト秒]">
-              <ui:GetLastDownloadedFile.Body>
-                <ActivityAction>
-                  <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリックDL結果ファイル格納：クリック" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7c3f5c7-aa00-4600-8285-cfa2a71adab1" InformativeScreenshot="824206fe0448313eded9143e7daf7ae5" Selector="[i_クリックアクティビティプロパティ_セレクター]" TimeoutMS="[i_クリックアクティビティプロパティ_タイムアウトミリ秒]">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:Click>
-                  </Sequence>
-                </ActivityAction>
-              </ui:GetLastDownloadedFile.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:GetLastDownloadedFile>
-            <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID14">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">159,945.5</av:Point>
-                    <av:Size x:Key="ShapeSize">262,60</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">290,1005.5 290,1026.5</av:PointCollection>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　ＤＬファイル：" + fileinfoＤＬファイル.FullName]</InArgument>
-                  </Assign.Value>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Assign>
-                <FlowStep.Next>
-                  <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID5}" x:Name="__ReferenceID13" sap2010:Annotation.AnnotationText="【i_パス指定モード】&#xD;&#xA;0,Default：格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xD;&#xA;1：&#xD;&#xA;格納先ファイルパス指定を引数とする。" DisplayName="パス指定モード" Expression="[i_パス指定モード]" sap:VirtualizedContainerService.HintSize="155,227" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <av:Point x:Key="ShapeLocation">212.5,1026.5</av:Point>
-                        <av:Size x:Key="ShapeSize">155,227</av:Size>
-                        <av:PointCollection x:Key="Default">290,1253.5 290,1283.5 150,1283.5 150,1300</av:PointCollection>
-                        <av:PointCollection x:Key="0Connector">212.5,1140 150,1140 150,1300</av:PointCollection>
-                        <av:PointCollection x:Key="1Connector">367.5,1140 430,1140 430,1300</av:PointCollection>
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <FlowStep x:Key="0" x:Name="__ReferenceID5">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">19,1300</av:Point>
-                          <av:Size x:Key="ShapeSize">262,104</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">150,1404 150,1434 290,1434 290,1450</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="TOファイルパス&#xD;&#xA;　←TOフォルダパス + ＤＬファイル名" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_12">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[strTOファイルパス]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[strTOフォルダパス + "\" + fileinfoＤＬファイル.Name]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID4">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">159,1450</av:Point>
-                              <av:Size x:Key="ShapeSize">262,60</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">290,1510 290,1550</av:PointCollection>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　移動先ファイルパス：" + strTOファイルパス]</InArgument>
-                            </Assign.Value>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </Assign>
-                          <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID20" DisplayName="上書許容" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                              <FlowDecision.Condition>
-                                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i_上書許容" />
-                              </FlowDecision.Condition>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">255,1550</av:Point>
-                                  <av:Size x:Key="ShapeSize">70,87</av:Size>
-                                  <x:String x:Key="TrueLabel">する</x:String>
-                                  <x:String x:Key="FalseLabel">しない</x:String>
-                                  <av:PointCollection x:Key="TrueConnector">255,1593.5 230,1593.5 230,1798.5 290,1798.5 290,1828.5</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">325,1593.5 355,1593.5 355,1600 490,1600</av:PointCollection>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <FlowDecision.True>
-                                <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID2}" x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="【i_ファイル移動モード】&#xD;&#xA;0,Default：&#xD;&#xA;MoveFile命令でファイル移動し格納&#xD;&#xA;1：&#xD;&#xA;CopyFile命令＆DeleteFile命令でFile移動し格納&#xD;&#xA;" DisplayName="パス指定モード" Expression="[i_パス指定モード]" sap:VirtualizedContainerService.HintSize="158,243" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_3">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <av:Point x:Key="ShapeLocation">211,1828.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">158,243</av:Size>
-                                      <av:PointCollection x:Key="Default">290,2071.5 290,2101.5 140,2101.5 140,2180</av:PointCollection>
-                                      <av:PointCollection x:Key="0Connector">211,1950 140,1950 140,2180</av:PointCollection>
-                                      <av:PointCollection x:Key="1Connector">369,1950 430,1950 430,2114</av:PointCollection>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <FlowStep x:Key="0" x:Name="__ReferenceID2">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">40,2180</av:Point>
-                                        <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">140,2232 140,2262 290,2262 290,2291</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[strTOファイルパス]" DisplayName="ファイルを移動" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[fileinfoＤＬファイル.FullName]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:MoveFile>
-                                    <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID1">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">159,2291</av:Point>
-                                            <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">290,2351 290,2370</av:PointCollection>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <Assign DisplayName="o_格納結果ファイルパス：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[o_格納結果ファイルパス]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[strTOファイルパス]</InArgument>
-                                          </Assign.Value>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </Assign>
-                                        <FlowStep.Next>
-                                          <x:Reference>__ReferenceID0</x:Reference>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowStep.Next>
-                                  </FlowStep>
-                                  <FlowStep x:Key="1" x:Name="__ReferenceID9">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:Point x:Key="ShapeLocation">330,2114</av:Point>
-                                        <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">430,2166 430,2184</av:PointCollection>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strTOファイルパス]" DisplayName="ファイルをコピー" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[fileinfoＤＬファイル.FullName]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:CopyFile>
-                                    <FlowStep.Next>
-                                      <FlowStep x:Name="__ReferenceID10">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">330,2184</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">430,2236 430,2266 290,2266 290,2291</av:PointCollection>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:DeleteFileX DisplayName="ファイルを削除" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[fileinfoＤＬファイル.FullName]">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:DeleteFileX>
-                                        <FlowStep.Next>
-                                          <x:Reference>__ReferenceID1</x:Reference>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowStep.Next>
-                                  </FlowStep>
-                                </FlowSwitch>
-                              </FlowDecision.True>
-                              <FlowDecision.False>
-                                <FlowStep x:Name="__ReferenceID21">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">490,1558.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">590,1641.5 590,1666.5</av:PointCollection>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:PathExists sap2010:Annotation.AnnotationText="TOファイルパスの存在チェック" DisplayName="パスの存在を確認" Exists="[blnパス存在チェック結果]" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[strTOファイルパス]" PathType="File">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:PathExists>
-                                  <FlowStep.Next>
-                                    <FlowDecision x:Name="__ReferenceID23" Condition="[blnパス存在チェック結果]" DisplayName="TOファイル存在" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <av:Point x:Key="ShapeLocation">550.5,1666.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">79,87</av:Size>
-                                          <av:PointCollection x:Key="TrueConnector">550.5,1710 420,1710 420,1749</av:PointCollection>
-                                          <x:String x:Key="TrueLabel">存在(NG)</x:String>
-                                          <x:String x:Key="FalseLabel">無し</x:String>
-                                          <av:PointCollection x:Key="FalseConnector">629.5,1710 650,1710 650,1798.5 290,1798.5 290,1828.5</av:PointCollection>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <FlowDecision.True>
-                                        <FlowStep x:Name="__ReferenceID22">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">320,1749</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <Throw DisplayName="ビジネス例外をスロー" Exception="[New BusinessRuleException( &quot;クリックDL結果ファイル格納：格納先フォルダが存在しません。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
-                                        </FlowStep>
-                                      </FlowDecision.True>
-                                      <FlowDecision.False>
-                                        <x:Reference>__ReferenceID3</x:Reference>
-                                      </FlowDecision.False>
-                                    </FlowDecision>
-                                  </FlowStep.Next>
-                                </FlowStep>
-                              </FlowDecision.False>
-                            </FlowDecision>
-                          </FlowStep.Next>
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <FlowStep x:Key="1" x:Name="__ReferenceID19">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">299,1300</av:Point>
-                          <av:Size x:Key="ShapeSize">262,104</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">430,1404 430,1434 290,1434 290,1450</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="TOファイルパス&#xD;&#xA;　←i_格納先" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_22">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[strTOファイルパス]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[i_格納先]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <FlowStep.Next>
-                        <x:Reference>__ReferenceID4</x:Reference>
-                      </FlowStep.Next>
-                    </FlowStep>
-                  </FlowSwitch>
-                </FlowStep.Next>
-              </FlowStep>
-            </FlowStep.Next>
-          </FlowStep>
-          <FlowStep x:Name="__ReferenceID15">
+          <FlowStep x:Name="__ReferenceID21">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">159,90</av:Point>
@@ -516,7 +182,7 @@
                 <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">["クリックDL結果ファイル格納：Start"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["クリックDL結果ファイル格納：Start " + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")]</InArgument>
               </Assign.Value>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -525,142 +191,993 @@
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
             <FlowStep.Next>
-              <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID8}" x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="【i_パス指定モード】&#xD;&#xA;0,Default：格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xD;&#xA;1：&#xD;&#xA;格納先ファイルパス指定を引数とする。" DisplayName="パス指定モード" sap:VirtualizedContainerService.HintSize="155,227" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
-                <FlowSwitch.Expression>
-                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="i_パス指定モード" />
-                </FlowSwitch.Expression>
+              <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID13}" x:Name="__ReferenceID17" sap2010:Annotation.AnnotationText="【i_パス指定モード】&#xA;0,Default：格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xA;1：&#xA;格納先ファイルパス指定を引数とする。" DisplayName="パス指定モード" Expression="[i_パス指定モード]" sap:VirtualizedContainerService.HintSize="155,227" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <av:Point x:Key="ShapeLocation">212.5,186.5</av:Point>
                     <av:Size x:Key="ShapeSize">155,227</av:Size>
-                    <av:PointCollection x:Key="Default">290,413.5 290,443.5 150,443.5 150,468</av:PointCollection>
-                    <av:PointCollection x:Key="0Connector">212.5,300 150,300 150,468</av:PointCollection>
-                    <av:PointCollection x:Key="1Connector">367.5,300 430,300 430,468</av:PointCollection>
+                    <av:PointCollection x:Key="Default">290,413.5 290,443.5 150,443.5 150,458</av:PointCollection>
+                    <av:PointCollection x:Key="0Connector">212.5,300 150,300 150,458</av:PointCollection>
+                    <av:PointCollection x:Key="1Connector">367.5,300 430,300 430,460</av:PointCollection>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <FlowStep x:Key="0" x:Name="__ReferenceID8">
+                <FlowStep x:Key="0" x:Name="__ReferenceID13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">19,468</av:Point>
-                      <av:Size x:Key="ShapeSize">262,104</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">150,572 150,602 290,602 290,624.5</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">19,458</av:Point>
+                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">150,518 150,548</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText="TOフォルダパス&#xD;&#xA;　←i_格納先" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_10">
+                  <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[strTOフォルダパス]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[i_格納先]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 格納先(フォルダパス指定)="]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID7">
+                    <FlowStep x:Name="__ReferenceID31">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">190,624.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,83</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">290,707.5 290,726.5</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">19,548</av:Point>
+                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">150,608 150,638</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:PathExists sap2010:Annotation.AnnotationText="TOフォルダの存在チェック" DisplayName="パスの存在を確認" Exists="[blnパス存在チェック結果]" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strTOフォルダパス]" PathType="Folder">
+                      <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + i_格納先]</InArgument>
+                        </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </ui:PathExists>
+                      </Assign>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID11" DisplayName="TOフォルダ存在" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                          <FlowDecision.Condition>
-                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="blnパス存在チェック結果" />
-                          </FlowDecision.Condition>
+                        <FlowStep x:Name="__ReferenceID18">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">249.5,726.5</av:Point>
-                              <av:Size x:Key="ShapeSize">81,87</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">249.5,770 230,770 230,834.5 290,834.5 290,864.5</av:PointCollection>
-                              <x:String x:Key="TrueLabel">存在</x:String>
-                              <x:String x:Key="FalseLabel">無し(NG)</x:String>
-                              <av:PointCollection x:Key="FalseConnector">330.5,770 545.5,770 545.5,820</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">19,638</av:Point>
+                              <av:Size x:Key="ShapeSize">262,104</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">150,742 150,772 290,772 290,794.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <FlowDecision.True>
-                            <x:Reference>__ReferenceID6</x:Reference>
-                          </FlowDecision.True>
-                          <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID17">
+                          <Assign sap2010:Annotation.AnnotationText="TOフォルダパス&#xA;　←i_格納先" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strTOフォルダパス]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[i_格納先]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">445.5,820</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                  <av:Point x:Key="ShapeLocation">190,794.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,83</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">290,877.5 290,896.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Throw DisplayName="ビジネス例外をスロー" Exception="[New BusinessRuleException( &quot;クリックDL結果ファイル格納：格納先フォルダが存在しません。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                              <ui:PathExists sap2010:Annotation.AnnotationText="TOフォルダの存在チェック" DisplayName="TOフォルダ：パスの存在を確認" Exists="[blnパス存在チェック結果]" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[strTOフォルダパス]" PathType="Folder">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:PathExists>
+                              <FlowStep.Next>
+                                <FlowDecision x:Name="__ReferenceID16" Condition="[blnパス存在チェック結果]" DisplayName="TOフォルダ存在" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <av:Point x:Key="ShapeLocation">249.5,896.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">81,87</av:Size>
+                                      <av:PointCollection x:Key="TrueConnector">249.5,940 230,940 230,1004.5 290,1004.5 290,1034.5</av:PointCollection>
+                                      <x:String x:Key="TrueLabel">存在</x:String>
+                                      <x:String x:Key="FalseLabel">無し(NG)</x:String>
+                                      <av:PointCollection x:Key="FalseConnector">330.5,940 545.5,940 545.5,990</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <FlowDecision.True>
+                                    <FlowStep x:Name="__ReferenceID33">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">159,1034.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">290,1094.5 290,1140</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 格納先フォルダ存在を確認。"]</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID39">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">159,1140</av:Point>
+                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">290,1200 290,1220</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 監視対象フォルダ="]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID38">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">159,1220</av:Point>
+                                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">290,1280 290,1298.5</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + i_監視対象フォルダパス]</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID34">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">190,1298.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">290,1381.5 290,1406.5</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:PathExists sap2010:Annotation.AnnotationText="監視対象フォルダの存在チェック" DisplayName="監視対象フォルダ：パスの存在を確認" Exists="[blnパス存在チェック結果]" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[i_監視対象フォルダパス]" PathType="Folder">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:PathExists>
+                                                  <FlowStep.Next>
+                                                    <FlowDecision x:Name="__ReferenceID36" Condition="[blnパス存在チェック結果]" DisplayName="監視対象フォルダ存在" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          <av:Point x:Key="ShapeLocation">233,1406.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">114,87</av:Size>
+                                                          <av:PointCollection x:Key="TrueConnector">233,1450 203,1450 203,1530 290,1530 290,1560</av:PointCollection>
+                                                          <x:String x:Key="TrueLabel">存在</x:String>
+                                                          <x:String x:Key="FalseLabel">無し(NG)</x:String>
+                                                          <av:PointCollection x:Key="FalseConnector">347,1450 550,1450 550,1499</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <FlowDecision.True>
+                                                        <FlowStep x:Name="__ReferenceID37">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">159,1560</av:Point>
+                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">290,1620 290,1654</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 監視対象フォルダ存在を確認。ダウンロードを待機開始。"]</InArgument>
+                                                            </Assign.Value>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </Assign>
+                                                          <FlowStep.Next>
+                                                            <FlowStep x:Name="__ReferenceID40">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <av:Point x:Key="ShapeLocation">190,1654</av:Point>
+                                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">290,1706 290,1735.5</av:PointCollection>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:GetLastDownloadedFile DisplayName="ダウンロードを待機" DownloadFolder="[i_監視対象フォルダパス]" File="[fileinfoＤＬファイル]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_4" Timeout="[i_ダウンロードタイムアウト秒]">
+                                                                <ui:GetLastDownloadedFile.Body>
+                                                                  <ActivityAction>
+                                                                    <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="696,728" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <Flowchart DisplayName="DL操作" sap:VirtualizedContainerService.HintSize="654,636" sap2010:WorkflowViewState.IdRef="Flowchart_7">
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            <av:Point x:Key="ShapeLocation">0,0</av:Point>
+                                                                            <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                            <av:PointCollection x:Key="ConnectorLocation">60,37.5 90,37.5 90,30 179.5,30</av:PointCollection>
+                                                                            <x:Double x:Key="Width">620</x:Double>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                        <Flowchart.StartNode>
+                                                                          <x:Reference>__ReferenceID5</x:Reference>
+                                                                        </Flowchart.StartNode>
+                                                                        <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID1}" x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="【i_クリックアクティビティプロパティ_UIオプション】&#xA;0,Default：ノーマル&#xA;1：ウィンドウメッセージを送信&#xA;2：クリックをシミュレート&#xA;" DisplayName="UIオプション" Expression="[i_クリックアクティビティプロパティ_UIオプション]" sap:VirtualizedContainerService.HintSize="158,211" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_5">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                              <av:Point x:Key="ShapeLocation">231.5,98</av:Point>
+                                                                              <av:Size x:Key="ShapeSize">158,211</av:Size>
+                                                                              <av:PointCollection x:Key="Default">231.5,256.25 100,256.25 100,374.5</av:PointCollection>
+                                                                              <av:PointCollection x:Key="0Connector">271,309 271,339 201.5,339 201.5,400.5 200,400.5</av:PointCollection>
+                                                                              <av:PointCollection x:Key="1Connector">310.5,309 310.5,339 310,339 310,374.5</av:PointCollection>
+                                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                              <av:PointCollection x:Key="2Connector">350,309 350,339 419.5,339 419.5,400.5 420,400.5</av:PointCollection>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <FlowStep x:Key="1" x:Name="__ReferenceID2">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">210,374.5</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">310,426.5 310,476.5</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリックDL結果ファイル格納_1：クリック" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                                                              <ui:Click.CursorPosition>
+                                                                                <ui:CursorPosition Position="Center">
+                                                                                  <ui:CursorPosition.OffsetX>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetX>
+                                                                                  <ui:CursorPosition.OffsetY>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetY>
+                                                                                </ui:CursorPosition>
+                                                                              </ui:Click.CursorPosition>
+                                                                              <ui:Click.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7c3f5c7-aa00-4600-8285-cfa2a71adab1" InformativeScreenshot="824206fe0448313eded9143e7daf7ae5" Selector="[i_クリックアクティビティプロパティ_セレクター]" TimeoutMS="[i_クリックアクティビティプロパティ_タイムアウトミリ秒]">
+                                                                                  <ui:Target.WaitForReady>
+                                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                  </ui:Target.WaitForReady>
+                                                                                </ui:Target>
+                                                                              </ui:Click.Target>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                            </ui:Click>
+                                                                            <FlowStep.Next>
+                                                                              <FlowStep x:Name="__ReferenceID0">
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <av:Point x:Key="ShapeLocation">179,476.5</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">320.5,70 320.5,108</av:PointCollection>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                                                                  <Assign.To>
+                                                                                    <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                  </Assign.To>
+                                                                                  <Assign.Value>
+                                                                                    <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " クリック完了"]</InArgument>
+                                                                                  </Assign.Value>
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </Assign>
+                                                                              </FlowStep>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                          <FlowStep x:Key="0" x:Name="__ReferenceID1">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">0,374.5</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">100,426.5 100,456.5 310,456.5 310,476.5</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリックDL結果ファイル格納_0：クリック" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                                                              <ui:Click.CursorPosition>
+                                                                                <ui:CursorPosition Position="Center">
+                                                                                  <ui:CursorPosition.OffsetX>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetX>
+                                                                                  <ui:CursorPosition.OffsetY>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetY>
+                                                                                </ui:CursorPosition>
+                                                                              </ui:Click.CursorPosition>
+                                                                              <ui:Click.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7c3f5c7-aa00-4600-8285-cfa2a71adab1" InformativeScreenshot="824206fe0448313eded9143e7daf7ae5" Selector="[i_クリックアクティビティプロパティ_セレクター]" TimeoutMS="[i_クリックアクティビティプロパティ_タイムアウトミリ秒]">
+                                                                                  <ui:Target.WaitForReady>
+                                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                  </ui:Target.WaitForReady>
+                                                                                </ui:Target>
+                                                                              </ui:Click.Target>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                            </ui:Click>
+                                                                            <FlowStep.Next>
+                                                                              <x:Reference>__ReferenceID0</x:Reference>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                          <FlowStep x:Key="2" x:Name="__ReferenceID3">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">420,374.5</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">520,426.5 520,456.5 310,456.5 310,476.5</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリックDL結果ファイル格納_2：クリック" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                                              <ui:Click.CursorPosition>
+                                                                                <ui:CursorPosition Position="Center">
+                                                                                  <ui:CursorPosition.OffsetX>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetX>
+                                                                                  <ui:CursorPosition.OffsetY>
+                                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                                  </ui:CursorPosition.OffsetY>
+                                                                                </ui:CursorPosition>
+                                                                              </ui:Click.CursorPosition>
+                                                                              <ui:Click.Target>
+                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7c3f5c7-aa00-4600-8285-cfa2a71adab1" InformativeScreenshot="824206fe0448313eded9143e7daf7ae5" Selector="[i_クリックアクティビティプロパティ_セレクター]" TimeoutMS="[i_クリックアクティビティプロパティ_タイムアウトミリ秒]">
+                                                                                  <ui:Target.WaitForReady>
+                                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                  </ui:Target.WaitForReady>
+                                                                                </ui:Target>
+                                                                              </ui:Click.Target>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                            </ui:Click>
+                                                                            <FlowStep.Next>
+                                                                              <x:Reference>__ReferenceID0</x:Reference>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                        </FlowSwitch>
+                                                                        <x:Reference>__ReferenceID1</x:Reference>
+                                                                        <x:Reference>__ReferenceID2</x:Reference>
+                                                                        <x:Reference>__ReferenceID3</x:Reference>
+                                                                        <FlowStep x:Name="__ReferenceID5">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <av:Point x:Key="ShapeLocation">179.5,0</av:Point>
+                                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">310.5,60 310.5,98</av:PointCollection>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                                                            <Assign.To>
+                                                                              <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                            </Assign.To>
+                                                                            <Assign.Value>
+                                                                              <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " クリック開始"]</InArgument>
+                                                                            </Assign.Value>
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                          </Assign>
+                                                                          <FlowStep.Next>
+                                                                            <x:Reference>__ReferenceID4</x:Reference>
+                                                                          </FlowStep.Next>
+                                                                        </FlowStep>
+                                                                        <x:Reference>__ReferenceID0</x:Reference>
+                                                                      </Flowchart>
+                                                                    </Sequence>
+                                                                  </ActivityAction>
+                                                                </ui:GetLastDownloadedFile.Body>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:GetLastDownloadedFile>
+                                                              <FlowStep.Next>
+                                                                <FlowStep x:Name="__ReferenceID20">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <av:Point x:Key="ShapeLocation">159,1735.5</av:Point>
+                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                      <av:PointCollection x:Key="ConnectorLocation">290,1795.5 290,1815.5</av:PointCollection>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                                    <Assign.To>
+                                                                      <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                    </Assign.To>
+                                                                    <Assign.Value>
+                                                                      <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " ＤＬファイル="]</InArgument>
+                                                                    </Assign.Value>
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                  </Assign>
+                                                                  <FlowStep.Next>
+                                                                    <FlowStep x:Name="__ReferenceID41">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <av:Point x:Key="ShapeLocation">159,1815.5</av:Point>
+                                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                          <av:PointCollection x:Key="ConnectorLocation">290,1875.5 290,1926.5</av:PointCollection>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + fileinfoＤＬファイル.FullName]</InArgument>
+                                                                        </Assign.Value>
+                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          </scg:Dictionary>
+                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                      </Assign>
+                                                                      <FlowStep.Next>
+                                                                        <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID11}" x:Name="__ReferenceID19" sap2010:Annotation.AnnotationText="【i_パス指定モード】&#xA;0,Default：格納先フォルダパス指定を引数とし，格納結果ファイルパスを返す。&#xA;1：&#xA;格納先ファイルパス指定を引数とする。" DisplayName="パス指定モード" Expression="[i_パス指定モード]" sap:VirtualizedContainerService.HintSize="155,227" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                              <av:Point x:Key="ShapeLocation">212.5,1926.5</av:Point>
+                                                                              <av:Size x:Key="ShapeSize">155,227</av:Size>
+                                                                              <av:PointCollection x:Key="Default">290,2153.5 290,2183.5 150,2183.5 150,2200</av:PointCollection>
+                                                                              <av:PointCollection x:Key="0Connector">212.5,2040 150,2040 150,2200</av:PointCollection>
+                                                                              <av:PointCollection x:Key="1Connector">367.5,2040 430,2040 430,2200</av:PointCollection>
+                                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <FlowStep x:Key="0" x:Name="__ReferenceID11">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">19,2200</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">262,104</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">150,2304 150,2334 290,2334 290,2350</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <Assign sap2010:Annotation.AnnotationText="TOファイルパス&#xA;　←TOフォルダパス + ＤＬファイル名" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                                              <Assign.To>
+                                                                                <OutArgument x:TypeArguments="x:String">[strTOファイルパス]</OutArgument>
+                                                                              </Assign.To>
+                                                                              <Assign.Value>
+                                                                                <InArgument x:TypeArguments="x:String">[strTOフォルダパス + "\" + fileinfoＤＬファイル.Name]</InArgument>
+                                                                              </Assign.Value>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                            </Assign>
+                                                                            <FlowStep.Next>
+                                                                              <FlowStep x:Name="__ReferenceID10">
+                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                    <av:Point x:Key="ShapeLocation">159,2350</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">290,2410 290,2430</av:PointCollection>
+                                                                                  </scg:Dictionary>
+                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                                                  <Assign.To>
+                                                                                    <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                  </Assign.To>
+                                                                                  <Assign.Value>
+                                                                                    <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 移動先ファイルパス="]</InArgument>
+                                                                                  </Assign.Value>
+                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    </scg:Dictionary>
+                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                </Assign>
+                                                                                <FlowStep.Next>
+                                                                                  <FlowStep x:Name="__ReferenceID42">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <av:Point x:Key="ShapeLocation">159,2430</av:Point>
+                                                                                        <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                        <av:PointCollection x:Key="ConnectorLocation">290,2490 290,2520</av:PointCollection>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+                                                                                      <Assign.To>
+                                                                                        <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                      </Assign.To>
+                                                                                      <Assign.Value>
+                                                                                        <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + strTOファイルパス]</InArgument>
+                                                                                      </Assign.Value>
+                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                        </scg:Dictionary>
+                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                    </Assign>
+                                                                                    <FlowStep.Next>
+                                                                                      <FlowDecision x:Name="__ReferenceID26" Condition="[i_上書許容]" DisplayName="上書許容" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                            <av:Point x:Key="ShapeLocation">255,2520</av:Point>
+                                                                                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                                                                            <x:String x:Key="TrueLabel">する</x:String>
+                                                                                            <x:String x:Key="FalseLabel">しない</x:String>
+                                                                                            <av:PointCollection x:Key="TrueConnector">255,2563.5 230,2563.5 230,2763 290,2763 290,2793</av:PointCollection>
+                                                                                            <av:PointCollection x:Key="FalseConnector">325,2563.5 355,2563.5 355,2570 490,2570</av:PointCollection>
+                                                                                          </scg:Dictionary>
+                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                        <FlowDecision.True>
+                                                                                          <FlowSwitch x:TypeArguments="x:Int32" Default="{x:Reference __ReferenceID8}" x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="【i_ファイル移動モード】&#xA;0,Default：&#xA;MoveFile命令でファイル移動し格納&#xA;1：&#xA;CopyFile命令＆DeleteFile命令でFile移動し格納&#xA;" DisplayName="ファイル移動モード" sap:VirtualizedContainerService.HintSize="158,243" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_3">
+                                                                                            <FlowSwitch.Expression>
+                                                                                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="i_ファイル移動モード" />
+                                                                                            </FlowSwitch.Expression>
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                <av:Point x:Key="ShapeLocation">211,2793</av:Point>
+                                                                                                <av:Size x:Key="ShapeSize">158,243</av:Size>
+                                                                                                <av:PointCollection x:Key="Default">290,3036 290,3066 140,3066 140,3090</av:PointCollection>
+                                                                                                <av:PointCollection x:Key="0Connector">211,2914.5 140,2914.5 140,3090</av:PointCollection>
+                                                                                                <av:PointCollection x:Key="1Connector">369,2914.5 430,2914.5 430,3054</av:PointCollection>
+                                                                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <FlowStep x:Key="0" x:Name="__ReferenceID8">
+                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                  <av:Point x:Key="ShapeLocation">40,3090</av:Point>
+                                                                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,3142 140,3182</av:PointCollection>
+                                                                                                </scg:Dictionary>
+                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                              <ui:MoveFile ContinueOnError="{x:Null}" Destination="[strTOファイルパス]" DisplayName="ファイルを移動" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[fileinfoＤＬファイル.FullName]">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                              </ui:MoveFile>
+                                                                                              <FlowStep.Next>
+                                                                                                <FlowStep x:Name="__ReferenceID43">
+                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                      <av:Point x:Key="ShapeLocation">9,3182</av:Point>
+                                                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,3242 140,3272 290,3272 290,3391</av:PointCollection>
+                                                                                                    </scg:Dictionary>
+                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                  <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                                                                    <Assign.To>
+                                                                                                      <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                                    </Assign.To>
+                                                                                                    <Assign.Value>
+                                                                                                      <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " ファイル移動完了"]</InArgument>
+                                                                                                    </Assign.Value>
+                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                      </scg:Dictionary>
+                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                  </Assign>
+                                                                                                  <FlowStep.Next>
+                                                                                                    <FlowStep x:Name="__ReferenceID7">
+                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                          <av:Point x:Key="ShapeLocation">159,3391</av:Point>
+                                                                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                          <av:PointCollection x:Key="ConnectorLocation">290,3451 290,3470</av:PointCollection>
+                                                                                                        </scg:Dictionary>
+                                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                                      <Assign DisplayName="o_格納結果ファイルパス：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                                                                        <Assign.To>
+                                                                                                          <OutArgument x:TypeArguments="x:String">[o_格納結果ファイルパス]</OutArgument>
+                                                                                                        </Assign.To>
+                                                                                                        <Assign.Value>
+                                                                                                          <InArgument x:TypeArguments="x:String">[strTOファイルパス]</InArgument>
+                                                                                                        </Assign.Value>
+                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                          </scg:Dictionary>
+                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                      </Assign>
+                                                                                                      <FlowStep.Next>
+                                                                                                        <x:Reference>__ReferenceID6</x:Reference>
+                                                                                                      </FlowStep.Next>
+                                                                                                    </FlowStep>
+                                                                                                  </FlowStep.Next>
+                                                                                                </FlowStep>
+                                                                                              </FlowStep.Next>
+                                                                                            </FlowStep>
+                                                                                            <FlowStep x:Key="1" x:Name="__ReferenceID14">
+                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                  <av:Point x:Key="ShapeLocation">330,3054</av:Point>
+                                                                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                                  <av:PointCollection x:Key="ConnectorLocation">430,3106 430,3126</av:PointCollection>
+                                                                                                </scg:Dictionary>
+                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strTOファイルパス]" DisplayName="ファイルをコピー" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[fileinfoＤＬファイル.FullName]">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                              </ui:CopyFile>
+                                                                                              <FlowStep.Next>
+                                                                                                <FlowStep x:Name="__ReferenceID44">
+                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                      <av:Point x:Key="ShapeLocation">299,3126</av:Point>
+                                                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                      <av:PointCollection x:Key="ConnectorLocation">430,3186 430,3204</av:PointCollection>
+                                                                                                    </scg:Dictionary>
+                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                  <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                                                                                                    <Assign.To>
+                                                                                                      <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                                    </Assign.To>
+                                                                                                    <Assign.Value>
+                                                                                                      <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " ファイルコピー完了"]</InArgument>
+                                                                                                    </Assign.Value>
+                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                      </scg:Dictionary>
+                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                  </Assign>
+                                                                                                  <FlowStep.Next>
+                                                                                                    <FlowStep x:Name="__ReferenceID15">
+                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                          <av:Point x:Key="ShapeLocation">330,3204</av:Point>
+                                                                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                                                                          <av:PointCollection x:Key="ConnectorLocation">430,3256 430,3280</av:PointCollection>
+                                                                                                        </scg:Dictionary>
+                                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                                      <ui:DeleteFileX DisplayName="ファイルを削除" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[fileinfoＤＬファイル.FullName]">
+                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                          </scg:Dictionary>
+                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                      </ui:DeleteFileX>
+                                                                                                      <FlowStep.Next>
+                                                                                                        <FlowStep x:Name="__ReferenceID45">
+                                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                              <av:Point x:Key="ShapeLocation">299,3280</av:Point>
+                                                                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                              <av:PointCollection x:Key="ConnectorLocation">430,3340 430,3370 290,3370 290,3391</av:PointCollection>
+                                                                                                            </scg:Dictionary>
+                                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                                          <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+                                                                                                            <Assign.To>
+                                                                                                              <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                                                                                                            </Assign.To>
+                                                                                                            <Assign.Value>
+                                                                                                              <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " コピー元ファイル削除完了"]</InArgument>
+                                                                                                            </Assign.Value>
+                                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                              </scg:Dictionary>
+                                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                                          </Assign>
+                                                                                                          <FlowStep.Next>
+                                                                                                            <x:Reference>__ReferenceID7</x:Reference>
+                                                                                                          </FlowStep.Next>
+                                                                                                        </FlowStep>
+                                                                                                      </FlowStep.Next>
+                                                                                                    </FlowStep>
+                                                                                                  </FlowStep.Next>
+                                                                                                </FlowStep>
+                                                                                              </FlowStep.Next>
+                                                                                            </FlowStep>
+                                                                                          </FlowSwitch>
+                                                                                        </FlowDecision.True>
+                                                                                        <FlowDecision.False>
+                                                                                          <FlowStep x:Name="__ReferenceID27">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <av:Point x:Key="ShapeLocation">490,2528.5</av:Point>
+                                                                                                <av:Size x:Key="ShapeSize">200,83</av:Size>
+                                                                                                <av:PointCollection x:Key="ConnectorLocation">590,2611.5 590,2636.5</av:PointCollection>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <ui:PathExists sap2010:Annotation.AnnotationText="TOファイルパスの存在チェック" DisplayName="パスの存在を確認" Exists="[blnパス存在チェック結果]" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[strTOファイルパス]" PathType="File">
+                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                                </scg:Dictionary>
+                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                            </ui:PathExists>
+                                                                                            <FlowStep.Next>
+                                                                                              <FlowDecision x:Name="__ReferenceID29" Condition="[blnパス存在チェック結果]" DisplayName="TOファイル存在" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                    <av:Point x:Key="ShapeLocation">550.5,2636.5</av:Point>
+                                                                                                    <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                                                                                    <av:PointCollection x:Key="TrueConnector">550.5,2680 420,2680 420,2719</av:PointCollection>
+                                                                                                    <x:String x:Key="TrueLabel">存在(NG)</x:String>
+                                                                                                    <x:String x:Key="FalseLabel">無し</x:String>
+                                                                                                    <av:PointCollection x:Key="FalseConnector">629.5,2680 650,2680 650,2763 290,2763 290,2793</av:PointCollection>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                <FlowDecision.True>
+                                                                                                  <FlowStep x:Name="__ReferenceID28">
+                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                        <av:Point x:Key="ShapeLocation">320,2719</av:Point>
+                                                                                                        <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                                                                      </scg:Dictionary>
+                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                    <Throw DisplayName="ビジネス例外をスロー" Exception="[New BusinessRuleException( &quot;クリックDL結果ファイル格納：移動先に重複ファイルが存在する為，ファイル移動をキャンセルします。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                                                                                  </FlowStep>
+                                                                                                </FlowDecision.True>
+                                                                                                <FlowDecision.False>
+                                                                                                  <x:Reference>__ReferenceID9</x:Reference>
+                                                                                                </FlowDecision.False>
+                                                                                              </FlowDecision>
+                                                                                            </FlowStep.Next>
+                                                                                          </FlowStep>
+                                                                                        </FlowDecision.False>
+                                                                                      </FlowDecision>
+                                                                                    </FlowStep.Next>
+                                                                                  </FlowStep>
+                                                                                </FlowStep.Next>
+                                                                              </FlowStep>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                          <FlowStep x:Key="1" x:Name="__ReferenceID25">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <av:Point x:Key="ShapeLocation">299,2200</av:Point>
+                                                                                <av:Size x:Key="ShapeSize">262,104</av:Size>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">430,2304 430,2334 290,2334 290,2350</av:PointCollection>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <Assign sap2010:Annotation.AnnotationText="TOファイルパス&#xA;　←i_格納先" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                                                              <Assign.To>
+                                                                                <OutArgument x:TypeArguments="x:String">[strTOファイルパス]</OutArgument>
+                                                                              </Assign.To>
+                                                                              <Assign.Value>
+                                                                                <InArgument x:TypeArguments="x:String">[i_格納先]</InArgument>
+                                                                              </Assign.Value>
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                            </Assign>
+                                                                            <FlowStep.Next>
+                                                                              <x:Reference>__ReferenceID10</x:Reference>
+                                                                            </FlowStep.Next>
+                                                                          </FlowStep>
+                                                                        </FlowSwitch>
+                                                                      </FlowStep.Next>
+                                                                    </FlowStep>
+                                                                  </FlowStep.Next>
+                                                                </FlowStep>
+                                                              </FlowStep.Next>
+                                                            </FlowStep>
+                                                          </FlowStep.Next>
+                                                        </FlowStep>
+                                                      </FlowDecision.True>
+                                                      <FlowDecision.False>
+                                                        <FlowStep x:Name="__ReferenceID35">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">450,1499</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Throw DisplayName="ビジネス例外をスロー" Exception="[New BusinessRuleException( &quot;クリックDL結果ファイル格納：監視対象フォルダが存在しません。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                                        </FlowStep>
+                                                      </FlowDecision.False>
+                                                    </FlowDecision>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <FlowStep x:Name="__ReferenceID23">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">445.5,990</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Throw DisplayName="ビジネス例外をスロー" Exception="[New BusinessRuleException( &quot;クリックDL結果ファイル格納：格納先フォルダが存在しません。&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                    </FlowStep>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowStep.Next>
                             </FlowStep>
-                          </FlowDecision.False>
-                        </FlowDecision>
+                          </FlowStep.Next>
+                        </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
-                <FlowStep x:Key="1" x:Name="__ReferenceID18">
+                <FlowStep x:Key="1" x:Name="__ReferenceID30">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">299,468</av:Point>
-                      <av:Size x:Key="ShapeSize">262,104</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">430,572 430,602 290,602 290,624.5</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">299,460</av:Point>
+                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">430,520 430,550</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap2010:Annotation.AnnotationText="TOフォルダパス&#xD;&#xA;　←i_格納先　から，フォルダパスを切り出し" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_21">
+                  <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_25">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[strTOフォルダパス]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[System.IO.Path.GetDirectoryName( i_格納先 )]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " 格納先(ファイルパス指定)="]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID7</x:Reference>
+                    <FlowStep x:Name="__ReferenceID32">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">299,550</av:Point>
+                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">430,610 430,638</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="o_実行ログ情報：代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_27">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[o_実行ログ情報]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[o_実行ログ情報 + vbNewLine + "　" + System.IO.Path.GetDirectoryName( i_格納先 )]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">299,638</av:Point>
+                              <av:Size x:Key="ShapeSize">262,104</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">430,742 430,772 290,772 290,794.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap2010:Annotation.AnnotationText="TOフォルダパス&#xA;　←i_格納先　から，フォルダパスを切り出し" DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,104" sap2010:WorkflowViewState.IdRef="Assign_21">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strTOフォルダパス]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[System.IO.Path.GetDirectoryName( i_格納先 )]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID12</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowSwitch>
             </FlowStep.Next>
           </FlowStep>
-          <x:Reference>__ReferenceID2</x:Reference>
-          <x:Reference>__ReferenceID9</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
+          <x:Reference>__ReferenceID14</x:Reference>
+          <x:Reference>__ReferenceID15</x:Reference>
+          <x:Reference>__ReferenceID12</x:Reference>
+          <x:Reference>__ReferenceID16</x:Reference>
+          <x:Reference>__ReferenceID17</x:Reference>
+          <x:Reference>__ReferenceID18</x:Reference>
+          <x:Reference>__ReferenceID11</x:Reference>
+          <x:Reference>__ReferenceID19</x:Reference>
+          <x:Reference>__ReferenceID20</x:Reference>
           <x:Reference>__ReferenceID10</x:Reference>
           <x:Reference>__ReferenceID7</x:Reference>
-          <x:Reference>__ReferenceID11</x:Reference>
-          <x:Reference>__ReferenceID12</x:Reference>
-          <x:Reference>__ReferenceID8</x:Reference>
-          <x:Reference>__ReferenceID5</x:Reference>
-          <x:Reference>__ReferenceID13</x:Reference>
-          <x:Reference>__ReferenceID14</x:Reference>
-          <x:Reference>__ReferenceID4</x:Reference>
-          <x:Reference>__ReferenceID1</x:Reference>
-          <FlowStep x:Name="__ReferenceID24">
+          <FlowStep x:Name="__ReferenceID46">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">159,0</av:Point>
@@ -683,18 +1200,35 @@
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
             <FlowStep.Next>
-              <x:Reference>__ReferenceID15</x:Reference>
+              <x:Reference>__ReferenceID21</x:Reference>
             </FlowStep.Next>
           </FlowStep>
-          <x:Reference>__ReferenceID16</x:Reference>
-          <x:Reference>__ReferenceID17</x:Reference>
-          <x:Reference>__ReferenceID3</x:Reference>
-          <x:Reference>__ReferenceID18</x:Reference>
-          <x:Reference>__ReferenceID19</x:Reference>
-          <x:Reference>__ReferenceID20</x:Reference>
-          <x:Reference>__ReferenceID21</x:Reference>
           <x:Reference>__ReferenceID22</x:Reference>
           <x:Reference>__ReferenceID23</x:Reference>
+          <x:Reference>__ReferenceID9</x:Reference>
+          <x:Reference>__ReferenceID24</x:Reference>
+          <x:Reference>__ReferenceID25</x:Reference>
+          <x:Reference>__ReferenceID26</x:Reference>
+          <x:Reference>__ReferenceID27</x:Reference>
+          <x:Reference>__ReferenceID28</x:Reference>
+          <x:Reference>__ReferenceID29</x:Reference>
+          <x:Reference>__ReferenceID13</x:Reference>
+          <x:Reference>__ReferenceID30</x:Reference>
+          <x:Reference>__ReferenceID31</x:Reference>
+          <x:Reference>__ReferenceID32</x:Reference>
+          <x:Reference>__ReferenceID33</x:Reference>
+          <x:Reference>__ReferenceID34</x:Reference>
+          <x:Reference>__ReferenceID35</x:Reference>
+          <x:Reference>__ReferenceID36</x:Reference>
+          <x:Reference>__ReferenceID37</x:Reference>
+          <x:Reference>__ReferenceID38</x:Reference>
+          <x:Reference>__ReferenceID39</x:Reference>
+          <x:Reference>__ReferenceID40</x:Reference>
+          <x:Reference>__ReferenceID41</x:Reference>
+          <x:Reference>__ReferenceID42</x:Reference>
+          <x:Reference>__ReferenceID43</x:Reference>
+          <x:Reference>__ReferenceID44</x:Reference>
+          <x:Reference>__ReferenceID45</x:Reference>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -720,32 +1254,29 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
-                <x:Reference>__ReferenceID28</x:Reference>
+                <x:Reference>__ReferenceID51</x:Reference>
               </Flowchart.StartNode>
-              <FlowDecision x:Name="__ReferenceID28" DisplayName="フロー条件分岐" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                <FlowDecision.Condition>
-                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i_エクセプションスロー有効" />
-                </FlowDecision.Condition>
+              <FlowDecision x:Name="__ReferenceID51" Condition="[i_エクセプションスロー有効]" DisplayName="フロー条件分岐" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <av:Point x:Key="ShapeLocation">260.5,127.5</av:Point>
                     <av:Size x:Key="ShapeSize">79,87</av:Size>
-                    <av:PointCollection x:Key="TrueConnector">260.5,171 110,171 110,204</av:PointCollection>
+                    <av:PointCollection x:Key="TrueConnector">260.5,171 110,171 110,212</av:PointCollection>
                     <av:PointCollection x:Key="FalseConnector">339.5,171 510,171 510,218</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <FlowDecision.True>
-                  <FlowStep x:Name="__ReferenceID27">
+                  <FlowStep x:Name="__ReferenceID50">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">10,204</av:Point>
+                        <av:Point x:Key="ShapeLocation">10,212</av:Point>
                         <av:Size x:Key="ShapeSize">200,83</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">110,287 110,309</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">110,294 110,324</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="xceptionをスローします" DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;クリックDL結果ファイル格納：エラー発生。Exceptionをスローします。&quot;]">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="o_実行ログ情報" DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[o_実行ログ情報]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -753,20 +1284,38 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
                     <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID25">
+                      <FlowStep x:Name="__ReferenceID49">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">10,309</av:Point>
-                            <av:Size x:Key="ShapeSize">200,22</av:Size>
+                            <av:Point x:Key="ShapeLocation">10,324</av:Point>
+                            <av:Size x:Key="ShapeSize">200,83</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">110,406 110,439</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="スロー" Exception="[Exception]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <ui:LogMessage sap2010:Annotation.AnnotationText="xceptionをスローします" DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;クリックDL結果ファイル格納：エラー発生。Exceptionをスローします。&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID47">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">10,439</av:Point>
+                                <av:Size x:Key="ShapeSize">200,22</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Throw DisplayName="スロー" Exception="[Exception]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                          </FlowStep>
+                        </FlowStep.Next>
                       </FlowStep>
                     </FlowStep.Next>
                   </FlowStep>
                 </FlowDecision.True>
                 <FlowDecision.False>
-                  <FlowStep x:Name="__ReferenceID26">
+                  <FlowStep x:Name="__ReferenceID48">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">379,218</av:Point>
@@ -792,9 +1341,10 @@
                   </FlowStep>
                 </FlowDecision.False>
               </FlowDecision>
-              <x:Reference>__ReferenceID25</x:Reference>
-              <x:Reference>__ReferenceID26</x:Reference>
-              <x:Reference>__ReferenceID27</x:Reference>
+              <x:Reference>__ReferenceID47</x:Reference>
+              <x:Reference>__ReferenceID48</x:Reference>
+              <x:Reference>__ReferenceID49</x:Reference>
+              <x:Reference>__ReferenceID50</x:Reference>
             </Flowchart>
           </ActivityAction>
         </Catch>
