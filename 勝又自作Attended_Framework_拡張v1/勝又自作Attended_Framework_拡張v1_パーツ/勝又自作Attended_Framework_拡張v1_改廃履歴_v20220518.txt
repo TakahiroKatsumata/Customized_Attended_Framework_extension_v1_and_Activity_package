@@ -1,6 +1,6 @@
 [勝又自作Attended_Framework_拡張v1] (C) 2022 Takahiro Katsumata
 
-■2022/05/15	改良
+■2022/05/18	改良
 	◆依存関係ライブラリパッケージのバージョンアップ
 	　　Microsoft.Activities			1.0.1				※変更無し
 	　　Microsoft.Activities.Extensions	2.0.6.9				※変更無し

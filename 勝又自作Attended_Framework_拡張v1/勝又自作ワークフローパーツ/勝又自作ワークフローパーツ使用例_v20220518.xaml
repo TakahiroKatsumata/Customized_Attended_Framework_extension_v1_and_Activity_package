@@ -54,7 +54,6 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
@@ -496,7 +495,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 430,107.5 430,153 400,153</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 450,107.5 450,143 420,143</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
@@ -505,9 +504,9 @@
         <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,416.5</av:Point>
+              <av:Point x:Key="ShapeLocation">220,406.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,467.5 300,517.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">320,457.5 320,507.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;【実行ログ】&quot; + vbNewLine + vbNewLine + strＤＬ部品実行ログ]">
@@ -521,7 +520,7 @@
             <FlowStep x:Name="__ReferenceID15">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,517.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">220,507.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">320,299.5 320,349.5</av:PointCollection>
                 </scg:Dictionary>
@@ -539,9 +538,9 @@
         <FlowStep x:Name="__ReferenceID13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,214.5</av:Point>
+              <av:Point x:Key="ShapeLocation">220,204.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,265.5 300,315.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">320,255.5 320,305.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;一時停止中&quot;]">
@@ -555,15 +554,15 @@
             <FlowStep x:Name="__ReferenceID14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,315.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">220,305.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,366.5 300,416.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">320,356.5 320,406.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="勝又自作ワークフローパーツ\クリックDL結果ファイル格納.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="勝又自作ワークフローパーツ\クリックDL結果ファイル格納.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="i_クリックアクティビティプロパティ_セレクター">
-                    <Literal x:TypeArguments="x:String">&lt;html app='msedge.exe' title='ダウンロードページテスト | にっき' /&gt;&lt;webctrl parentid='mainEntity' tag='A' /&gt;</Literal>
+                    <Literal x:TypeArguments="x:String">&lt;html app='msedge.exe' title='ダウンロードページテスト | にっき' /&gt;&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;ファイルをダウンロード&amp;#x9;&amp;#x9;&amp;#x9;floral-2069810_1280x800.png – 2 MB' parentid='mainEntity' tag='A' /&gt;</Literal>
                   </InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="i_監視対象フォルダパス">
                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="System.Environment.GetFolderPath( Environment.SpecialFolder.UserProfile) + &quot;\Downloads&quot;" />
@@ -604,6 +603,9 @@
                   <InArgument x:TypeArguments="x:Int32" x:Key="i_ファイル移動モード">
                     <Literal x:TypeArguments="x:Int32" />
                   </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="i_除外ファイルパターン">
+                    <Literal x:TypeArguments="x:String">*.tmp</Literal>
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -620,9 +622,9 @@
         <FlowStep x:Name="__ReferenceID16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
+              <av:Point x:Key="ShapeLocation">220,117.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,214.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">320,168.5 320,204.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーを開く" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="https://sugizo.info/download-test/#google_vignette">
@@ -631,7 +633,13 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3" />
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
               </ActivityAction>
             </ui:OpenBrowser.Body>
             <sap:WorkflowViewStateService.ViewState>
@@ -646,6 +654,41 @@
         </FlowStep>
         <x:Reference>__ReferenceID14</x:Reference>
         <x:Reference>__ReferenceID15</x:Reference>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,304.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'TIME'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3b92591f-bfe4-437f-893b-9db848f2defc" InformativeScreenshot="7cdd8f755da54e2be2aaef7691a16eae" Selector="&lt;html app='msedge.exe' title='ダウンロードページテスト | にっき' /&gt;&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;ファイルをダウンロード&amp;#x9;&amp;#x9;&amp;#x9;floral-2069810_1280x800.png – 2 MB' parentid='mainEntity' tag='A' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:Click>
+        </FlowStep>
       </Flowchart>
     </FlowStep>
   </Flowchart>
