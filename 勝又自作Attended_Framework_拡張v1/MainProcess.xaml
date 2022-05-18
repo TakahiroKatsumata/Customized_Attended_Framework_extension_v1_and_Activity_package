@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1186,1043</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1203,1043</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -90,7 +90,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="※詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;■以下のオプション機能は必要に応じて &quot;Config.xlsx&quot; で有効/無効を設定してください。&#xA;　　&quot;InitialProcess.xaml&quot; から呼び出し&#xA;　　　　＜Credentials一括取得＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜YMDhmsフォルダ作成＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜TimeStampファイル(Start)作成＞　　　　　　※デフォルトは &quot;有効&quot;&#xA;　　&quot;MainProcess.xaml&quot; から呼び出し&#xA;　　　　無し&#xA;　　&quot;EndProcess.xaml&quot; から呼び出し&#xA;　　　　＜TimeStampファイル(Start)削除，(End)作成＞　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜リネームアウトプットフォルダ名＞　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜アウトプットフォルダ移動＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜完了目印ファイル更新＞　　　　　　　　　※デフォルトは &quot;有効&quot;&#xD;&#xA;　　　　＜SMTPメール＞　　　　　　　　　　　　　※デフォルトは &quot;無効&quot;&#xA;■変数&quot;LOCAL_CONST_strセクション名&quot;について&#xA;　＜ログ出力実装補助＞機能として，トレースログ出力を簡易に実装するための変数です。&#xA;　使い方：&#xA;　トレースログとして開始・終了メッセージを出力したい処理ブロック・ネスト(スコープ)それぞれについて，&#xA;　この共通の変数名称で，スコープに対応した名称のセクション名を変数規定値に設定してください。&#xA;　適切なタイミングで適切なセクション名が開始・終了メッセージに出力されます。&#xA;　（スコープ違いで変数名をバッティングさせることで，処理中スコープに対応した変数値が採用される仕組み）" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1083,978" sap2010:WorkflowViewState.IdRef="Flowchart_7">
+  <Flowchart sap2010:Annotation.AnnotationText="※詳細は &quot;勝又自作Attended_Framework_拡張v1_説明書.txt&quot; を参照してください。&#xA;■このワークフローがUOCになります。&#xA;■以下のオプション機能は必要に応じて &quot;Config.xlsx&quot; で有効/無効を設定してください。&#xA;　　&quot;InitialProcess.xaml&quot; から呼び出し&#xA;　　　　＜Credentials一括取得＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜YMDhmsフォルダ作成＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※エラー発生時は &quot;InitialProcess.xaml&quot; をスローで終了&#xA;　　　　＜TimeStampファイル(Start)作成＞　　　　　　※デフォルトは &quot;有効&quot;&#xA;　　&quot;MainProcess.xaml&quot; から呼び出し&#xA;　　　　無し&#xA;　　&quot;EndProcess.xaml&quot; から呼び出し&#xA;　　　　＜TimeStampファイル(Start)削除，(End)作成＞　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜リネームアウトプットフォルダ名＞　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜アウトプットフォルダ移動＞　　　　　　　　　※デフォルトは &quot;有効&quot;　※ &quot;InitialProcess.xaml&quot; のエラー時はスキップ&#xA;　　　　＜完了目印ファイル更新＞　　　　　　　　　※デフォルトは &quot;有効&quot;&#xA;　　　　＜SMTPメール＞　　　　　　　　　　　　　※デフォルトは &quot;無効&quot;&#xA;■変数&quot;LOCAL_CONST_strセクション名&quot;について&#xA;　＜ログ出力実装補助＞機能として，トレースログ出力を簡易に実装するための変数です。&#xA;　使い方：&#xA;　トレースログとして開始・終了メッセージを出力したい処理ブロック・ネスト(スコープ)それぞれについて，&#xA;　この共通の変数名称で，スコープに対応した名称のセクション名を変数規定値に設定してください。&#xA;　適切なタイミングで適切なセクション名が開始・終了メッセージに出力されます。&#xA;　（スコープ違いで変数名をバッティングさせることで，処理中スコープに対応した変数値が採用される仕組み）" DisplayName="Top" sap:VirtualizedContainerService.HintSize="1083,978" sap2010:WorkflowViewState.IdRef="Flowchart_7">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="MainProcess.xaml" Name="LOCAL_CONST_strセクション名" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" Name="dictionaryParameters" />
@@ -239,9 +239,13 @@
                   <av:PointCollection x:Key="ConnectorLocation">180,263 180,294.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Flowchart DisplayName="メイン処理" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_9">
+              <Flowchart DisplayName="メイン処理" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_9">
                 <Flowchart.Variables>
-                  <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：メインループ処理" Name="LOCAL_CONST_strセクション名" />
+                  <Variable x:TypeArguments="x:String" Name="LOCAL_CONST_strセクション名">
+                    <Variable.Default>
+                      <Literal x:TypeArguments="x:String">MainProcess.xaml：メイン処理</Literal>
+                    </Variable.Default>
+                  </Variable>
                 </Flowchart.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -275,7 +279,11 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <Flowchart sap2010:Annotation.AnnotationText="サンプル処理として，&quot;Hello World!&quot; をメッセージボックス出力するだけの&quot;UOCワークフローの例.xaml&quot; を実行していますので，UOCで組み直してください。" DisplayName="サンプル処理" sap:VirtualizedContainerService.HintSize="684,678" sap2010:WorkflowViewState.IdRef="Flowchart_11">
                         <Flowchart.Variables>
-                          <Variable x:TypeArguments="x:String" Default="MainProcess.xaml：メインループ処理：サンプル処理" Name="LOCAL_CONST_strセクション名" />
+                          <Variable x:TypeArguments="x:String" Name="LOCAL_CONST_strセクション名">
+                            <Variable.Default>
+                              <Literal x:TypeArguments="x:String">MainProcess.xaml：メイン処理：サンプル処理</Literal>
+                            </Variable.Default>
+                          </Variable>
                         </Flowchart.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -299,7 +307,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">320,374.5 320,424.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UOCワークフローの例 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="サンプルUOCワークフロー.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UOCワークフローの例 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="サンプルUOCワークフロー.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_Config">[io_Config]</InOutArgument>
                               <InOutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="io_dictionaryParameters">[dictionaryParameters]</InOutArgument>
