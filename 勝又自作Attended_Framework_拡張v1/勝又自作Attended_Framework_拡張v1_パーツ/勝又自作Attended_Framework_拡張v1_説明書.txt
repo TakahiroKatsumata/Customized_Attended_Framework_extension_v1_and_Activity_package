@@ -26,6 +26,26 @@
 
 　◆FrameworkのUiPathプロジェクトは，そのままロボットプロセスのテスト実行ができるように初期設定されています。
 
+　◆Framework部品ワークフローとUOCワークフローの格納フォルダ構造は以下の通り。
+
+　　　[ロボットプロジェクトフォルダ]　　　　　　　　　　　　←■UOCワークフローの格納フォルダ
+　　　　　　├　InitialProcess.xaml 　※UOCワークフロー("main"ワークフローから呼び出し)
+　　　　　　├　MainProcess.xaml　　　※同上
+　　　　　　├　EndProcess.xaml 　　　※同上
+　　　　　　├　：　　　　　　　　　　※UOCワークフロー(ユーザ追加ワークフロー）
+　　　　　　├　：　　　　　　　　　　※：
+　　　　　　｜　
+　　　　　　└ \勝又自作Attended_Framework_拡張v1_パーツ　　←■Framework部品ワークフローの格納フォルダ
+　　　　　　　　├　MainFramework.xaml　　　　　　　　　　　　　※基本，このフォルダ配下はUOC無しの前提。
+　　　　　　　　├　：
+
+　◆ロボットプロセスの"main"である "MainFramework.xaml" から以下のUOCワークフローを呼び出します。
+
+　　　　MainFramework.xaml　　　　　　※ロボットプロセスの"main"ワークフロー
+　　　　　　├　InitialProcess.xaml 　※想定処理：アウトプット格納場所の準備等　※ここが正常終了するまでは何もアウトプットされない想定であり，
+　　　　　　├　MainProcess.xaml　　　※想定処理：主要な更新やアウトプット処理　※ここでエラー等による中断があっても，何かしらの
+　　　　　　└　EndProcess.xaml 　　　※想定処理：
+
 　◆【サンプルＵＯＣ挙動】　※デフォルトで以下の挙動となるように設定しています。適宜，設定変更とＵＯＣ実装を行ってください。
 
 　　　1. InitialProcess.xaml
@@ -34,37 +54,21 @@
 
 　　　2. MainProcess.xaml
 　　　　　2.1 "Parameters.xlsx" の読み込み。　　　　　　　　　　　　　　　　　　　　　　　　　　　　（ＵＯＣ）
-　　　　　2.1 "サンプルUOCワークフロー.xaml"を実行　　　　　　　　　　　　　　　　　　　　　　　　　（ＵＯＣ）
-　　　　　　　2.1.1 "Parameters.xlsx"から読み込んだ文字列 "Hello World!" の
+　　　　　2.2 "サンプルUOCワークフロー.xaml"を実行　　　　　　　　　　　　　　　　　　　　　　　　　（ＵＯＣ）
+　　　　　　　2.2.1 "Parameters.xlsx"から読み込んだ文字列 "Hello World!" の
 　　　　　　　　　　メッセージボックス出力を繰り返す。　　　　　　　　　　　　　　　　　　　　　　　（ＵＯＣ）
 
 　　　3. EndProcess.xaml
 　　　　　3.1 先行 "MainProcess.xaml" の成功時に，メール添付ファイル機能の有効化スイッチをONに設定。（ＵＯＣ）
-　　　　　1.2 StartタイムスタンプファイルをEndタイムスタンプファイルに変更。　　　　　　　　　　　　（Frameworkオプション機能）
-　　　　　3.1 フォルダ名 "YYYYMMDDhhmmss" を "YYYYMMDDhhmmss_成功" にリネーム 　　　　　　　　　　　（Frameworkオプション機能）
-　　　　　3.1 フォルダ "YYYYMMDDhhmmss_成功" をデータ提供用の外部フォルダに移動 　　　　　　　　　　（Frameworkオプション機能）
-　　　　　3.1 外部フォルダ移動が失敗した時に，フォルダ "YYYYMMDDhhmmss_成功" を
-　　　　　　　ZIP圧縮してメール添付に設定。 　　　　　　　　　　　　　　　　　　　　　　　　　　　　（ＵＯＣ）
+　　　　　3.2 StartタイムスタンプファイルをEndタイムスタンプファイルに変更。　　　　　　　　　　　　（Frameworkオプション機能）
+　　　　　3.3 フォルダ名 "YYYYMMDDhhmmss" を "YYYYMMDDhhmmss_成功" にリネーム 　　　　　　　　　　　（Frameworkオプション機能）
+　　　　　3.4 フォルダ "YYYYMMDDhhmmss_成功" をデータ提供用の外部フォルダに移動 　　　　　　　　　　（Frameworkオプション機能）
+　　　　　　　※サンプルUOCとして，以下処理ブロックを用意しています。 　　　　　　　　　　　　　　　（ＵＯＣ）
+　　　　　　　　デフォルトでは処理ブロックを通過しませんので，必要に応じて有効化してください。
+　　　　　　　　　　処理：外部フォルダ移動が失敗した時に，フォルダ "YYYYMMDDhhmmss_成功" を
+　　　　　　　　　　　　　ZIP圧縮してメール添付に設定。
 　　　　　3.1 完了目印ファイルを更新　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　（Frameworkオプション機能）
 　　　　　3.2 結果メール配信機能は無効化しているため，スキップ　　　　　　　　　　　　　　　　　　　（Frameworkオプション機能）
-
-
-　◆Framework部品ワークフローフォルダとUOCワークフローフォルダを切り分けています。
-
-　　　[ロボットプロジェクトフォルダ]　　　　　　　　　　　　←UOCワークフローフォルダ
-　　　　　　├　MainProcess.xaml
-　　　　　　├　：
-　　　　　　｜　
-　　　　　　└ \勝又自作Attended_Framework_拡張v1_パーツ　　←Framework部品ワークフローフォルダ
-　　　　　　　　├　MainFramework.xaml
-　　　　　　　　├　：
-
-　◆ロボットプロセスの"main"である "MainFramework.xaml" から以下のUOCワークフローを呼び出します。
-
-　　　　MainFramework.xaml　　　　　　※ロボットプロセスの"main"ワークフロー
-　　　　　　├　InitialProcess.xaml 　※UOCワークフロー
-　　　　　　├　MainProcess.xaml　　　※UOCワークフロー
-　　　　　　└　EndProcess.xaml 　　　※UOCワークフロー
 
 　◆パラメタ系シートの基本的な使い分け。
 
